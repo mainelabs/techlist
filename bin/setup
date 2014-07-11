@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# Set up Rails app. Run this script immediately after cloning the codebase.
+
+# Exit if any subcommand fails
+set -e
+
+# Set up Ruby dependencies via Bundler
+bundle install
+
+# Set up configurable environment variables
+if [ ! -f .env ]; then
+  cp .sample.env .env
+fi
+
+# Set up the database
+bundle exec rake db:setup
+
+# Pick a port for Foreman
+echo "port: 7000" > .foreman

@@ -1,0 +1,50 @@
+AllCops:
+  Include:
+    - 'Gemfile'
+    - 'Rakefile'
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+
+ParameterLists:
+  Max: 4
+  CountKeywordArgs: true
+
+ClassLength:
+  Max: 100
+
+LineLength:
+  Enabled: false
+
+MethodLength:
+  CountComments: false
+  Max: 15
+
+# Avoid more than `Max` levels of nesting.
+BlockNesting:
+  Max: 2
+
+# Disable documentation checking until a class needs to be documented once
+Documentation:
+  Enabled: false
+
+# Enforce Ruby 1.9-compatible hash syntax
+HashSyntax:
+  EnforcedStyle: ruby19
+
+EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+# Align ends correctly
+EndAlignment:
+  AlignWith: variable
+
+# Indentation of when/else
+CaseIndentation:
+  IndentWhenRelativeTo: end
+  IndentOneStep: false
+
+# Enforce single_quotes
+StringLiterals:
+  EnforcedStyle: single_quotes
