@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 
+gem 'active_model_serializers'
 gem 'coffee-rails'
 gem 'delayed_job_active_record'
 gem 'email_validator'
 gem 'foundation-rails', '~> 5.0'
 gem 'high_voltage'
-gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rack-timeout'

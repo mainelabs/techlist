@@ -11,6 +11,10 @@ class Api::V1::PlacesController < Api::V1::BaseController
     end
   end
 
+  def index
+    render json: Place.all
+  end
+
   private
 
   def place_params
