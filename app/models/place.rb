@@ -1,5 +1,5 @@
 class Place < ActiveRecord::Base
-  KINDS = ['startup', 'accelerator', 'incubator', 'coworking', 'investor', 'service']
+  KINDS = ['startup', 'accelerator', 'incubator', 'coworking', 'investor', 'service', 'nonprofit']
 
   validates :name, presence: true
   validates :state, presence: true
