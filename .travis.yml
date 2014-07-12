@@ -25,6 +25,3 @@ deploy:
     repo: mainelabs/techlist
     branch: master
   run: "rake db:migrate"
-
-before_deploy:
-  - git fetch --unshallow
