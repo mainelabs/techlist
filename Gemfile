@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 gem 'active_model_serializers'
+gem 'aasm'
 gem 'coffee-rails'
 gem 'delayed_job_active_record'
 gem 'email_validator'

@@ -12,7 +12,7 @@ class Api::V1::PlacesController < Api::V1::BaseController
   end
 
   def index
-    render json: Place.all
+    render json: Place.active
   end
 
   private
