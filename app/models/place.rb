@@ -23,6 +23,7 @@ class Place < ActiveRecord::Base
     edit do
       field :name
       field :kind
+      field :state
       field :address
       field :zip_code
       field :city
@@ -35,5 +36,9 @@ class Place < ActiveRecord::Base
 
   def kind_enum
     KINDS
+  end
+
+  def state_enum
+    aasm.states
   end
 end
