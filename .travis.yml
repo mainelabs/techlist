@@ -18,6 +18,7 @@ notifications:
 
 deploy:
   provider: heroku
+  strategy: git
   api_key:
     secure: bJtBomGeq8F+fDpevik/bMWRlXoCYYkok7AqzSlB/+AEwmmEEpOGoyicEe4AgN5LGbo2Nx6EWMlE5T1Nyguo9AAz/hhTnRYJcTdhHB9IxkhlK2fRHC9EOX0fpAvETKRwILgbjHFZoFfEqevvYQ9KnhJK4VNC2pv9xFUTjDyUVmY=
   app: techlist-angers-staging
