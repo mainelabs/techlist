@@ -2,6 +2,7 @@ class Place < ActiveRecord::Base
   KINDS = ['startup', 'accelerator', 'incubator', 'coworking', 'investor', 'service']
 
   validates :name, presence: true
+  validates :state, presence: true
   validates :kind, presence: true, inclusion: { in: KINDS }
 
   include AASM
@@ -20,6 +21,15 @@ class Place < ActiveRecord::Base
   end
 
   rails_admin do
+    list do
+      filters [:state, :kind]
+      field :state
+      field :kind
+      field :name
+      field :url
+      field :owner_email
+    end
+
     edit do
       field :name
       field :kind
