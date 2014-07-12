@@ -9,3 +9,11 @@ development: &default
 test:
   <<: *default
   database: techlist_test
+
+staging:
+  <<: *default
+  database: techlist_staging
+
+production:
+  <<: *default
+  database: techlist_production
