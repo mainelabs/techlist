@@ -13,4 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require leaflet
 //= require_tree .
+
+$(document).on('ready page:load', function(){
+  if ($('#map')) {
+    var map = L.map('map').setView([<%= ENV.fetch('MAP_DEFAULT_LAT') %>, <%= ENV.fetch('MAP_DEFAULT_LON') %>], <%= ENV.fetch('MAP_DEFAULT_ZOOM') %>);
+
+    // add an OpenStreetMap tile layer
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+  }
+});
