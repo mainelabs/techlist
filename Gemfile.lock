@@ -32,6 +32,10 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
+    barber (0.4.2)
+      ember-source
+      execjs
+      handlebars-source
     builder (3.2.2)
     capybara (2.3.0)
       mime-types (>= 1.16)
@@ -66,6 +70,19 @@ GEM
       dotenv (= 0.11.1)
     email_validator (1.4.0)
       activemodel
+    ember-data-source (1.0.0.beta.8)
+      ember-source
+    ember-rails (0.15.0)
+      active_model_serializers
+      barber (>= 0.4.1)
+      ember-data-source (>= 1.0.0.beta.5)
+      ember-source (>= 1.1.0)
+      execjs (>= 1.2)
+      handlebars-source (> 1.0.0)
+      jquery-rails (>= 1.0.17)
+      railties (>= 3.1)
+    ember-source (1.6.0)
+      handlebars-source (~> 1.0)
     erubis (2.7.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -83,6 +100,7 @@ GEM
       sass (>= 3.2.0)
     haml (4.0.5)
       tilt
+    handlebars-source (1.3.0)
     high_voltage (2.2.0)
     hike (1.2.3)
     i18n (0.6.11)
@@ -233,6 +251,8 @@ DEPENDENCIES
   delayed_job_active_record
   dotenv-rails
   email_validator
+  ember-rails
+  ember-source
   factory_girl_rails
   foreman
   foundation-rails (~> 5.0)
