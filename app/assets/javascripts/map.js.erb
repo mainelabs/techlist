@@ -1,4 +1,6 @@
 $(document).on('ready page:load', function(){
+    L.Icon.Default.imagePath = 'assets/leaflet-dist/images/';
+
     TechlistApp = Ember.Application.create({rootElement: '#map'});
 
     TechlistApp.IndexRoute = Ember.Route.extend({
