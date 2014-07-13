@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     aasm (3.1.1)
     actionmailer (4.1.4)
@@ -114,7 +115,6 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
-    leaflet-rails (0.7.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -145,6 +145,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.4)
       sprockets-rails (~> 2.0)
+    rails-assets-leaflet (0.7.3)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
@@ -258,11 +259,11 @@ DEPENDENCIES
   foundation-rails (~> 5.0)
   high_voltage
   jquery-rails
-  leaflet-rails
   newrelic_rpm (>= 3.7.3)
   pg
   rack-timeout
   rails (~> 4.1.0)
+  rails-assets-leaflet
   rails_12factor
   rails_admin
   recipient_interceptor

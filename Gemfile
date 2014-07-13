@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 ruby '2.1.1'
 
@@ -12,11 +13,11 @@ gem 'ember-source'
 gem 'foundation-rails', '~> 5.0'
 gem 'high_voltage'
 gem 'jquery-rails'
-gem 'leaflet-rails'
 gem 'pg'
 gem 'rack-timeout'
 gem 'rails', '~> 4.1.0'
 gem 'rails_admin'
+gem 'rails-assets-leaflet'
 gem 'recipient_interceptor'
 gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form'
