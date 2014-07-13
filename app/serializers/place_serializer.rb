@@ -3,8 +3,7 @@ class PlaceSerializer < ActiveModel::Serializer
               :name,
               :kind,
               :state,
-              :lat,
-              :lon,
+              :coordinates,
               :address,
               :zip_code,
               :city,
@@ -14,4 +13,8 @@ class PlaceSerializer < ActiveModel::Serializer
               :owner_email,
               :created_at,
               :updated_at
+
+  def coordinates
+    [object.lat, object.lon]
+  end
 end
