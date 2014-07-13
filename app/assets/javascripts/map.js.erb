@@ -26,9 +26,12 @@ $(document).on('ready page:load', function(){
     TechlistApp.MarkerCollectionLayer =
       EmberLeaflet.MarkerCollectionLayer.extend({
         content: Ember.computed.alias('controller'),
-        itemLayerClass: EmberLeaflet.MarkerLayer.extend({
-          location: EmberLeaflet.computed.latLngFromLatLngArray('content.coordinates'),
-        })
+        itemLayerClass: EmberLeaflet.MarkerLayer.extend(
+          EmberLeaflet.PopupMixin, {
+            popupContent: Ember.computed.alias('content.name'),
+            location: EmberLeaflet.computed.latLngFromLatLngArray('content.coordinates')
+          }
+        )
       });
 
     TechlistApp.IndexView =
