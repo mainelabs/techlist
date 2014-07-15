@@ -15,7 +15,7 @@ namespace :dev do
 
     FactoryGirl.create(:place,
                        :active,
-                       kind: :service,
+                       kind: 'service',
                        name: 'Craftsmen',
                        address: '25 rue Lenepveu',
                        zip_code: '49000',
@@ -25,7 +25,17 @@ namespace :dev do
                        url: 'http://craftsmen.io')
     FactoryGirl.create(:place,
                        :active,
-                       kind: :nonprofit,
+                       kind: 'service',
+                       name: 'Playmoweb',
+                       address: '25 rue Lenepveu',
+                       zip_code: '49000',
+                       city: 'Angers',
+                       lat: 47.472041,
+                       lon: -0.551269,
+                       url: 'http://playmoweb.com')
+    FactoryGirl.create(:place,
+                       :active,
+                       kind: 'nonprofit',
                        name: 'Mainelabs',
                        address: '12 Place Louis Imbach',
                        zip_code: '49000',
@@ -35,7 +45,7 @@ namespace :dev do
                        url: 'http://mainelabs.fr')
     FactoryGirl.create(:place,
                        :active,
-                       kind: :accelerator,
+                       kind: 'accelerator',
                        name: 'Angers technopole',
                        address: '8 Rue André le Notre 49066 ',
                        zip_code: '49100',
