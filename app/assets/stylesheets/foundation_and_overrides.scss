@@ -1,3 +1,20 @@
 @import 'foundation/functions';
 
+$color-grey: #ccc;
+$color-blue: #89d8ff;
+
+$body-font-family : 'RobotoDraft',sans-serif;
+$font-weight-normal: 300;
+
+$header-top-margin: .2rem;
+$header-bottom-margin: .5rem;
+
+$h1-font-size: rem-calc(30);
+
+$tabs-navigation-bg-color: none;
+$tabs-navigation-active-bg-color: $tabs-navigation-bg-color;
+$tabs-navigation-hover-bg-color: $tabs-navigation-bg-color;
+$tabs-navigation-active-border-color: $color-blue;
+$tabs-navigation-active-border-size: rem-calc(3);
+
 @import 'foundation';

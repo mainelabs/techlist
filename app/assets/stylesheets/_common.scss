@@ -1,0 +1,4 @@
+.tab-title.active {
+  border-top: $tabs-navigation-active-border-size solid $tabs-navigation-active-border-color;
+  margin-top: -$tabs-navigation-active-border-size;
+}

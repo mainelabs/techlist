@@ -1,4 +1,35 @@
-#map, .leaflet-container {
-  width: 100%;
+.full-height, .leaflet-container {
   height: 100%;
+}
+
+#map-app {
+  max-width: none;
+}
+
+#map {
+  padding:0;
+}
+
+#panel {
+  padding: rem-calc(10);
+
+  .tab-title a {
+    text-align: center;
+  }
+
+  .filters-list {
+    margin-left: 0;
+
+    input[type=checkbox] {
+      margin-right: rem-calc(10);
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+
+  .kind-counter {
+    color: $color-grey;
+  }
 }
