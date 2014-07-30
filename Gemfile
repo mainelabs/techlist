@@ -24,7 +24,7 @@ gem 'simple_form'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'unicorn'
-
+gem "rails_admin_import", :git => "https://github.com/adamwong246/rails_admin_import.git"
 group :development do
   gem 'foreman'
   gem 'spring'

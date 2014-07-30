@@ -17,10 +17,12 @@ RailsAdmin.config do |config|
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
   config.actions do
+   
     dashboard                     # mandatory
     index                         # mandatory
     new
     export
+    import
     bulk_delete
     show
     edit
@@ -28,3 +30,4 @@ RailsAdmin.config do |config|
     show_in_app
   end
 end
+  
