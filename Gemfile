@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
-
 ruby '2.1.1'
 gem 'active_model_serializers'
 gem 'aasm'
@@ -29,13 +28,11 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
 end
-
 group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 2.14.0'
 end
-
 group :test do
   gem 'capybara-webkit', '>= 1.0.0'
   gem 'database_cleaner'
@@ -44,7 +41,6 @@ group :test do
   gem 'timecop'
   gem 'webmock'
 end
-
 group :staging, :production do
   gem 'newrelic_rpm', '>= 3.7.3'
   gem 'rails_12factor'
