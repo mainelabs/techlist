@@ -23,16 +23,19 @@ gem 'turbolinks'
 gem 'uglifier'
 gem 'unicorn'
 gem "rails_admin_import", :git => "https://github.com/adamwong246/rails_admin_import.git"
+
 group :development do
   gem 'foreman'
   gem 'spring'
   gem 'spring-commands-rspec'
 end
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 2.14.0'
 end
+
 group :test do
   gem 'capybara-webkit', '>= 1.0.0'
   gem 'database_cleaner'
@@ -41,6 +44,7 @@ group :test do
   gem 'timecop'
   gem 'webmock'
 end
+
 group :staging, :production do
   gem 'newrelic_rpm', '>= 3.7.3'
   gem 'rails_12factor'
