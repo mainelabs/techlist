@@ -1,4 +1,4 @@
-RailsAdminImport.config do |config| 
+RailsAdminImport.config 
   # config.model User do
   #   excluded_fields do
   #     # [:field1, :field2, :field3]
