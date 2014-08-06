@@ -10,6 +10,26 @@ fr:
       date: '%d %b %Y'
       short: '%d %B'
 
+  activerecord:
+    models:
+      place: 
+        one: 'Lieu'
+        other: 'Lieux'
+    attributes:
+      place:
+        name: 'Nom'
+        kind: 'Type'
+        state: 'Etat'
+        address: 'Adresse'
+        zip_code: 'Code postal'
+        city: 'Ville'
+        lat: 'Latitude'
+        lon: 'Longitude'
+        url: 'Url'
+        description: 'Description'
+        owner_name: 'Nom du gestionnaire'
+        owner_email: 'Email du gestionnaire'
+
   typology:
     nonprofit: 'Organisation à but non lucratif'
     startup: 'Startup'
