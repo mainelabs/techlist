@@ -1,0 +1,20 @@
+fr:
+  date:
+    formats:
+      default: '%d/%m/%Y'
+      with_weekday: '%a %d/%m/%y'
+
+  time:
+    formats:
+      default: '%a %d %b %Y à %T'
+      date: '%d %b %Y'
+      short: '%d %B'
+
+  typology:
+    nonprofit: 'Organisation à but non lucratif'
+    startup: 'Startup'
+    accelerator: 'Accelerateur'
+    incubator: 'Incubateur'
+    coworking: 'Espace de coworking'
+    investor: 'Investisseur'
+    service: 'Service'

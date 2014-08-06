@@ -9,3 +9,12 @@ en:
       default: '%a, %b %-d, %Y at %r'
       date: '%b %-d, %Y'
       short: '%B %d'
+
+  typology:
+    nonprofit: 'Nonprofit organization'
+    startup: 'Startup'
+    accelerator: 'Accelerator'
+    incubator: 'Incubator'
+    coworking: 'Coworking'
+    investor: 'Investor'
+    service: 'Service'
