@@ -12,6 +12,7 @@ gem 'ember-rails'
 gem 'ember-source'
 gem 'foundation-rails', '~> 5.0'
 gem 'high_voltage'
+gem 'i18n-js'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rack-timeout'
@@ -24,7 +25,6 @@ gem 'simple_form'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'unicorn'
-gem "i18n-js"
 
 group :development do
   gem 'foreman'
