@@ -24,5 +24,6 @@
       ga('create', '<%= ENV.fetch('GOOGLE_ANALYTICS_ID') %>', 'auto');
       ga('send', 'pageview');
     </script>
+    <%= javascript_include_tag "translations" %>
   </body>
 </html>

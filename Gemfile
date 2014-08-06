@@ -24,6 +24,7 @@ gem 'simple_form'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'unicorn'
+gem "i18n-js"
 
 group :development do
   gem 'foreman'

@@ -10,3 +10,4 @@ log/*
 public/system
 tags
 tmp/*
+public/javascripts/translations.js
