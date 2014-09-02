@@ -24,9 +24,9 @@ describe 'POST /api/v1/places' do
       'zip_code' => nil,
       'city' => nil,
       'url' => place.url,
+      'logo_url' => place.logo_url,
       'description' => nil,
-      'owner_name' => nil,
-      'owner_email' => place.owner_email,
+      'twitter_name' => place.twitter_name,
       'created_at' => place.created_at.as_json,
       'updated_at' =>place.updated_at.as_json
     )

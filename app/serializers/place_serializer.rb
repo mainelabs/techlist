@@ -8,9 +8,9 @@ class PlaceSerializer < ActiveModel::Serializer
               :zip_code,
               :city,
               :url,
+              :logo_url,
               :description,
-              :owner_name,
-              :owner_email,
+              :twitter_name,
               :created_at,
               :updated_at
 
