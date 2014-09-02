@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/adamwong246/rails_admin_import.git
+  revision: 1c2c899c66532d6b786405eb0a365e4e885fe86d
+  specs:
+    rails_admin_import (0.2.1)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -276,6 +282,7 @@ DEPENDENCIES
   rails-assets-gabesmed--ember-leaflet
   rails_12factor
   rails_admin
+  rails_admin_import!
   recipient_interceptor
   rspec-rails (~> 2.14.0)
   sass-rails (~> 4.0.3)
