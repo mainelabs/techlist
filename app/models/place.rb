@@ -42,6 +42,8 @@ class Place < ActiveRecord::Base
       field :lat
       field :lon
       field :url
+      field :twitter_name
+      field :logo_url
       field :description
       field :owner_name
       field :owner_email
