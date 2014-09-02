@@ -15,7 +15,7 @@ namespace :dev do
 
     FactoryGirl.create(:place,
                        :active,
-                       kind: 'service',
+                       kind: 'company',
                        name: 'Craftsmen',
                        address: '25 rue Lenepveu',
                        zip_code: '49000',
@@ -25,7 +25,7 @@ namespace :dev do
                        url: 'http://craftsmen.io')
     FactoryGirl.create(:place,
                        :active,
-                       kind: 'service',
+                       kind: 'company',
                        name: 'Playmoweb',
                        address: '25 rue Lenepveu',
                        zip_code: '49000',
