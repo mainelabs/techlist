@@ -33,7 +33,7 @@ describe CsvImportService do
     end
 
     it 'force default values' do
-      importer = CsvImportService.new('Place', Rails.root.join('spec/fixtures/csv/valid.csv'), {state: 'active'})
+      importer = CsvImportService.new('Place', Rails.root.join('spec/fixtures/csv/valid.csv'), state: 'active')
 
       importer.save
 

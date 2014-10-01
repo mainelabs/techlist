@@ -44,7 +44,7 @@ class CsvImportService
         records << model.new(row.to_hash.reverse_merge(@defaults))
       end
     rescue Exception => e
-      errors.add(:csv_error, ": #{e.to_s}")
+      errors.add(:csv_error, ": #{e}")
     end
 
     records
