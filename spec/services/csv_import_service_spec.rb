@@ -32,4 +32,18 @@ describe CsvImportService do
       expect(Place.count).to eq(1)
     end
   end
+
+  describe '#file' do
+    it 'returns the given path if absolute' do
+      importer = CsvImportService.new('Place', '/somewhere.csv')
+
+      expect(importer.file).to eq('/somewhere.csv')
+    end
+
+    it 'returns a full path if relative' do
+      importer = CsvImportService.new('Place', 'somewhere.csv')
+
+      expect(importer.file).to eq("#{Dir.pwd}/somewhere.csv")
+    end
+  end
 end

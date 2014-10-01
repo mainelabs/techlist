@@ -1,9 +1,13 @@
+require 'pathname'
+
 class CsvImportService
   include ActiveModel::Model
 
+  attr_reader :file
+
   def initialize(model_class, file)
     @model_class = model_class
-    @file = file
+    @file = full_path(file)
   end
 
   def valid?
@@ -22,6 +26,13 @@ class CsvImportService
 
   def records
     @records ||= read_from_csv
+  end
+
+  def full_path(path)
+    if (Pathname.new path).absolute?
+      return path
+    end
+    "#{Dir.pwd}/#{path}"
   end
 
   def read_from_csv
