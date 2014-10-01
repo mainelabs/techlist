@@ -45,7 +45,7 @@ class CsvImportService
 
   def file_exists?
     if !File.exists?(@file)
-      errors.add(:file, "doesn't exists")
+      errors.add(:file, "#{file} doesn't exist")
       return false
     end
     true

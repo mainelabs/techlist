@@ -9,10 +9,10 @@ describe CsvImportService do
     end
 
     it "returns false if file doesn't exists" do
-      importer = CsvImportService.new('Place', 'missing.csv')
+      importer = CsvImportService.new('Place', '/missing.csv')
 
       expect(importer.valid?).to be_false
-      expect(importer.errors.full_messages.first).to eq("File doesn't exists")
+      expect(importer.errors.full_messages.first).to eq("File /missing.csv doesn't exist")
     end
 
     it 'returns false if one record is not valid' do
