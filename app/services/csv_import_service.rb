@@ -37,9 +37,15 @@ class CsvImportService
 
   def read_from_csv
     records = []
-    CSV.new(File.read(@file), headers: :first_row, col_sep: ';', force_quotes: false).each do |row|
-      records << model.new(row.to_hash)
+
+    begin
+      CSV.new(File.read(@file), headers: :first_row, col_sep: ';', force_quotes: false).each do |row|
+        records << model.new(row.to_hash)
+      end
+    rescue Exception => e
+      errors.add(:csv_error, ": #{e.to_s}")
     end
+
     records
   end
 
@@ -55,10 +61,10 @@ class CsvImportService
     all_valid = true
     records.each_with_index do |record, i|
       if !record.valid?
-        errors.add("line_#{i + 2}", ": #{record.errors.full_messages.join(', ')}")
+        errors.add(:data_error, ": #{record.errors.full_messages.join(', ')} (line #{i + 2})")
         all_valid = false
       end
     end
-    all_valid
+    all_valid && errors.size == 0
   end
 end
