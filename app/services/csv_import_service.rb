@@ -5,9 +5,10 @@ class CsvImportService
 
   attr_reader :file
 
-  def initialize(model_class, file)
+  def initialize(model_class, file, defaults = {})
     @model_class = model_class
     @file = full_path(file)
+    @defaults = defaults
   end
 
   def valid?
@@ -40,7 +41,7 @@ class CsvImportService
 
     begin
       CSV.new(File.read(@file), headers: :first_row, col_sep: ';', force_quotes: false).each do |row|
-        records << model.new(row.to_hash)
+        records << model.new(row.to_hash.reverse_merge(@defaults))
       end
     rescue Exception => e
       errors.add(:csv_error, ": #{e.to_s}")

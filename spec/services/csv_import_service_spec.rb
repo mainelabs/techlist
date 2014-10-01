@@ -31,6 +31,14 @@ describe CsvImportService do
 
       expect(Place.count).to eq(1)
     end
+
+    it 'force default values' do
+      importer = CsvImportService.new('Place', Rails.root.join('spec/fixtures/csv/valid.csv'), {state: 'active'})
+
+      importer.save
+
+      expect(Place.first.state).to eq('active')
+    end
   end
 
   describe '#file' do
