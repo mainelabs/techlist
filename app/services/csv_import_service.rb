@@ -19,14 +19,14 @@ class CsvImportService
     records.map(&:save) if valid?
   end
 
+  def records
+    @records ||= read_from_csv
+  end
+
   private
 
   def model
     @model_class.constantize
-  end
-
-  def records
-    @records ||= read_from_csv
   end
 
   def full_path(path)
