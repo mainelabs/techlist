@@ -1,0 +1,35 @@
+require 'spec_helper'
+
+describe CsvImportService do
+  describe '#valid?' do
+    it 'returns true if all the records are valid' do
+      importer = CsvImportService.new('Place', Rails.root.join('spec/fixtures/csv/valid.csv'))
+
+      expect(importer.valid?).to be_true
+    end
+
+    it "returns false if file doesn't exists" do
+      importer = CsvImportService.new('Place', 'missing.csv')
+
+      expect(importer.valid?).to be_false
+      expect(importer.errors.full_messages.first).to eq("File doesn't exists")
+    end
+
+    it 'returns false if one record is not valid' do
+      importer = CsvImportService.new('Place', Rails.root.join('spec/fixtures/csv/not_valid.csv'))
+
+      expect(importer.valid?).to be_false
+      expect(importer.errors.full_messages.first).to eq("Line 2 : Name can't be blank")
+    end
+  end
+
+  describe '#save' do
+    it 'creates the records' do
+      importer = CsvImportService.new('Place', Rails.root.join('spec/fixtures/csv/valid.csv'))
+
+      importer.save
+
+      expect(Place.count).to eq(1)
+    end
+  end
+end
