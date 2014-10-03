@@ -23,7 +23,6 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form'
 gem 'thor'
 gem 'thor-rails'
-gem 'turbolinks'
 gem 'uglifier'
 gem 'unicorn'
 
