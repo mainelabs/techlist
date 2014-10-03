@@ -9,22 +9,6 @@ $(document).on('ready page:load', function(){
         }
     });
 
-    TechlistApp.Place = Ember.Object.extend();
-
-    TechlistApp.Place.reopenClass({
-      all: function() {
-          return $.getJSON('api/v1/places.json').then(function(response) {
-            var places = [];
-
-            response.forEach( function (data) {
-              places.push( TechlistApp.Place.create(data) );
-            });
-
-            return places;
-          });
-      }
-    });
-
     TechlistApp.MarkerCollectionLayer =
       EmberLeaflet.MarkerCollectionLayer.extend({
         content: Ember.computed.alias('controller'),

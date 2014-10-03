@@ -1,2 +1,5 @@
-h1 Hello World
-outlet
+#map-app.row.full-height
+  #map.full-height.small-12.large-9.columns
+  #panel.full-height.small-12.large-3.columns
+    h1 Techlist
+    = outlet

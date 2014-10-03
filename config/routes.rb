@@ -6,4 +6,5 @@ Rails.application.routes.draw do
       resources :places, only: [:create, :index]
     end
   end
+  get '*path', to: 'home#index'
 end
