@@ -1,0 +1,2 @@
+div#place
+  strong= model.name
