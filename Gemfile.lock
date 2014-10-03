@@ -37,6 +37,9 @@ GEM
       ember-source
       execjs
       handlebars-source
+    barber-emblem (0.1.1)
+      barber (>= 0.4.1)
+      emblem-source
     builder (3.2.2)
     capybara (2.3.0)
       mime-types (>= 1.16)
@@ -84,6 +87,10 @@ GEM
       railties (>= 3.1)
     ember-source (1.6.0)
       handlebars-source (~> 1.0)
+    emblem-rails (0.2.1)
+      barber-emblem (~> 0.1.1)
+      ember-rails (>= 0.14.0)
+    emblem-source (0.3.17)
     erubis (2.7.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -265,6 +272,7 @@ DEPENDENCIES
   email_validator
   ember-rails
   ember-source
+  emblem-rails
   factory_girl_rails
   foreman
   foundation-rails (~> 5.0)
