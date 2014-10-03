@@ -7,6 +7,6 @@ describe 'GET /api/v1/places' do
 
     get '/api/v1/places', nil, headers
 
-    expect(response_json.length).to eq 5
+    expect(response_json['places'].length).to eq 5
   end
 end

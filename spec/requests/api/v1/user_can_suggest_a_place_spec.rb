@@ -15,20 +15,23 @@ describe 'POST /api/v1/places' do
 
     place = Place.last
     expect(response_json).to eq(
-      'id' => place.id,
-      'name' => place.name,
-      'kind' => place.kind,
-      'state' => place.state,
-      'coordinates' => [place.lat, place.lon],
-      'address' => nil,
-      'zip_code' => nil,
-      'city' => nil,
-      'url' => place.url,
-      'logo_url' => place.logo_url,
-      'description' => nil,
-      'twitter_name' => place.twitter_name,
-      'created_at' => place.created_at.as_json,
-      'updated_at' =>place.updated_at.as_json
+      'place' => {
+        'id' => place.id,
+        'name' => place.name,
+        'kind' => place.kind,
+        'state' => place.state,
+        'lat' => place.lat,
+        'lon' => place.lon,
+        'address' => nil,
+        'zip_code' => nil,
+        'city' => nil,
+        'url' => place.url,
+        'logo_url' => place.logo_url,
+        'description' => nil,
+        'twitter_name' => place.twitter_name,
+        'created_at' => place.created_at.as_json,
+        'updated_at' =>place.updated_at.as_json
+      }
     )
   end
 
