@@ -1,0 +1,4 @@
+div#places
+  ul
+    each place in controller
+      li= place.name
