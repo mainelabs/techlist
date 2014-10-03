@@ -2,6 +2,8 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require leaflet-dist
+//= require ember-leaflet
 //= require_self
 //= require ./app
 
