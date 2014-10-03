@@ -54,13 +54,4 @@ $(document).on('ready page:load', function(){
           EmberLeaflet.DefaultTileLayer,
           TechlistApp.MarkerClusterLayer]
       });
-
-    TechlistApp.IndexController =
-      Ember.ArrayController.extend({
-        content: [
-          {location: L.latLng(47.472041,-0.551269)},
-          {location: L.latLng(47.473826,-0.548895)},
-          {location: L.latLng(47.478667,-0.60619)}
-        ]
-      });
 });
