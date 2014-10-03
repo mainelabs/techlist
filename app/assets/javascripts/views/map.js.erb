@@ -2,12 +2,19 @@ App.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
   contentBinding: 'controller'
 });
 
+App.MarkerClusterLayer = EmberLeaflet.ContainerLayer.extend({
+  childLayers: [App.MarkerCollectionLayer],
+  _newLayer: function() {
+    return new L.MarkerClusterGroup();
+  }
+});
+
 App.MapView = EmberLeaflet.MapView.extend({
   center: L.latLng(<%= ENV.fetch('MAP_DEFAULT_LAT') %>, <%= ENV.fetch('MAP_DEFAULT_LON') %>),
   zoom: <%= ENV.fetch('MAP_DEFAULT_ZOOM') %>,
   options: {maxZoom: 19, minZoom: 0},
   childLayers: [
     EmberLeaflet.DefaultTileLayer,
-    App.MarkerCollectionLayer
+    App.MarkerClusterLayer
   ]
 });

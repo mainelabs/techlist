@@ -4,6 +4,7 @@
 //= require ember-data
 //= require leaflet-dist
 //= require ember-leaflet
+//= require leaflet.markerclusterer/dist/leaflet.markercluster
 //= require_self
 //= require ./app
 
