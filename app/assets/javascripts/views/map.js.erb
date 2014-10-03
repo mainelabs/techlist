@@ -1,5 +1,10 @@
+App.MarkerLayer = EmberLeaflet.MarkerLayer.extend({
+    click: function() { this.get('controller').send('click', this.content) }
+});
+
 App.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
-  contentBinding: 'controller'
+  contentBinding: 'controller',
+  itemLayerClass: App.MarkerLayer
 });
 
 App.MarkerClusterLayer = EmberLeaflet.ContainerLayer.extend({
