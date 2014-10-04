@@ -3,7 +3,7 @@ class PlaceSerializer < ActiveModel::Serializer
               :name,
               :kind,
               :state,
-              :address,
+              :street,
               :zip_code,
               :city,
               :latitude,

@@ -22,7 +22,7 @@ describe 'POST /api/v1/places' do
         'state' => place.state,
         'latitude' => place.latitude,
         'longitude' => place.longitude,
-        'address' => nil,
+        'street' => nil,
         'zip_code' => nil,
         'city' => nil,
         'url' => place.url,

@@ -6,7 +6,7 @@ class Place < ActiveRecord::Base
   validates :state, presence: true
   validates :kind, presence: true, inclusion: { in: Kind.codes }
 
-  geocoded_by :full_address
+  geocoded_by :address
 
   after_validation :set_coordinates, if: :geocoding_necessary?
 
@@ -39,7 +39,7 @@ class Place < ActiveRecord::Base
       field :name
       field :kind
       field :state
-      field :address
+      field :street
       field :zip_code
       field :city
       field :country_code
@@ -62,14 +62,14 @@ class Place < ActiveRecord::Base
     aasm.states
   end
 
-  def full_address
-    [address, zip_code, city, country_code].compact.join(', ')
+  def address
+    [street, zip_code, city, country_code].compact.join(', ')
   end
 
   private
 
   def address_changed?
-    (changed & [address, zip_code, city, country_code]).any?
+    (changed & [street, zip_code, city, country_code]).any?
   end
 
   def geocoding_necessary?
@@ -85,6 +85,6 @@ class Place < ActiveRecord::Base
   end
 
   def set_coordinates
-    self.latitude, self.longitude = geocoding_service.coordinates(full_address)
+    self.latitude, self.longitude = geocoding_service.coordinates(address)
   end
 end

@@ -19,7 +19,7 @@
     background-color: white;
     padding: rem-calc(10) rem-calc(5);
 
-    p.address {
+    p.street {
       margin-bottom: 0;
     }
 
@@ -27,7 +27,7 @@
       margin-top: rem-calc(3);
     }
 
-    p.url i, p.address i {
+    p.url i, p.street i {
       font-size: rem-calc(11);
       padding-right: rem-calc(5);
     }

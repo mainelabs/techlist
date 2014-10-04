@@ -26,7 +26,7 @@ class Api::V1::PlacesController < Api::V1::BaseController
                   :kind,
                   :latitude,
                   :longitude,
-                  :address,
+                  :street,
                   :zip_code,
                   :city,
                   :url,

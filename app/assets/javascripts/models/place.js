@@ -5,7 +5,7 @@ App.Place = DS.Model.extend({
   url: DS.attr('string'),
   twitter_name: DS.attr('string'),
   description: DS.attr('string'),
-  address: DS.attr('string'),
+  street: DS.attr('string'),
   zipCode: DS.attr('string'),
   city: DS.attr('string'),
   latitude: DS.attr('number'),

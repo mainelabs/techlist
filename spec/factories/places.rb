@@ -5,7 +5,7 @@ FactoryGirl.define do
     state :pending
     latitude 48.8724029
     longitude 2.7768103
-    address '25 rue Lenepveu'
+    street '25 rue Lenepveu'
     zip_code '49100'
     city 'Angers'
     url 'http://craftsmen.io'

@@ -9,7 +9,7 @@ describe Place do
     it 'geocodes location when location coordinates has not been provided' do
       stub_geocoding_request('Undefined address', 47.47, -0.55)
 
-      place = Place.new(address: 'Undefined address')
+      place = Place.new(street: 'Undefined address')
       place.valid?
 
       expect(place.latitude).to eq(47.47)
@@ -20,7 +20,7 @@ describe Place do
       stub_geocoding_request('20 rue Pablo Picasso', 45.42, 4.42)
 
       place = create(:place)
-      place.address = '20 rue Pablo Picasso'
+      place.street = '20 rue Pablo Picasso'
       place.valid?
 
       expect(place.latitude).to eq(45.42)
