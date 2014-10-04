@@ -1,9 +1,7 @@
 class Place < ActiveRecord::Base
-  KINDS = Kind.codes
-
   validates :name, presence: true
   validates :state, presence: true
-  validates :kind, presence: true, inclusion: { in: KINDS }
+  validates :kind, presence: true, inclusion: { in: Kind.codes }
   validates :lat, presence: true, numericality: true
   validates :lon, presence: true, numericality: true
 
@@ -51,7 +49,7 @@ class Place < ActiveRecord::Base
   end
 
   def kind_enum
-    KINDS
+    Kind.codes
   end
 
   def state_enum
