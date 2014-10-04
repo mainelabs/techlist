@@ -8,7 +8,7 @@ class Place < ActiveRecord::Base
 
   geocoded_by :full_address
 
-  after_validation :set_coordinates, if: :missing_coordinates?
+  after_validation :set_coordinates, if: :geocoding_necessary?
 
   include AASM
   aasm column: 'state' do
@@ -67,6 +67,18 @@ class Place < ActiveRecord::Base
   end
 
   private
+
+  def address_changed?
+    (changed & [address, zip_code, city, country_code]).any?
+  end
+
+  def geocoding_necessary?
+    if new_record?
+      missing_coordinates?
+    else
+      address_changed?
+    end
+  end
 
   def missing_coordinates?
     latitude.blank? || longitude.blank?
