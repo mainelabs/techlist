@@ -9,8 +9,11 @@ div#place
         img src="<%= image_url 'no-logo.png' %>" alt="Logo is missing"
     .small-8.columns
       p.url
+        i.icon-link
         a= model.url
-      p.address= model.address
+      p.address
+        i.icon-pointer
+        span= model.address
       p.city
         span= model.zipCode
         span= model.city
