@@ -1,5 +1,7 @@
 div#place
-  h1= model.name
+  h1
+    model.name
+    i.icon-close title="Fermer" click="close"
 
   .header.row
     .small-4.columns.logo
