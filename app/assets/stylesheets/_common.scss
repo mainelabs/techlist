@@ -1,4 +1,8 @@
-.tab-title.active {
-  border-top: $tabs-navigation-active-border-size solid $tabs-navigation-active-border-color;
-  margin-top: -$tabs-navigation-active-border-size;
+h1 {
+  background-color: $color-background-main;
+  color: $color-text-background-main;
+  font-size: rem-calc(20);
+  margin: 0;
+  padding: rem-calc(5) rem-calc(10);
+  font-weight: 300;
 }
