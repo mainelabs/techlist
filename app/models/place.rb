@@ -42,6 +42,7 @@ class Place < ActiveRecord::Base
       field :address
       field :zip_code
       field :city
+      field :country_code
       field :latitude
       field :longitude
       field :url
@@ -62,7 +63,7 @@ class Place < ActiveRecord::Base
   end
 
   def full_address
-    [address, zip_code, city].compact.join(', ')
+    [address, zip_code, city, country_code].compact.join(', ')
   end
 
   private
