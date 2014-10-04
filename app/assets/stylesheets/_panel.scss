@@ -64,3 +64,20 @@
     cursor: pointer;
   }
 }
+
+#search {
+  ul.filters {
+    padding: rem-calc(10);
+    margin: 0;
+
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      input {
+        margin-right: rem-calc(10);
+      }
+    }
+  }
+}
