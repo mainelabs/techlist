@@ -9,8 +9,8 @@ describe 'POST /api/v1/places' do
       kind: place.kind,
       url: place.url,
       owner_email: place.owner_email,
-      lat: place.lat,
-      lon: place.lon
+      latitude: place.latitude,
+      longitude: place.longitude
     }.to_json, headers
 
     place = Place.last
@@ -20,8 +20,8 @@ describe 'POST /api/v1/places' do
         'name' => place.name,
         'kind' => place.kind,
         'state' => place.state,
-        'lat' => place.lat,
-        'lon' => place.lon,
+        'latitude' => place.latitude,
+        'longitude' => place.longitude,
         'address' => nil,
         'zip_code' => nil,
         'city' => nil,

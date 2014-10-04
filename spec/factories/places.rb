@@ -5,8 +5,8 @@ FactoryGirl.define do
     name 'Craftsmen Angers'
     kind Kind.codes.first
     state :pending
-    lat 48.8724029
-    lon 2.7768103
+    latitude 48.8724029
+    longitude 2.7768103
     address '25 rue Lenepveu'
     zip_code '49100'
     city 'Angers'

@@ -20,8 +20,8 @@ namespace :dev do
                        address: '25 rue Lenepveu',
                        zip_code: '49000',
                        city: 'Angers',
-                       lat: 47.472041,
-                       lon: -0.551269,
+                       latitude: 47.472041,
+                       longitude: -0.551269,
                        url: 'http://craftsmen.io')
     FactoryGirl.create(:place,
                        :active,
@@ -30,8 +30,8 @@ namespace :dev do
                        address: '25 rue Lenepveu',
                        zip_code: '49000',
                        city: 'Angers',
-                       lat: 47.472041,
-                       lon: -0.551269,
+                       latitude: 47.472041,
+                       longitude: -0.551269,
                        url: 'http://playmoweb.com')
     FactoryGirl.create(:place,
                        :active,
@@ -40,8 +40,8 @@ namespace :dev do
                        address: '12 Place Louis Imbach',
                        zip_code: '49000',
                        city: 'Angers',
-                       lat: 47.473826,
-                       lon: -0.548895,
+                       latitude: 47.473826,
+                       longitude: -0.548895,
                        url: 'http://mainelabs.fr')
     FactoryGirl.create(:place,
                        :active,
@@ -50,8 +50,8 @@ namespace :dev do
                        address: '8 Rue André le Notre 49066 ',
                        zip_code: '49100',
                        city: 'Angers',
-                       lat: 47.478667,
-                       lon: -0.60619,
+                       latitude: 47.478667,
+                       longitude: -0.60619,
                        url: 'http://angerstechnopole.com/')
   end
 

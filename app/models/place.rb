@@ -2,8 +2,6 @@ class Place < ActiveRecord::Base
   validates :name, presence: true
   validates :state, presence: true
   validates :kind, presence: true, inclusion: { in: Kind.codes }
-  validates :lat, presence: true, numericality: true
-  validates :lon, presence: true, numericality: true
 
   include AASM
   aasm column: 'state' do
@@ -37,8 +35,8 @@ class Place < ActiveRecord::Base
       field :address
       field :zip_code
       field :city
-      field :lat
-      field :lon
+      field :latitude
+      field :longitude
       field :url
       field :twitter_name
       field :logo_url

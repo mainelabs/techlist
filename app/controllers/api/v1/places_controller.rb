@@ -24,8 +24,8 @@ class Api::V1::PlacesController < Api::V1::BaseController
   def place_params
     params.permit(:name,
                   :kind,
-                  :lat,
-                  :lon,
+                  :latitude,
+                  :longitude,
                   :address,
                   :zip_code,
                   :city,

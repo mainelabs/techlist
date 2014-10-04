@@ -1,2 +1,2 @@
-name;kind;address;zip_code;city;url;lat;lon;twitter_name;logo_url;description;owner_name;owner_email
+name;kind;address;zip_code;city;url;latitude;longitude;twitter_name;logo_url;description;owner_name;owner_email
 Craftsmen;company;25 rue Lenepveu;49000;Angers;http://craftsmen.io;47.472041;-0.551269;craftsmenhq;;;;

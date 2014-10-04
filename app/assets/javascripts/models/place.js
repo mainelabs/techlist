@@ -7,13 +7,13 @@ App.Place = DS.Model.extend({
   description: DS.attr('string'),
   address: DS.attr('string'),
   zipCode: DS.attr('string'),
-  city: DS.attr('string', { defaultValue: 'new' }),
-  lat: DS.attr('number'),
-  lon: DS.attr('number'),
+  city: DS.attr('string'),
+  latitude: DS.attr('number'),
+  longitude: DS.attr('number'),
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date'),
 
   location: function() {
-    return L.latLng(this.get('lat'), this.get('lon'))
-  }.property('lat','lon')
+    return L.latLng(this.get('latitude'), this.get('longitude'))
+  }.property('latitude','longitude')
 })
