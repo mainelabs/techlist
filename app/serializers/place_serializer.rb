@@ -3,18 +3,15 @@ class PlaceSerializer < ActiveModel::Serializer
               :name,
               :kind,
               :state,
-              :coordinates,
               :address,
               :zip_code,
               :city,
+              :lat,
+              :lon,
               :url,
               :logo_url,
               :description,
               :twitter_name,
               :created_at,
               :updated_at
-
-  def coordinates
-    [object.lat, object.lon]
-  end
 end

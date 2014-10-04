@@ -1,0 +1,57 @@
+#panel {
+  padding: 0;
+  background-color: $color-background-alternative;
+
+  .row {
+    margin: 0;
+  }
+
+  span {
+    padding-right: rem-calc(5);
+  }
+
+  p {
+    margin-bottom: rem-calc(5);
+    font-size: rem-calc(13);
+  }
+
+  .header {
+    background-color: white;
+    padding: rem-calc(10) rem-calc(5);
+
+    p.address {
+      margin-bottom: 0;
+    }
+
+    p.url {
+      margin-top: rem-calc(3);
+    }
+
+    p.url i, p.address i {
+      font-size: rem-calc(11);
+      padding-right: rem-calc(5);
+    }
+
+    p.city {
+      padding-left: rem-calc(15);
+    }
+
+    img {
+      max-height: 70px;
+    }
+
+    .columns {
+      padding-left: rem-calc(5);
+      padding-right: rem-calc(5);
+    }
+  }
+
+  .content {
+    padding: rem-calc(10);
+
+    .placeholder {
+      background-color: #E2E1E1;
+      color: #E2E1E1;
+    }
+  }
+}

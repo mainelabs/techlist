@@ -1,4 +1,11 @@
-#map, .leaflet-container {
-  width: 100%;
+.ember-application, .ember-view, .full-height, .leaflet-container {
   height: 100%;
+}
+
+#map-app {
+  max-width: none;
+}
+
+#map {
+  padding:0;
 }

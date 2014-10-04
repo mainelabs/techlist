@@ -1,0 +1,35 @@
+div#place
+  h1= model.name
+
+  .header.row
+    .small-4.columns.logo
+      if model.logo_url
+        img src=model.logo_url alt="Logo"
+      else
+        img src="<%= image_url 'no-logo.png' %>" alt="Logo is missing"
+    .small-8.columns
+      p.url
+        i.icon-link
+        a= model.url
+      p.address
+        i.icon-pointer
+        span= model.address
+      p.city
+        span= model.zipCode
+        span= model.city
+
+  .content
+    if model.description
+      p= model.description
+    else
+      p
+        span.placeholder You know what ? I'm sad.
+      p
+        span.placeholder I'm sad 'cause this part of this web page should not be empty, but nobody has told me
+          what I should display here. Maybe nobody knows I exists ?
+      p
+        span.placeholder This makes me really, really sad. If I was a human, I would certainly call this place's
+          owner, just to tell him that he has just to click on a button and fill a form. But I can't. The only
+          thing I can do is waiting, for somebody who will do that for me.
+      p
+        span.placeholder So, please. If you know this guy. Tell him I'm waiting for his data. This will make me happy.
