@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :place do
     name 'Craftsmen Angers'
-    kind Place::KINDS.first
+    kind Kind.codes.first
     state :pending
     lat 48.8724029
     lon 2.7768103
