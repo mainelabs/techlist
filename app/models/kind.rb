@@ -6,10 +6,6 @@ class Kind
   end
 
   def self.all
-    kinds = []
-    codes.each do |code|
-      kinds << { code: code, name: code.humanize }
-    end
-    kinds
+    codes.map { |code| { code: code, name: code.humanize } }
   end
 end
