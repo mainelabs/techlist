@@ -2,8 +2,8 @@
   h1 Techlist #<%= ENV.fetch('CITY') %>
 
   ul.filters
-    each kind in controller
+    each controller
       li
-        label for=kind.id
-          input type="checkbox" name="kind[]" id=kind.id value=kind.id
-            kind.name
+        label for=id
+          input type="checkbox" name="kind[]" id=id value=id checked=isSelected
+            name
