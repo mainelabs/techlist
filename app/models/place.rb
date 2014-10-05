@@ -25,14 +25,6 @@ class Place < ActiveRecord::Base
     end
   end
 
-  def kind_enum
-    Kind.codes
-  end
-
-  def state_enum
-    aasm.states
-  end
-
   def address
     [street, zip_code, city, country_code].compact.join(', ')
   end

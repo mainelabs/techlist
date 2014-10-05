@@ -21,8 +21,16 @@ RailsAdmin.config do |config|
 
     edit do
       field :name
-      field :kind
-      field :state
+      field :kind, :enum do
+        enum do
+          Kind.codes
+        end
+      end
+      field :state, :enum do
+        enum do
+          Place.aasm.states.map(&:name)
+        end
+      end
       field :street
       field :zip_code
       field :city
