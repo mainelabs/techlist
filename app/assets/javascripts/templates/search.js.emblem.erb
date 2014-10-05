@@ -1,0 +1,9 @@
+#search
+  h1 Techlist #<%= ENV.fetch('CITY') %>
+
+  ul.filters
+    each controller
+      li
+        label for=id
+          view Ember.Checkbox id=id value=id checked=isSelected
+            name

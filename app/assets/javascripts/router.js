@@ -6,6 +6,7 @@ App.Router.reopen({
 
 App.Router.map(function() {
   this.resource('places', { path: '/' }, function() {
+    this.resource('search', { path: '/' });
     this.resource('place', { path: '/place/:id' });
   });
 })

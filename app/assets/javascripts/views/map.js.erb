@@ -3,7 +3,7 @@ App.MarkerLayer = EmberLeaflet.MarkerLayer.extend({
 });
 
 App.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
-  contentBinding: 'controller',
+  contentBinding: 'controller.places',
   itemLayerClass: App.MarkerLayer
 });
 
