@@ -1,18 +1,30 @@
 RailsAdmin.config do |config|
+  config.model Place do
+    list do
+      filters [:state, :kind]
+      field :state
+      field :kind
+      field :name
+      field :url
+      field :owner_email
+    end
 
-  ### Popular gems integration
-
-  ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
-
-  ## == Cancan ==
-  # config.authorize_with :cancan
-
-  ## == PaperTrail ==
-  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
-
-  ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
+    edit do
+      field :name
+      field :kind
+      field :state
+      field :street
+      field :zip_code
+      field :city
+      field :country_code
+      field :latitude
+      field :longitude
+      field :url
+      field :twitter_name
+      field :logo_url
+      field :description
+      field :owner_name
+      field :owner_email
+    end
+  end
 end
