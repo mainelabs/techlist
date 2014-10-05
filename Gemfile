@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
 gem 'active_model_serializers'
 gem 'aasm'
