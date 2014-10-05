@@ -1,3 +1,6 @@
+// This is a hack to have working markers on Heroku
+L.Icon.Default.imagePath = 'leaflet';
+
 App.MarkerLayer = EmberLeaflet.MarkerLayer.extend({
     click: function() { this.get('controller').send('click', this.content) }
 });
