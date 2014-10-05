@@ -1,4 +1,14 @@
 RailsAdmin.config do |config|
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+
+  config.authorize_with do
+    redirect_to '/' unless current_user.admin?
+  end
+
+  config.current_user_method(&:current_user)
+
   config.model Place do
     list do
       filters [:state, :kind]
@@ -25,6 +35,21 @@ RailsAdmin.config do |config|
       field :description
       field :owner_name
       field :owner_email
+    end
+  end
+
+  config.model User do
+    list do
+      field :id
+      field :email
+      field :last_sign_in_at
+    end
+
+    edit do
+      field :email
+      field :password
+      field :password_confirmation
+      field :admin
     end
   end
 end

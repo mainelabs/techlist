@@ -40,6 +40,7 @@ GEM
     barber-emblem (0.1.1)
       barber (>= 0.4.1)
       emblem-source
+    bcrypt (3.1.7)
     builder (3.2.2)
     capybara (2.3.0)
       mime-types (>= 1.16)
@@ -65,6 +66,12 @@ GEM
     delayed_job_active_record (4.0.1)
       activerecord (>= 3.0, < 4.2)
       delayed_job (>= 3.0, < 4.1)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
     dotenv (0.11.1)
@@ -134,6 +141,7 @@ GEM
     newrelic_rpm (3.9.0.229)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -253,6 +261,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    warden (1.2.3)
+      rack (>= 1.0)
     webmock (1.18.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -269,6 +279,7 @@ DEPENDENCIES
   coffee-rails
   database_cleaner
   delayed_job_active_record
+  devise
   dotenv-rails
   email_validator
   ember-rails
