@@ -1,4 +1,4 @@
-App.PlaceController = Ember.Controller.extend({
+App.PlaceController = Ember.ObjectController.extend({
   actions : {
     close: function() {
       this.transitionToRoute('places')

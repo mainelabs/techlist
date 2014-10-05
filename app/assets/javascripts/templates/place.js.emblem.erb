@@ -1,28 +1,28 @@
 div#place
   h1
-    model.name
+    name
     i.icon-close title="Fermer" click="close"
 
   .header.row
     .small-4.columns.logo
-      if model.logo_url
-        img src=model.logo_url alt="Logo"
+      if logo_url
+        img src=logo_url alt="Logo"
       else
         img src="<%= image_url 'no-logo.png' %>" alt="Logo is missing"
     .small-8.columns
       p.url
         i.icon-link
-        a= model.url
+        a= url
       p.street
         i.icon-pointer
-        span= model.street
+        span= street
       p.city
-        span= model.zipCode
-        span= model.city
+        span= zipCode
+        span= city
 
   .content
-    if model.description
-      p= model.description
+    if description
+      p= description
     else
       p
         span.placeholder You know what ? I'm sad.
