@@ -3,18 +3,15 @@ rvm: 2.1.1
 cache: bundler
 
 before_install:
-- 'echo ''gem: --no-document'' > ~/.gemrc'
-- echo '--colour' > ~/.rspec
+  - "echo 'gem: --no-document' > ~/.gemrc"
+  - "echo '--colour' > ~/.rspec"
 
 before_script:
-- bundle exec rake db:create db:schema:load RAILS_ENV=test
+  - cp .sample.env .env
+  - bundle exec rake db:create db:schema:load RAILS_ENV=test
 
 notifications:
   email: false
-  irc:
-    channels: chat.freenode.net#craftsmen
-    template: "%{repository_name} build #%{build_number} on %{branch} by %{author}
-      finished: %{message}: %{build_url}"
 
 deploy:
   provider: heroku
@@ -22,7 +19,4 @@ deploy:
   api_key:
     secure: bJtBomGeq8F+fDpevik/bMWRlXoCYYkok7AqzSlB/+AEwmmEEpOGoyicEe4AgN5LGbo2Nx6EWMlE5T1Nyguo9AAz/hhTnRYJcTdhHB9IxkhlK2fRHC9EOX0fpAvETKRwILgbjHFZoFfEqevvYQ9KnhJK4VNC2pv9xFUTjDyUVmY=
   app: techlist-angers-staging
-  on:
-    repo: mainelabs/techlist
-    branch: master
   run: "rake db:migrate"
