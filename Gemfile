@@ -38,11 +38,11 @@ end
 group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 2.14.0'
+  gem 'rspec-rails', '~> 3.0.0'
 end
 
 group :test do
-  gem 'capybara-webkit', '>= 1.0.0'
+  gem 'capybara-webkit', '>= 1.2.0'
   gem 'database_cleaner'
   gem 'shoulda-matchers', require: false
   gem 'simplecov', require: false

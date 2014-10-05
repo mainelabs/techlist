@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe 'POST /api/v1/places' do
   it 'creates a new place and returns it' do
