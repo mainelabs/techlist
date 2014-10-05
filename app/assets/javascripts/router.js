@@ -6,7 +6,9 @@ App.Router.reopen({
 
 App.Router.map(function() {
   this.resource('places', { path: '/' }, function() {
-    this.resource('search', { path: '/' });
-    this.resource('place', { path: '/place/:id' });
+    this.route('search', { path: '/' });
+    this.resource('place', { path: '/place/:id' }, function() {
+      // Here we'll have the edit route
+    });
   });
 })

@@ -1,5 +1,5 @@
 App.PlacesController = Ember.ArrayController.extend({
-  needs: 'search',
+  needs: 'places_search',
 
   actions : {
     click: function(place) {
@@ -8,11 +8,11 @@ App.PlacesController = Ember.ArrayController.extend({
   },
 
   places: function() {
-    return this.get('controllers.search.filters').length ? this.get('filteredPlaces') : this ;
-  }.property('places', 'controllers.search.filters'),
+    return this.get('controllers.places_search.filters').length ? this.get('filteredPlaces') : this ;
+  }.property('places', 'controllers.places_search.filters'),
 
   filteredPlaces: function() {
-    filters = this.get('controllers.search.filters');
+    filters = this.get('controllers.places_search.filters');
     return this.filter(function(place) {
       return filters.indexOf(place.get('kind')) !== -1;
     });

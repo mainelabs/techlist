@@ -1,4 +1,4 @@
-App.SearchController = Ember.ArrayController.extend({
+App.PlacesSearchController = Ember.ArrayController.extend({
   filters: [],
 
   updateFilters : function(kind) {
