@@ -1,17 +1,8 @@
-h1 {
-  background-color: $color-background-main;
-  color: $color-text-background-main;
-  font-size: rem-calc(20);
-  margin: 0;
-  padding: rem-calc(5) rem-calc(10);
-  font-weight: 300;
-}
-
 h3 {
   font-size: rem-calc(22);
 }
 
 .hint {
-  color: $color-text-hint;
+  color: $hint-color-text;
   font-size: rem-calc(14);
 }
