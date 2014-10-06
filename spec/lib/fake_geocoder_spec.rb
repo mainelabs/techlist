@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe FakeGeocoder do
   it 'allows for setting and retrieving geocoded values' do
