@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="small-12 medium-10 columns medium-centered">
+    <h2>Add a place</h2>
+    <hr />
+
+    <%= simple_form_for(@place) do |f| %>
+
+      <%= f.error_notification %>
+
+      <div class="row">
+        <div class="small-12 large-4 columns">
+          <h3>General informations</h3>
+          <p class="hint">You should choose the place type carefully, this is how our users will find you.</p>
+          <p class="hint">You cannot upload a logo right now, give us the url of your best picture !</p>
+        </div>
+        <div class="small-12 large-8 columns">
+          <%= f.input :name, autofocus: true, required: true %>
+          <%= f.input :kind,
+                      collection: Kind.all,
+                      label_method: lambda { |kind| kind[:name] },
+                      value_method: lambda { |kind| kind[:id] },
+                      required: true %>
+          <%= f.input :url, label: 'Website' %>
+          <%= f.input :logo_url, label: 'Logo url' %>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="small-12 large-4 columns">
+          <h3>Description</h3>
+          <p class="hint">Describe the place in a few words. You can use Markdown for styles.</p>
+        </div>
+        <div class="small-12 large-8 columns">
+          <%= f.input :description %>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="small-12 large-4 columns">
+          <h3>Address</h3>
+          <p class="hint">We will geolocalize automatically your place on the map. Be sure to fill the address fields correctly !</p>
+        </div>
+        <div class="small-12 large-8 columns">
+          <%= f.input :street %>
+          <div class="row">
+            <div class="small-4 columns">
+              <%= f.input :zip_code %>
+            </div>
+            <div class="small-8 columns">
+              <%= f.input :city %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="small-12 large-4 columns">
+          <h3>Contact information</h3>
+          <p class="hint">We will check that you're the real place's owner with your contact informations. Please give us an email address corresponding to your place website url.</p>
+        </div>
+        <div class="small-12 large-8 columns">
+          <%= f.input :owner_name %>
+          <%= f.input :owner_email %>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <%= f.button :submit, 'Add the place' %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
