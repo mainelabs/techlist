@@ -6,3 +6,12 @@ h1 {
   padding: rem-calc(5) rem-calc(10);
   font-weight: 300;
 }
+
+h3 {
+  font-size: rem-calc(22);
+}
+
+.hint {
+  color: $color-text-hint;
+  font-size: rem-calc(14);
+}
