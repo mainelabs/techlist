@@ -14,13 +14,14 @@
           <p class="hint">You cannot upload a logo right now, give us the url of your best picture !</p>
         </div>
         <div class="small-12 large-8 columns">
-          <%= f.input :name, autofocus: true, required: true %>
+          <%= f.input :name, label: 'Place name', autofocus: true, required: true %>
           <%= f.input :kind,
+                      label: 'Type',
                       collection: Kind.all,
                       label_method: lambda { |kind| kind[:name] },
                       value_method: lambda { |kind| kind[:id] },
                       required: true %>
-          <%= f.input :url, label: 'Website' %>
+          <%= f.input :url, label: 'Website url' %>
           <%= f.input :logo_url, label: 'Logo url' %>
         </div>
       </div>
@@ -33,7 +34,7 @@
           <p class="hint">Describe the place in a few words. You can use Markdown for styles.</p>
         </div>
         <div class="small-12 large-8 columns">
-          <%= f.input :description %>
+          <%= f.input :description, input_html: { rows: 10 } %>
         </div>
       </div>
 
@@ -65,8 +66,8 @@
           <p class="hint">We will check that you're the real place's owner with your contact informations. Please give us an email address corresponding to your place website url.</p>
         </div>
         <div class="small-12 large-8 columns">
-          <%= f.input :owner_name %>
-          <%= f.input :owner_email %>
+          <%= f.input :owner_name, label: 'Your name' %>
+          <%= f.input :owner_email, label: 'Your email address' %>
         </div>
       </div>
 
