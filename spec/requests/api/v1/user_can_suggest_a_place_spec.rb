@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'POST /api/v1/places' do
   it 'creates a new place and returns it' do
-    place = build(:place)
+    place = build(:place, :in_angers_with_coordinates)
 
     post "/api/v1/places", {
       name: place.name,
@@ -36,6 +36,7 @@ describe 'POST /api/v1/places' do
   end
 
   it 'returns an error when invalid' do
+    stub_geocoding_request('FR', 47.47, -0.55)
     post '/api/v1/places', {
       name: 'I should give a kind'
     }.to_json, headers

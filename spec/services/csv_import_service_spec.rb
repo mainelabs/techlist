@@ -5,20 +5,20 @@ describe CsvImportService do
     it 'returns true if all the records are valid' do
       importer = CsvImportService.new('Place', Rails.root.join('spec/fixtures/csv/valid.csv'))
 
-      expect(importer.valid?).to be_true
+      expect(importer).to be_valid
     end
 
     it "returns false if file doesn't exists" do
       importer = CsvImportService.new('Place', '/missing.csv')
 
-      expect(importer.valid?).to be_false
+      expect(importer).not_to be_valid
       expect(importer.errors.full_messages.first).to eq("File /missing.csv doesn't exist")
     end
 
     it 'returns false if one record is not valid' do
       importer = CsvImportService.new('Place', Rails.root.join('spec/fixtures/csv/not_valid.csv'))
 
-      expect(importer.valid?).to be_false
+      expect(importer).not_to be_valid
       expect(importer.errors.full_messages.first).to eq("Data error : Name can't be blank (line 2)")
     end
   end

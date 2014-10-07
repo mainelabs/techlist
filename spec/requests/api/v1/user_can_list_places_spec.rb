@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe 'GET /api/v1/places' do
   it 'returns places list' do
-    places = create_list(:place, 5, :active)
-    create(:place)
+    create_list(:place, 5, :in_angers_with_coordinates, :active)
+    create(:place, :in_angers_with_coordinates)
 
     get '/api/v1/places', nil, headers
 

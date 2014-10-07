@@ -8,7 +8,7 @@ class Place < ActiveRecord::Base
 
   geocoded_by :address
 
-  after_validation :set_coordinates, if: :geocoding_necessary?
+  before_save :set_coordinates, if: :geocoding_necessary?
 
   include AASM
   aasm column: 'state' do
@@ -32,7 +32,7 @@ class Place < ActiveRecord::Base
   private
 
   def address_changed?
-    (changed & [street, zip_code, city, country_code]).any?
+    (changed & ['street', 'zip_code', 'city', 'country_code']).any?
   end
 
   def geocoding_necessary?

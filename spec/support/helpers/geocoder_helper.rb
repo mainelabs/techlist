@@ -8,7 +8,7 @@ module GeocoderHelper
 end
 
 RSpec.configure do |config|
-  config.around(:each) do
+  config.before do
     FakeGeocoder.clear
   end
 end
