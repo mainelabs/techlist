@@ -2,15 +2,22 @@ require 'rails_helper'
 
 feature 'A user add a place' do
   scenario 'fills all the required fields' do
-    puts 'here'
+    Place.geocoding_service = double('geocoding service', coordinates: nil)
+
     visit new_place_path
-    exit(1)
-    fill_in 'Name', with: 'Craftsmen'
+    fill_in 'Place name', with: 'Craftsmen'
     select 'Company', from: 'Type'
     click_button 'Add the place'
 
-    save_and_open_page
+    expect(page).to have_content('Your place has correctly been saved')
+  end
 
-    expect(page).to have_content('Ahahahaha. Impossible.')
+  scenario 'omit some required fields' do
+    Place.geocoding_service = double('geocoding service', coordinates: nil)
+
+    visit new_place_path
+    click_button 'Add the place'
+
+    expect(page).to have_content('Please review the problems below')
   end
 end
