@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'places#index'
 
   devise_for :users
 
@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     end
   end
 
-  get '*path', to: 'home#index'
+  get '*path', to: 'places#index'
 end
