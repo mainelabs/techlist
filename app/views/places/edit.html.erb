@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="small-12 medium-10 columns medium-centered">
+    <h2>Update a place</h2>
+    <hr />
+    <%= simple_form_for(@place_update, url: place_path(@place_update.place), method: :put) do |f| %>
+
+      <%= render partial: 'form', locals: { f: f } %>
+
+      <div class="submit">
+        <%= f.button :submit, 'Update the place' %>
+        or
+        <%= link_to 'go back to the map', root_path %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
