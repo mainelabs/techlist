@@ -27,5 +27,8 @@ FactoryGirl.define do
     trait :active do
       state :active
     end
+
+    factory :place_update do
+    end
   end
 end
