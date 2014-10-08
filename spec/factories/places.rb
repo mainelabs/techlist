@@ -6,9 +6,10 @@ FactoryGirl.define do
     url 'http://craftsmen.io'
     logo_url 'https://pbs.twimg.com/profile_images/425256684244566016/N0wcdLyQ_400x400.jpeg'
     twitter_name 'craftsmenhq'
-    description 'This could be a long description'
+    description 'This could be a long description.'
     owner_name 'Sébastien Charrier'
     owner_email 'sebastien@craftsmen.io'
+    in_angers
 
     trait :in_angers do
       street '25 rue Lenepveu'
