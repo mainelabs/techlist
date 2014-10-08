@@ -8,7 +8,7 @@ class PlacesController < ApplicationController
 
   def create
     @place = Place.new(place_params)
-    if !@place.save
+    if !@place.save(context: :user_input)
       render :new
     end
   end
@@ -19,14 +19,13 @@ class PlacesController < ApplicationController
     params.require(:place)
           .permit(:name,
                   :kind,
-                  :latitude,
-                  :longitude,
+                  :url,
+                  :twitter_name,
+                  :logo_url,
+                  :description,
                   :street,
                   :zip_code,
                   :city,
-                  :url,
-                  :logo_url,
-                  :description,
                   :owner_name,
                   :owner_email)
   end
