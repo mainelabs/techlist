@@ -9,18 +9,13 @@ class PlaceUpdate < Place
     end
   end
 
+  def self.from_place(place)
+    self.new(place.duplicable_attributes.merge!({ place: place }))
+  end
+
   private
 
   def apply_update
-    place.update(
-      name: name,
-      kind: kind,
-      url: url,
-      twitter_name: twitter_name,
-      logo_url: logo_url,
-      description: description,
-      street: street,
-      zip_code: zip_code,
-      city: city)
+    place.update(duplicable_attributes)
   end
 end

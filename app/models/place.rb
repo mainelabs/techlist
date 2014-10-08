@@ -35,6 +35,14 @@ class Place < ActiveRecord::Base
     [street, zip_code, city, country_code].compact.join(', ')
   end
 
+  def duplicable_attributes
+    attributes.except!('id',
+                       'created_at',
+                       'updated_at',
+                       'owner_name',
+                       'owner_email')
+  end
+
   private
 
   def address_changed?
