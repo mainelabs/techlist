@@ -1,6 +1,6 @@
 #panel {
   padding: 0;
-  background-color: $color-background-alternative;
+  background-color: $third-color;
 
   .row {
     margin: 0;
@@ -10,14 +10,32 @@
     padding-right: rem-calc(5);
   }
 
-  p {
-    margin-bottom: rem-calc(5);
-    font-size: rem-calc(13);
+  h1 {
+    background-color: $primary-color;
+    color: $primary-color-text;
+    font-size: rem-calc(26);
+    margin: 0;
+    padding: rem-calc(5) rem-calc(10);
+    font-weight: 300;
+  }
+}
+
+#place {
+  h1 i {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    cursor: pointer;
   }
 
   .header {
     background-color: white;
     padding: rem-calc(10) rem-calc(5);
+
+    p {
+      margin-bottom: rem-calc(5);
+      font-size: rem-calc(13);
+    }
 
     p.street {
       margin-bottom: 0;
@@ -56,16 +74,15 @@
   }
 }
 
-#place {
-  h1 i {
-    position: absolute;
-    right: 5px;
-    top: 8px;
-    cursor: pointer;
-  }
-}
-
 #search {
+  background-color: white;
+  height: 100%;
+
+  .add {
+    padding: rem-calc(10);
+    text-align: center;
+  }
+
   ul.filters {
     padding: rem-calc(10);
     margin: 0;
@@ -74,6 +91,10 @@
       list-style: none;
       padding: 0 0 rem-calc(5) 0;
       margin: 0;
+
+      label {
+        font-size: rem-calc(16);
+      }
 
       input {
         margin-right: rem-calc(10);
