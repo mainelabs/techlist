@@ -9,5 +9,5 @@
             name
 
   .add
-    p Still not on that map ? Add your place now !
-    a href="/places/new" class="button" Add a place
+    p <%= I18n.t('places.messages.not_on_map') %>
+    a href="/places/new" class="button" <%= I18n.t('places.messages.add_a_place') %>

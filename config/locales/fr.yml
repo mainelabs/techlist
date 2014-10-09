@@ -1,12 +1,12 @@
-en:
+fr:
   messages:
-    close: Close
-    or: or
+    close: Fermer
+    or: ou
 
   date:
     formats:
-      default: '%m/%d/%Y'
-      with_weekday: '%a %m/%d/%y'
+      default: '%d/%m/%Y'
+      with_weekday: '%a %d/%m/%y'
 
   time:
     formats:
