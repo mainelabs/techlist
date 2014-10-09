@@ -27,5 +27,9 @@ FactoryGirl.define do
     trait :active do
       state :active
     end
+
+    factory :place_update, class: 'PlaceUpdate' do
+      association :place, factory: [:place, :in_angers_with_coordinates]
+    end
   end
 end
