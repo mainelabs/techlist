@@ -10,7 +10,7 @@ class PlaceUpdate < Place
   end
 
   def self.from_place(place)
-    self.new(place.duplicable_attributes.merge!({ place: place }))
+    self.new(place.duplicable_attributes.merge!(place: place))
   end
 
   private
