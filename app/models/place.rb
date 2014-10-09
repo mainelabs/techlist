@@ -16,6 +16,8 @@ class Place < ActiveRecord::Base
 
   before_save :set_coordinates, if: :geocoding_necessary?
 
+  scope :displayable, -> { active.where(type: nil).where.not(longitude: nil, latitude: nil) }
+
   include AASM
   aasm column: 'state' do
     state :pending, initial: true
