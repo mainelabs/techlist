@@ -20,7 +20,7 @@ App.MarkerClusterLayer = EmberLeaflet.ContainerLayer.extend({
 App.MapView = EmberLeaflet.MapView.extend({
   center: L.latLng(<%= ENV.fetch('MAP_DEFAULT_LAT') %>, <%= ENV.fetch('MAP_DEFAULT_LON') %>),
   zoom: <%= ENV.fetch('MAP_DEFAULT_ZOOM') %>,
-  options: {maxZoom: 19, minZoom: 0},
+  options: {maxZoom: 19, minZoom: 1},
   childLayers: [
     EmberLeaflet.DefaultTileLayer,
     App.MarkerClusterLayer
