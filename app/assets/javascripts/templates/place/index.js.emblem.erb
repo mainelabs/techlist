@@ -1,7 +1,7 @@
 div#place
   h1
     name
-    i.icon-close title="Fermer" click="close"
+    i.icon-close title="<%= I18n.t('messages.close') %>" click="close"
 
   .header.row
     .small-4.columns.logo
@@ -34,5 +34,5 @@ div#place
           him I'm waiting for his data. This will make me happy.
 
   .edit
-    p This place is not up to date ? Update it now !
-    a href="/places/{{unbound id}}/edit" class="button" Update this place
+    p <%= I18n.t('places.messages.not_up_to_date') %>
+    a href="/places/{{unbound id}}/edit" class="button" <%= I18n.t('places.messages.update_this_place') %>

@@ -1,0 +1,54 @@
+fr:
+  kinds:
+    codes:
+      school: Établissement supérieur
+      lab: Laboratoire
+      company: Entreprise
+      media: Media
+      accelerator: Accelerateur
+      incubator: Incubateur
+      coworking: Espace de coworking
+      investor: Investisseur
+      nonprofit: Association
+      cluster: Pôle / Communauté
+  places:
+    messages:
+      or: ou
+      close: Fermer
+      not_on_map: Pas encore sur la carte ? Rajoutez-vous !
+      add_a_place: Ajouter un lieu
+      add_the_place: Ajouter ce lieu
+      not_up_to_date: Il manque des infos ? Mettez à jour !
+      update_a_place: Mettre à jour un lieu
+      update_the_place: Mettre à jour le lieu
+      update_this_place: Mettre à jour ce lieu
+      back_to_map: retourner à la carte
+      place_created: Yea ! Le lieu a été correctement sauvegardé. Nous l'ajouterons à la carte très prochainement, après avoir vérifié vos informations.
+      place_updated: Yea ! Votre demande de mise à jour a été correctement sauvegardée. Nous la validerons sous peu.
+      thanks_for_contributing: Merci de contribuer à ce projet !
+    titles:
+      general_informations: Informations générales
+      description: Description
+      address: Adresse
+      contact_informations: Contact
+    hints:
+      general_informations: Choisissez bien le type de lieu, c'est grace à cette information que nos utilisateurs vous trouveront!
+      description: Décrivez le lieu en quelques mots. Vous pouvez utiliser du markdown pour ajouter du style.
+      address: Le lieu sera automatiquement placé sur la carte en fonction de l'adresse saisie, veillez donc à ce que les informations soient correctes.
+      contact_informations: Nous vérifierons que vous êtes bien le responsable du lieu avec ces informations. L'email doit correspondre à l'adresse de votre site web.
+  simple_form:
+    labels:
+      place: &place
+        name: Nom du lieu
+        kind: Type
+        url: Site web
+        twitter_name: Compte Twitter
+        logo_url: Url du logo
+        description: Description
+        street: Numéro et rue
+        zip_code: Code postal
+        city: Ville
+        owner_name: Votre nom
+        owner_email: Votre adresse email
+      place_update:
+        <<: *place

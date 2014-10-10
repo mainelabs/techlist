@@ -15,8 +15,6 @@ Bundler.require(*Rails.groups)
 
 module Techlist
   class Application < Rails::Application
-    config.i18n.enforce_available_locales = true
-
     config.active_record.default_timezone = :utc
 
     config.generators do |generate|
@@ -34,7 +32,8 @@ module Techlist
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.enforce_available_locales = true
+    config.i18n.default_locale = ENV['LOCALE'] || :en
 
     config.serve_static_assets = true
 

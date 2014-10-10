@@ -6,6 +6,6 @@ class Kind
   end
 
   def self.all
-    codes.map { |code| { id: code, name: code.humanize } }
+    codes.map { |code| { id: code, name: I18n.t("kinds.codes.#{code}") } }
   end
 end

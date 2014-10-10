@@ -1,4 +1,8 @@
 en:
+  messages:
+    close: Close
+    or: or
+
   date:
     formats:
       default: '%m/%d/%Y'

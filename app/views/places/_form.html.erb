@@ -2,20 +2,18 @@
 
 <div class="row">
   <div class="small-12 large-4 columns">
-    <h3>General informations</h3>
-    <p class="hint">You should choose the place type carefully, this is how our users will find you.</p>
-    <p class="hint">You cannot upload a logo right now, give us the url of your best picture !</p>
+    <h3><%= t('places.titles.general_informations') %></h3>
+    <p class="hint"><%= t('places.hints.general_informations') %></p>
   </div>
   <div class="small-12 large-8 columns">
-    <%= f.input :name, label: 'Place name', autofocus: true %>
+    <%= f.input :name, autofocus: true %>
     <%= f.input :kind,
-                label: 'Type',
                 collection: Kind.all,
                 label_method: lambda { |kind| kind[:name] },
                 value_method: lambda { |kind| kind[:id] } %>
-    <%= f.input :url, label: 'Website url' %>
-    <%= f.input :twitter_name, label: 'Twitter name' %>
-    <%= f.input :logo_url, label: 'Logo url' %>
+    <%= f.input :url %>
+    <%= f.input :twitter_name %>
+    <%= f.input :logo_url %>
   </div>
 </div>
 
@@ -23,8 +21,8 @@
 
 <div class="row">
   <div class="small-12 large-4 columns">
-    <h3>Description</h3>
-    <p class="hint">Describe the place in a few words. You can use Markdown for styles.</p>
+    <h3><%= t('places.titles.description') %></h3>
+    <p class="hint"><%= t('places.hints.description') %></p>
   </div>
   <div class="small-12 large-8 columns">
     <%= f.input :description, required: true, input_html: { rows: 10 } %>
@@ -35,8 +33,8 @@
 
 <div class="row">
   <div class="small-12 large-4 columns">
-    <h3>Address</h3>
-    <p class="hint">We will geolocalize automatically your place on the map. Be sure to fill the address fields correctly !</p>
+    <h3><%= t('places.titles.address') %></h3>
+    <p class="hint"><%= t('places.hints.address') %></p>
   </div>
   <div class="small-12 large-8 columns">
     <%= f.input :street %>
@@ -55,11 +53,11 @@
 
 <div class="row">
   <div class="small-12 large-4 columns">
-    <h3>Contact information</h3>
-    <p class="hint">We will check that you're the real place's owner with your contact informations. Please give us an email address corresponding to your place website url.</p>
+    <h3><%= t('places.titles.contact_informations') %></h3>
+    <p class="hint"><%= t('places.hints.contact_informations') %></p>
   </div>
   <div class="small-12 large-8 columns">
-    <%= f.input :owner_name, label: 'Your name', required: true %>
-    <%= f.input :owner_email, label: 'Your email address', required: true %>
+    <%= f.input :owner_name, required: true %>
+    <%= f.input :owner_email, required: true %>
   </div>
 </div>

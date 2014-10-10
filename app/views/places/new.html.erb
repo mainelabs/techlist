@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-12 medium-10 columns medium-centered">
-    <h2>Add a place</h2>
+    <h2><%= t('places.messages.add_a_place') %></h2>
     <hr />
 
     <%= simple_form_for(@place) do |f| %>
@@ -8,9 +8,9 @@
       <%= render partial: 'form', locals: { f: f } %>
 
       <div class="submit">
-        <%= f.button :submit, 'Add the place' %>
-        or
-        <%= link_to 'go back to the map', root_path %>
+        <%= f.button :submit, t('places.messages.add_the_place') %>
+        <%= t('places.messages.or') %>
+        <%= link_to t('places.messages.back_to_map'), root_path %>
       </div>
 
     <% end %>
