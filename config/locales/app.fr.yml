@@ -38,7 +38,7 @@ fr:
       contact_informations: Nous vérifierons que vous êtes bien le responsable du lieu avec ces informations. L'email doit correspondre à l'adresse de votre site web.
   simple_form:
     labels:
-      place:
+      place: &place
         name: Nom du lieu
         kind: Type
         url: Site web
@@ -50,3 +50,5 @@ fr:
         city: Ville
         owner_name: Votre nom
         owner_email: Votre adresse email
+      place_update:
+        <<: *place

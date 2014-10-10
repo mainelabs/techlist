@@ -38,7 +38,7 @@ en:
       contact_informations: We will check that you're the real place's owner with your contact informations. Please give us an email address corresponding to your place website url.
   simple_form:
     labels:
-      place:
+      place: &place
         name: Place name
         kind: Type
         url: Website url
@@ -50,3 +50,5 @@ en:
         city: City
         owner_name: Your name
         owner_email: Your email
+      place_update:
+        <<: *place
