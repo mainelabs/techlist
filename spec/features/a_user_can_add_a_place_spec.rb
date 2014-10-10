@@ -6,24 +6,24 @@ feature 'A user add a place' do
     Place.geocoding_service = double('geocoding service', coordinates: nil)
 
     visit new_place_path
-    fill_in 'Place name', with: place.name
-    select place.kind.humanize, from: 'Type'
-    fill_in 'Description', with: place.description
-    fill_in 'Street', with: place.street
-    fill_in 'Zip code', with: place.zip_code
-    fill_in 'City', with: place.city
-    fill_in 'Your name', with: place.owner_name
-    fill_in 'Your email address', with: place.owner_email
-    click_button 'Add the place'
+    fill_in t('simple_form.labels.place.name'), with: place.name
+    select t('kinds.codes.school'), from: t('simple_form.labels.place.kind')
+    fill_in t('simple_form.labels.place.description'), with: place.description
+    fill_in t('simple_form.labels.place.street'), with: place.street
+    fill_in t('simple_form.labels.place.zip_code'), with: place.zip_code
+    fill_in t('simple_form.labels.place.city'), with: place.city
+    fill_in t('simple_form.labels.place.owner_name'), with: place.owner_name
+    fill_in t('simple_form.labels.place.owner_email'), with: place.owner_email
+    click_button t('places.messages.add_the_place')
 
-    expect(page).to have_content('Your place has correctly been saved')
+    expect(page).to have_content(t('places.messages.place_created'))
   end
 
   scenario 'omit some required fields' do
     Place.geocoding_service = double('geocoding service', coordinates: nil)
 
     visit new_place_path
-    click_button 'Add the place'
+    click_button t('places.messages.add_the_place')
 
     expect(page).to have_content('Please review the problems below')
   end

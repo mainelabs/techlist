@@ -19,7 +19,7 @@ describe CsvImportService do
       importer = CsvImportService.new('Place', Rails.root.join('spec/fixtures/csv/not_valid.csv'))
 
       expect(importer).not_to be_valid
-      expect(importer.errors.full_messages.first).to eq("Data error : Name can't be blank (line 2)")
+      expect(importer.errors.full_messages.first).to eq("Data error : Name #{t('errors.messages.blank')} (line 2)")
     end
   end
 
