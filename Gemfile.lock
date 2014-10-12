@@ -172,6 +172,7 @@ GEM
     rails-assets-jquery (2.1.0)
     rails-assets-leaflet-dist (0.7.2)
     rails-assets-leaflet.markerclusterer (0.4.0)
+    rails-assets-showdown (0.3.1)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
@@ -301,6 +302,7 @@ DEPENDENCIES
   rack-timeout
   rails (~> 4.1.0)
   rails-assets-gabesmed--ember-leaflet
+  rails-assets-showdown
   rails_12factor
   rails_admin
   rails_admin-i18n
