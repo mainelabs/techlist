@@ -23,6 +23,11 @@
     padding: rem-calc(10);
     text-align: center;
   }
+
+  .add {
+    padding-top: 110px;
+    background: image-url('arrow-add.png') no-repeat center top;
+  }
 }
 
 .add, .edit {
