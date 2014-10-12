@@ -1,5 +1,5 @@
 class Kind
-  ALL = ['school', 'lab', 'company', 'media', 'accelerator', 'incubator', 'coworking', 'investor', 'nonprofit', 'cluster']
+  ALL = ['school', 'lab', 'company', 'media', 'accelerator', 'incubator', 'coworking', 'nonprofit', 'cluster']
 
   def self.codes
     ALL
