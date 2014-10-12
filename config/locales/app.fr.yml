@@ -1,4 +1,7 @@
 fr:
+  meta:
+    title: Techlist %{city}
+    description: "Carte des lieux tech : entreprises, écoles, associations, espaces de coworking ... %{count} lieux actuellement. Ajoutez le votre !"
   kinds:
     codes:
       school: Établissement supérieur

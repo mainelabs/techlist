@@ -1,10 +1,37 @@
+<%
+city = ENV.fetch('CITY')
+places_count = Place.displayable.count
+%>
+
 <!DOCTYPE html>
-<html lang="en">
+<html itemscope itemtype="http://schema.org/Article">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title></title>
+    <title><%= t('meta.title', city: city) %></title>
+    <meta name="description" content="<%= t('meta.description', count: places_count) %>" />
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="<%= t('meta.title', city: city) %>">
+    <meta itemprop="description" content="<%= t('meta.description', count: places_count) %>">
+    <meta itemprop="image" content="<%= image_url('map-icon.png') %>">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:site" content="@<%= ENV['TWITTER_ACCOUNT'] %>" >
+    <meta name="twitter:title" content="<%= t('meta.title', city: city) %>">
+    <meta name="twitter:description" content="<%= t('meta.description', count: places_count) %>">
+    <meta name="twitter:creator" content="@<%= ENV['TWITTER_ACCOUNT'] %>">
+    <meta name="twitter:image:src" content="<%= image_url('map-icon.png') %>">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="<%= t('meta.title', city: city) %>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="<%= root_url %>" />
+    <meta property="og:image" content="<%= image_url('map-icon.png') %>" />
+    <meta property="og:description" content="<%= t('meta.description', count: places_count) %>" />
+    <meta property="og:site_name" content="<%= t('meta.title', city: city) %>" />
 
     <%= stylesheet_link_tag 'application' %>
     <%= csrf_meta_tags %>
