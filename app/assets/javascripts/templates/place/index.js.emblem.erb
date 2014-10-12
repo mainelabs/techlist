@@ -40,4 +40,6 @@ div#place
     else
       p <%= I18n.t('places.messages.not_up_to_date') %>
 
-    a href=updateUrl class="button" <%= I18n.t('places.messages.update_this_place') %>
+    a href=updateUrl class="button"
+      i.icon-note
+      | <%= I18n.t('places.messages.update_this_place') %>
