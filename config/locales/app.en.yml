@@ -1,4 +1,7 @@
 en:
+  meta:
+    title: Techlist %{city}
+    description: "Map of tech places : companies, schools, non-profit, coworking places ... %{count} places, right now. Add yours !"
   kinds:
     codes:
       school: School
