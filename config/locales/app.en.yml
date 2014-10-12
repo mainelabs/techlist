@@ -15,10 +15,12 @@ en:
     messages:
       or: or
       close: Close
+      places: places
       not_on_map: Still not on that map ? Add your place now !
       add_a_place: Add a place
       add_the_place: Add the place
       not_up_to_date: This place is not up to date ? Update it now !
+      no_description: Fill the place's description to display it here !
       update_a_place: Update a place
       update_the_place: Update the place
       update_this_place: Update this place

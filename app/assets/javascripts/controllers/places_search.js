@@ -1,4 +1,5 @@
 App.PlacesSearchController = Ember.ArrayController.extend({
+  needs: 'places',
   filters: [],
 
   updateFilters : function(kind) {
@@ -10,5 +11,7 @@ App.PlacesSearchController = Ember.ArrayController.extend({
       }
     });
     this.set('filters', active_filters);
-  }.observes('@each.isSelected')
+  }.observes('@each.isSelected'),
+
+  placesCount: Ember.computed.alias("controllers.places.placesCount")
 });

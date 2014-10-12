@@ -15,10 +15,12 @@ fr:
     messages:
       or: ou
       close: Fermer
+      places: lieux
       not_on_map: Pas encore sur la carte ? Rajoutez-vous !
       add_a_place: Ajouter un lieu
       add_the_place: Ajouter ce lieu
       not_up_to_date: Il manque des infos ? Mettez à jour !
+      no_description: Remplissez la description du lieu pour la faire apparaître ici !
       update_a_place: Mettre à jour un lieu
       update_the_place: Mettre à jour le lieu
       update_this_place: Mettre à jour ce lieu

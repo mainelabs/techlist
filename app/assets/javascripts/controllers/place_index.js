@@ -7,5 +7,9 @@ App.PlaceIndexController = Ember.ObjectController.extend({
 
   updateUrl: function() {
     return '/places/' + this.get('id') + '/edit'
-  }.property('updateUrl', 'model.id')
+  }.property('updateUrl', 'model.id'),
+
+  needsDescription: function() {
+    return this.get('description') ? false : true ;
+  }.property('hasDescription', 'description')
 });

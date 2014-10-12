@@ -7,6 +7,10 @@ App.PlacesController = Ember.ArrayController.extend({
     }
   },
 
+  placesCount: function() {
+    return this.get('places.length');
+  }.property('placesCount', 'places'),
+
   places: function() {
     return this.get('controllers.places_search.filters').length ? this.get('filteredPlaces') : this ;
   }.property('places', 'controllers.places_search.filters'),

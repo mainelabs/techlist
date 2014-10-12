@@ -10,9 +10,10 @@ div#place
       else
         img src="<%= image_url 'no-logo.png' %>" alt="Logo is missing"
     .small-8.columns
-      p.url
-        i.icon-link
-        a href=url target="_blank" = url
+      if url
+        p.url
+          i.icon-link
+          a href=url target="_blank" = url
       p.street
         i.icon-pointer
         span= street
@@ -33,6 +34,12 @@ div#place
         span.placeholder This makes me really, really sad. So, please. If you know this guy. Tell
           him I'm waiting for his data. This will make me happy.
 
-  .edit
-    p <%= I18n.t('places.messages.not_up_to_date') %>
-    a href=updateUrl class="button" <%= I18n.t('places.messages.update_this_place') %>
+  .edit class=needsDescription
+    if needsDescription
+      p <%= I18n.t('places.messages.no_description') %>
+    else
+      p <%= I18n.t('places.messages.not_up_to_date') %>
+
+    a href=updateUrl class="button"
+      i.icon-note
+      | <%= I18n.t('places.messages.update_this_place') %>

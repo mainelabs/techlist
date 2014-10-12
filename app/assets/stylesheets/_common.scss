@@ -2,6 +2,10 @@ h3 {
   font-size: rem-calc(22);
 }
 
+.full-page {
+  padding-top: rem-calc(16);
+}
+
 .hint {
   color: $hint-color-text;
   font-size: rem-calc(14);
@@ -9,4 +13,13 @@ h3 {
 
 .submit {
   margin: 20px 0 ;
+}
+
+.button {
+  @include radius(5px);
+  box-shadow: 0px 4px 0px 0px darken($primary-color, 12);
+
+  i {
+    padding-right: rem-calc(5);
+  }
 }

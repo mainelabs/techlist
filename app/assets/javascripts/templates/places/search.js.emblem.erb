@@ -1,13 +1,19 @@
 #search
   h1 Techlist #<%= ENV.fetch('CITY') %>
 
+  div.stats
+    span.counter= placesCount
+    span <%= I18n.t('places.messages.places') %>
+
   ul.filters
     each controller
-      li
+      li class=isSelected
         label for=id
           view Ember.Checkbox id=id value=id checked=isSelected
             name
 
   .add
     p <%= I18n.t('places.messages.not_on_map') %>
-    a href="/places/new" class="button" <%= I18n.t('places.messages.add_a_place') %>
+    a href="/places/new" class="button"
+      i.icon-plus
+      | <%= I18n.t('places.messages.add_a_place') %>

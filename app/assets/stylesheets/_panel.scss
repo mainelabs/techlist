@@ -22,7 +22,25 @@
   .add, .edit {
     padding: rem-calc(10);
     text-align: center;
+    vertical-align: bottom;
   }
+
+  .add {
+    padding-top: 75px;
+    background: image-url('arrow-add.png') no-repeat center top;
+  }
+
+  .edit.needs-description {
+    padding-top: 110px;
+    background: image-url('arrow-description.png') no-repeat center top;
+  }
+}
+
+.add, .edit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #place {
@@ -82,9 +100,21 @@
 #search {
   background-color: white;
   height: 100%;
+  position: relative;
+
+  .stats {
+    padding: rem-calc(20);
+    text-align: center;
+
+    span.counter {
+      font-size: rem-calc(38);
+      font-weight: 400;
+    }
+  }
 
   ul.filters {
     padding: rem-calc(10);
+    padding-top: 0;
     margin: 0;
 
     li {
@@ -103,6 +133,10 @@
       input[type="checkbox"] {
         vertical-align: bottom;
       }
+    }
+
+    li.is-selected label {
+      font-weight: bold;
     }
   }
 }
