@@ -14,3 +14,8 @@ h3 {
 .submit {
   margin: 20px 0 ;
 }
+
+.button {
+  @include radius(5px);
+  box-shadow: 0px 4px 0px 0px darken($primary-color, 12);
+}
