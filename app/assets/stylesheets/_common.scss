@@ -2,6 +2,10 @@ h3 {
   font-size: rem-calc(22);
 }
 
+.full-page {
+  padding-top: rem-calc(16);
+}
+
 .hint {
   color: $hint-color-text;
   font-size: rem-calc(14);
