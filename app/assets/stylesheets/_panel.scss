@@ -133,5 +133,9 @@
         vertical-align: bottom;
       }
     }
+
+    li.is-selected label {
+      font-weight: bold;
+    }
   }
 }
