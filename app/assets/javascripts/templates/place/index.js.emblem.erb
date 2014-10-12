@@ -10,9 +10,10 @@ div#place
       else
         img src="<%= image_url 'no-logo.png' %>" alt="Logo is missing"
     .small-8.columns
-      p.url
-        i.icon-link
-        a href=url target="_blank" = url
+      if url
+        p.url
+          i.icon-link
+          a href=url target="_blank" = url
       p.street
         i.icon-pointer
         span= street
