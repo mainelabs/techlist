@@ -25,6 +25,13 @@
   }
 }
 
+.add, .edit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 #place {
   h1 i {
     position: absolute;
@@ -82,6 +89,7 @@
 #search {
   background-color: white;
   height: 100%;
+  position: relative;
 
   ul.filters {
     padding: rem-calc(10);
