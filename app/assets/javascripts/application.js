@@ -11,3 +11,10 @@
 
 // for more details see: http://emberjs.com/guides/application/
 App = Ember.Application.create({rootElement: '#ember-app'})
+
+App.showdown = new Showdown.converter();
+
+Ember.Handlebars.helper('markdown', function(input) {
+  if (!input) return '' ;
+  return new Ember.Handlebars.SafeString(App.showdown.makeHtml(input))
+});

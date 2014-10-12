@@ -1,5 +1,5 @@
 div#place
-  h1
+  h1.header
     name
     i.icon-close title="<%= I18n.t('places.messages.close') %>" click="close"
 
@@ -23,7 +23,7 @@ div#place
 
   .content
     if description
-      p= description
+      markdown description
     else
       p
         span.placeholder You know what ? I'm sad.
