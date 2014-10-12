@@ -34,5 +34,9 @@ div#place
           him I'm waiting for his data. This will make me happy.
 
   .edit
-    p <%= I18n.t('places.messages.not_up_to_date') %>
+    if description
+      p <%= I18n.t('places.messages.not_up_to_date') %>
+    else
+      p <%= I18n.t('places.messages.no_description') %>
+
     a href=updateUrl class="button" <%= I18n.t('places.messages.update_this_place') %>
