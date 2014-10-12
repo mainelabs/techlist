@@ -16,7 +16,13 @@ After setting up, you can run the application using [foreman]:
 
     % foreman start
 
+License
+-------
+
+Techlist is released under the [MIT License].
+
 [foreman]: http://ddollar.github.io/foreman/
 [Mainelabs]: http://mainelabs.fr
 [Angers technopole]: http://angerstechnopole.com/
 [Angers]: http://angers.fr
+[MIT License]: http://www.opensource.org/licenses/MIT
