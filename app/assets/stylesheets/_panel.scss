@@ -101,8 +101,19 @@
   height: 100%;
   position: relative;
 
+  .stats {
+    padding: rem-calc(20);
+    text-align: center;
+
+    span.counter {
+      font-size: rem-calc(38);
+      font-weight: 400;
+    }
+  }
+
   ul.filters {
     padding: rem-calc(10);
+    padding-top: 0;
     margin: 0;
 
     li {

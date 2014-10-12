@@ -1,6 +1,10 @@
 #search
   h1 Techlist #<%= ENV.fetch('CITY') %>
 
+  div.stats
+    span.counter= placesCount
+    span <%= I18n.t('places.messages.places') %>
+
   ul.filters
     each controller
       li
