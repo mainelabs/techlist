@@ -28,6 +28,11 @@
     padding-top: 110px;
     background: image-url('arrow-add.png') no-repeat center top;
   }
+
+  .edit.needs-description {
+    padding-top: 110px;
+    background: image-url('arrow-description.png') no-repeat center top;
+  }
 }
 
 .add, .edit {
