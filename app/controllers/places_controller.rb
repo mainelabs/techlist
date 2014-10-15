@@ -15,11 +15,11 @@ class PlacesController < ApplicationController
   end
 
   def edit
-    @place_update = PlaceUpdate.from_place(Place.find(params[:id]))
+    @place_update = PlaceUpdate.from_place(Place.displayable.find(params[:id]))
   end
 
   def update
-    @place_update = PlaceUpdate.from_place(Place.find(params[:id]))
+    @place_update = PlaceUpdate.from_place(Place.displayable.find(params[:id]))
     @place_update.attributes = place_params(:place_update)
 
     if !@place_update.save(context: :user_input)
