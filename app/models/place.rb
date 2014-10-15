@@ -40,6 +40,7 @@ class Place < ActiveRecord::Base
   def duplicable_attributes
     attributes.except!('id',
                        'type',
+                       'state',
                        'created_at',
                        'updated_at',
                        'owner_name',
