@@ -1,4 +1,22 @@
+require Rails.root.join('lib', 'rails_admin/accept_update.rb')
+require Rails.root.join('lib', 'rails_admin/reject_update.rb')
+
 RailsAdmin.config do |config|
+
+  module RailsAdmin
+    module Config
+      module Actions
+        class AcceptUpdate < RailsAdmin::Config::Actions::Base
+          RailsAdmin::Config::Actions.register(self)
+        end
+
+        class RejectUpdate < RailsAdmin::Config::Actions::Base
+          RailsAdmin::Config::Actions.register(self)
+        end
+      end
+    end
+  end
+
   config.authenticate_with do
     warden.authenticate! scope: :user
   end
@@ -8,6 +26,20 @@ RailsAdmin.config do |config|
   end
 
   config.current_user_method(&:current_user)
+
+  RailsAdmin.config do |config|
+    config.actions do
+      dashboard
+      index
+      new
+
+      show
+      accept_update
+      reject_update
+      edit
+      delete
+    end
+  end
 
   config.model Place do
     list do

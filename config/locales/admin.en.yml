@@ -1,0 +1,9 @@
+fr:
+  admin:
+    actions:
+      accept_update:
+        menu: Apply
+        flash: You have applied the place update for %{name}
+      reject_update:
+        menu: Reject
+        flash: You have rejected the place update for %{name}

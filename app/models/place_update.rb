@@ -4,6 +4,14 @@ class PlaceUpdate < Place
   validates :place, presence: true
 
   aasm column: 'state' do
+    state :pending, initial: true
+    state :active
+    state :rejected
+
+    event :accept do
+      transitions from: :pending, to: :active
+    end
+
     event :accept do
       transitions from: :pending, to: :active, on_transition: :apply_update
     end

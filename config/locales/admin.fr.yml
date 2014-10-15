@@ -1,0 +1,9 @@
+fr:
+  admin:
+    actions:
+      accept_update:
+        menu: 'Appliquer'
+        flash: 'Vous avez appliqué la mise à jour pour le lieu %{name}'
+      reject_update:
+        menu: 'Refuser'
+        flash: 'Vous avez refusé la mise à jour pour le lieu %{name}'
