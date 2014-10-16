@@ -1,5 +1,6 @@
 FactoryGirl.define do
-  factory :place do
+  factory :place_update do
+    association :place, factory: [:place, :in_angers_with_coordinates]
     name 'Craftsmen Angers'
     kind Kind.codes.first
     state :pending
@@ -15,13 +16,6 @@ FactoryGirl.define do
       street '25 rue Lenepveu'
       city 'Angers'
       zip_code '49100'
-      country_code 'FR'
-    end
-
-    trait :in_angers_with_coordinates do
-      in_angers
-      latitude 48.8724029
-      longitude 2.7768103
     end
 
     trait :active do

@@ -7,7 +7,6 @@ class Place < ActiveRecord::Base
   validates :street, presence: true
   validates :zip_code, presence: true
   validates :city, presence: true
-
   validates :description, presence: true, on: :user_input
   validates :owner_name, presence: true, on: :user_input
   validates :owner_email, presence: true, on: :user_input
@@ -16,7 +15,7 @@ class Place < ActiveRecord::Base
 
   before_save :set_coordinates, if: :geocoding_necessary?
 
-  scope :displayable, -> { active.where(type: nil).where.not(longitude: nil, latitude: nil) }
+  scope :displayable, -> { active.where.not(longitude: nil, latitude: nil) }
 
   include AASM
   aasm column: 'state' do
@@ -35,16 +34,6 @@ class Place < ActiveRecord::Base
 
   def address
     [street, zip_code, city, country_code].compact.join(', ')
-  end
-
-  def duplicable_attributes
-    attributes.except!('id',
-                       'type',
-                       'state',
-                       'created_at',
-                       'updated_at',
-                       'owner_name',
-                       'owner_email')
   end
 
   private

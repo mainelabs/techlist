@@ -11,7 +11,7 @@ describe Place do
         create(:place, :in_angers_with_coordinates, state: :active)
         create(:place, :in_angers_with_coordinates)
         create(:place, state: :active)
-        create(:place_update, :in_angers_with_coordinates, state: :active)
+        create(:place_update, :in_angers, state: :active)
 
         expect(Place.displayable.size).to eq(1)
     end
