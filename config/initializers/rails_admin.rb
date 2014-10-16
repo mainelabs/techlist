@@ -98,9 +98,6 @@ RailsAdmin.config do |config|
       field :street
       field :zip_code
       field :city
-      field :country_code
-      field :latitude
-      field :longitude
       field :url
       field :twitter_name
       field :logo_url
