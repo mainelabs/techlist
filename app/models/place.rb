@@ -1,16 +1,8 @@
 class Place < ActiveRecord::Base
+  include PlaceConcern
+
   class_attribute :geocoding_service
   self.geocoding_service = Geocoder
-
-  validates :name, presence: true
-  validates :kind, presence: true, inclusion: { in: Kind.codes }
-  validates :street, presence: true
-  validates :zip_code, presence: true
-  validates :city, presence: true
-  validates :description, presence: true, on: :user_input
-  validates :owner_name, presence: true, on: :user_input
-  validates :owner_email, presence: true, on: :user_input
-
   geocoded_by :address
 
   before_save :set_coordinates, if: :geocoding_necessary?
