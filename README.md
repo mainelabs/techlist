@@ -5,6 +5,7 @@ This project aims to provide a way to visualize on a map startups and digital co
 
 Feel free to use it for your own city, we'll be happy to see our work used by other organizations!
 
+
 Getting Started
 ---------------
 
@@ -18,6 +19,14 @@ A few things are required on your machine before starting:
 You can then execute the setup script contained in the repository:
 
     % ./bin/setup
+
+Before launching the app, you should get a Google Maps API key. Everything is explained here : https://developers.google.com/maps/documentation/javascript/tutorial?hl=FR#api_key. Once this is done, you just have to add the key to your `.env` file :
+
+```
+  GOOGLE_MAPS_KEY=they_key_should_be_here
+```
+
+> Note that this step is not required : the file `.sample.env` comes with a generic key, working for the domain `localhost`. But you really should generate your own key.
 
 After setting up, you can run the application using [foreman]:
 
