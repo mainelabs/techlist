@@ -1,6 +1,12 @@
 // This is a hack to have working markers on Heroku
 L.Icon.Default.imagePath = 'leaflet';
 
+App.GoogleMapLayer = EmberLeaflet.Layer.extend({
+  _newLayer: function() {
+    return new L.Google('ROADMAP');
+  }
+});
+
 App.MarkerLayer = EmberLeaflet.MarkerLayer.extend({
     click: function() { this.get('controller').send('click', this.content) }
 });
@@ -22,7 +28,7 @@ App.MapView = EmberLeaflet.MapView.extend({
   zoom: <%= ENV.fetch('MAP_DEFAULT_ZOOM') %>,
   options: {maxZoom: 17, minZoom: 1},
   childLayers: [
-    EmberLeaflet.DefaultTileLayer,
+    App.GoogleMapLayer,
     App.MarkerClusterLayer
   ]
 });

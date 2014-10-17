@@ -5,6 +5,7 @@
 //= require leaflet-dist
 //= require ember-leaflet
 //= require leaflet.markerclusterer/dist/leaflet.markercluster
+//= require leaflet-plugins/layer/tile/Google
 //= require showdown
 //= require_self
 //= require ./app
