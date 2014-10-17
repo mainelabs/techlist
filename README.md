@@ -3,18 +3,27 @@ Techlist
 
 This project aims to provide a way to visualize on a map startups and digital companies around a city. It has been created by [Mainelabs] and [Angers technopole] developers for [Angers], France.
 
-Feel free to use it for your own city, we'll be happy to see our work used by other organizations !
+Feel free to use it for your own city, we'll be happy to see our work used by other organizations!
 
 Getting Started
 ---------------
 
-This repository comes equipped with a self-setup script:
+A few things are required on your machine before starting:
+
+* [ruby](https://www.ruby-lang.org/) v2.1.2
+* [bundler](http://bundler.io/)
+* [Qt](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit) for the capybara gem.
+* [PostgreSQL](http://www.postgresql.org/download/) for the pg gem. Depending on your environment, you might have some [additional libs](http://stackoverflow.com/questions/6040583/cant-find-the-libpq-fe-h-header-when-trying-to-install-pg-gem) to install. Make also sure you have created a postgres user having the same name as your OS username.
+
+You can then execute the setup script contained in the repository:
 
     % ./bin/setup
 
 After setting up, you can run the application using [foreman]:
 
     % foreman start
+
+And go check [http://localhost:7000](http://localhost:7000) in your browser.
 
 License
 -------
