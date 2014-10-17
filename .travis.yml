@@ -1,6 +1,9 @@
 language: ruby
 rvm: 2.1.2
-cache: bundler
+
+cache:
+  directories:
+  - vendor/bundle
 
 before_install:
   - "echo 'gem: --no-document' > ~/.gemrc"
