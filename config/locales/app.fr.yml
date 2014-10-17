@@ -1,14 +1,14 @@
 fr:
   meta:
     title: Techlist %{city}
-    description: "Carte des lieux tech : entreprises, écoles, associations, espaces de coworking ... %{count} lieux actuellement. Ajoutez le votre !"
+    description: "Carte des lieux tech : entreprises, écoles, associations, espaces de coworking… %{count} lieux actuellement. Ajoutez le votre !"
   kinds:
     codes:
       school: Établissement supérieur
       lab: Laboratoire
       company: Entreprise
-      media: Media
-      accelerator: Accelerateur
+      media: Média
+      accelerator: Accélérateur
       incubator: Incubateur
       coworking: Espace de coworking
       investor: Investisseur
@@ -37,7 +37,7 @@ fr:
       address: Adresse
       contact_informations: Contact
     hints:
-      general_informations: Choisissez bien le type de lieu, c'est grace à cette information que nos utilisateurs vous trouveront!
+      general_informations: Choisissez bien le type de lieu, c'est grace à cette information que nos utilisateurs vous trouveront !
       description: Décrivez le lieu en quelques mots. Vous pouvez utiliser du markdown pour ajouter du style.
       address: Le lieu sera automatiquement placé sur la carte en fonction de l'adresse saisie, veillez donc à ce que les informations soient correctes.
       contact_informations: Nous vérifierons que vous êtes bien le responsable du lieu avec ces informations. L'email doit correspondre à l'adresse de votre site web.
