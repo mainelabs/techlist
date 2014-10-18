@@ -26,13 +26,11 @@ div#place
       markdown description
     else
       p
-        span.placeholder You know what ? I'm sad.
+        span.placeholder <%= I18n.t('places.messages.im_sad') %>
       p
-        span.placeholder I'm sad 'cause this part of this web page should not be empty, but nobody has told me
-          what I should display here. Maybe nobody knows I exists ?
+        span.placeholder <%= I18n.t('places.messages.i_should_not_be_empty') %>
       p
-        span.placeholder This makes me really, really sad. So, please. If you know this guy. Tell
-          him I'm waiting for his data. This will make me happy.
+        span.placeholder <%= I18n.t('places.messages.please_gimme_data') %>
 
   .edit class=needsDescription
     if needsDescription

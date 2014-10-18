@@ -24,6 +24,9 @@ fr:
       add_the_place: Ajouter ce lieu
       not_up_to_date: Il manque des infos ? Mettez à jour !
       no_description: Remplissez la description du lieu pour la faire apparaître ici !
+      im_sad: Vous savez quoi ? Je suis triste.
+      i_should_not_be_empty: J'suis triste car cette partie ne devrait pas être vide, mais personne ne m'a dit quoi mettre là… Est-ce que quelqu'un sait au moins que j'existe ?
+      please_gimme_data: Ça me rend vraiment, vraiment triste. Alors s'il vous plait, si vous connaissez cette personne, dites-lui que j'attends ses données. Ça me rendra heureux.
       update_a_place: Mettre à jour un lieu
       update_the_place: Mettre à jour le lieu
       update_this_place: Mettre à jour ce lieu

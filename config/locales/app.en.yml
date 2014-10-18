@@ -24,6 +24,11 @@ en:
       add_the_place: Add the place
       not_up_to_date: This place is not up to date? Update it now!
       no_description: Fill the place's description to display it here!
+      im_sad: You know what? I'm sad.
+      i_should_not_be_empty: I'm sad 'cause this part of this web page should not be empty, but nobody has told me
+          what I should display here. Maybe nobody knows I exists?
+      please_gimme_data: This makes me really, really sad. So, please. If you know this guy. Tell
+          him I'm waiting for his data. This will make me happy.
       update_a_place: Update a place
       update_the_place: Update the place
       update_this_place: Update this place
