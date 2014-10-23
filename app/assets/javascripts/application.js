@@ -8,13 +8,19 @@
 //= require leaflet-plugins/layer/tile/Google
 //= require showdown
 //= require_self
-//= require ./app
 
-// for more details see: http://emberjs.com/guides/application/
+//= require ./store
+//= require_tree ./models
+//= require_tree ./controllers
+//= require_tree ./views
+//= require_tree ./templates
+//= require ./router
+//= require_tree ./routes
+
 App = Ember.Application.create({rootElement: '#ember-app'})
 
+// Markdown JS
 App.showdown = new Showdown.converter();
-
 Ember.Handlebars.helper('markdown', function(input) {
   if (!input) return '' ;
   return new Ember.Handlebars.SafeString(App.showdown.makeHtml(input))
