@@ -41,12 +41,11 @@
     flex: 0 0.5 auto;
     justify-content: flex-end;
     padding-top: 8px;
+    padding-bottom: 8px;
     text-align: center;
     vertical-align: bottom;
-
-    @media (min-height: 550px) {
-      height: 130px;
-    }
+    overflow: visible;
+    position: relative;
 
     .submit-message {
       @media (max-height: 550px) {
@@ -64,15 +63,27 @@
     }
   }
 
-  /* .add {
-    padding-top: 75px;
+  .arrow {
+    z-index: 100;
+    height: 100px;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+    @media (max-height: 550px) {
+      display: none;
+    }
+  }
+
+  .add .arrow {
+    top: -60px;
     background: image-url('arrow-add.png') no-repeat center top;
   }
 
-  .edit.needs-description {
-    padding-top: 110px;
+  .edit.needs-description  .arrow {
+    top: -100px;
     background: image-url('arrow-description.png') no-repeat center top;
-  } */
+  }
 }
 
 #place {
