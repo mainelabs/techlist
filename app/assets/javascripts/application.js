@@ -17,7 +17,15 @@
 //= require ./router
 //= require_tree ./routes
 
-App = Ember.Application.create({rootElement: '#ember-app'})
+App = Ember.Application.create({rootElement: '#ember-app'});
+
+App.ApplicationController = Ember.Controller.extend({
+  needs: 'place_index',
+  
+  displayPlace : function() {
+    return this.get('currentPath') == 'places.place.index';
+  }.property('displayPlace','currentPath')
+});
 
 // Markdown JS
 App.showdown = new Showdown.converter();
