@@ -1,6 +1,7 @@
 #panel {
   padding: 0;
   background-color: $third-color;
+  height: 100%;
 
   .row {
     margin: 0;
@@ -10,6 +11,13 @@
     padding-right: rem-calc(5);
   }
 
+  .sidebar {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
   h1.header {
     background-color: $primary-color;
     color: $primary-color-text;
@@ -17,15 +25,46 @@
     margin: 0;
     padding: rem-calc(5) rem-calc(10);
     font-weight: 300;
+
   }
 
-  .add, .edit {
-    padding: rem-calc(10);
+  .top {
+    flex: 0 0 44px;
+  }
+
+  .content {
+    flex-grow: 8;
+    overflow-y: scroll;
+  }
+
+  .bottom {
+    flex: 0 0.5 auto;
+    justify-content: flex-end;
+    padding-top: 8px;
     text-align: center;
     vertical-align: bottom;
+
+    @media (min-height: 550px) {
+      height: 130px;
+    }
+
+    .submit-message {
+      @media (max-height: 550px) {
+        display: none;
+      }
+    }
+
+    .button {
+      @media (max-height: 400px) {
+        background: none;
+        border: none;
+        box-shadow: none;
+        color: $primary-color;
+      }
+    }
   }
 
-  .add {
+  /* .add {
     padding-top: 75px;
     background: image-url('arrow-add.png') no-repeat center top;
   }
@@ -33,14 +72,7 @@
   .edit.needs-description {
     padding-top: 110px;
     background: image-url('arrow-description.png') no-repeat center top;
-  }
-}
-
-.add, .edit {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  } */
 }
 
 #place {
@@ -51,7 +83,7 @@
     cursor: pointer;
   }
 
-  .header {
+  .summary {
     background-color: white;
     padding: rem-calc(10) rem-calc(5);
 
@@ -87,7 +119,7 @@
     }
   }
 
-  .content {
+  .description {
     padding: rem-calc(10);
 
     .placeholder {
@@ -120,10 +152,6 @@
 }
 
 #search {
-  background-color: white;
-  height: 100%;
-  position: relative;
-
   .stats {
     padding: rem-calc(20);
     text-align: center;
