@@ -1,7 +1,7 @@
 en:
   meta:
     title: Techlist %{city}
-    description: "Map of tech places : companies, schools, non-profit, coworking places ... %{count} places, right now. Add yours !"
+    description: "Map of tech places: companies, schools, non-profit, coworking places… %{count} places, right now. Add yours!"
   kinds:
     codes:
       school: School
@@ -19,28 +19,33 @@ en:
       or: or
       close: Close
       places: places
-      not_on_map: Still not on that map ? Add your place now !
+      not_on_map: Still not on that map? Add your place now!
       add_a_place: Add a place
       add_the_place: Add the place
-      not_up_to_date: This place is not up to date ? Update it now !
-      no_description: Fill the place's description to display it here !
+      not_up_to_date: This place is not up to date? Update it now!
+      no_description: Fill the place's description to display it here!
+      im_sad: You know what? I'm sad.
+      i_should_not_be_empty: I'm sad 'cause this part of this web page should not be empty, but nobody has told me
+          what I should display here. Maybe nobody knows I exists?
+      please_gimme_data: This makes me really, really sad. So, please. If you know this guy. Tell
+          him I'm waiting for his data. This will make me happy.
       update_a_place: Update a place
       update_the_place: Update the place
       update_this_place: Update this place
       back_to_map: go back to the map
-      place_created: Well done ! Your place has correctly been saved. We'll add it to the map soon, after we have checked all the informations you have provided.
-      place_updated: Well done ! Your place update has correctly been saved. We'll check it and validate it soon.
-      thanks_for_contributing: Thanks for your contribution !
+      place_created: Well done! Your place has correctly been saved. We'll add it to the map soon, after we have checked all the information you have provided.
+      place_updated: Well done! Your place update has correctly been saved. We'll check it and validate it soon.
+      thanks_for_contributing: Thanks for your contribution!
     titles:
-      general_informations: General informations
+      general_informations: General information
       description: Description
       address: Address
-      contact_informations: Contact informations
+      contact_informations: Contact information
     hints:
       general_informations: You should choose the place type carefully, this is how our users will find you.
       description: Describe the place in a few words. You can use Markdown for styles.
-      address: We will geolocalize automatically your place on the map. Be sure to fill the address fields correctly !
-      contact_informations: We will check that you're the real place's owner with your contact informations. Please give us an email address corresponding to your place website url.
+      address: We will automatically geolocalize your place on the map. Be sure to fill the address fields correctly!
+      contact_informations: We will check that you're the real place's owner with your contact information. Please give us an email address corresponding to your place website url.
   simple_form:
     labels:
       place: &place
