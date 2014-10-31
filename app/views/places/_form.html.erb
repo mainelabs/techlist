@@ -6,7 +6,7 @@
     <p class="hint"><%= t('places.hints.general_informations') %></p>
   </div>
   <div class="small-12 large-8 columns">
-    <%= f.input :name, autofocus: true %>
+    <%= f.input :name %>
     <%= f.input :kind,
                 collection: Kind.all,
                 label_method: lambda { |kind| kind[:name] },

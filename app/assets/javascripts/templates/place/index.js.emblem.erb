@@ -1,42 +1,45 @@
-div#place
-  h1.header
+#place.sidebar
+  h1.header.top
     name
     i.icon-close title="<%= I18n.t('places.messages.close') %>" click="close"
 
-  .header.row
-    .small-4.columns.logo
-      if logo_url
-        img src=logo_url alt="Logo"
-      else
-        img src="<%= image_url 'no-logo.png' %>" alt="Logo is missing"
-    .small-8.columns
-      if url
-        p.url
-          i.icon-link
-          a href=url target="_blank" = url
-      p.street
-        i.icon-pointer
-        span= street
-      p.city
-        span= zipCode
-        span= city
-
   .content
-    if description
-      markdown description
-    else
-      p
-        span.placeholder <%= I18n.t('places.messages.im_sad') %>
-      p
-        span.placeholder <%= I18n.t('places.messages.i_should_not_be_empty') %>
-      p
-        span.placeholder <%= I18n.t('places.messages.please_gimme_data') %>
+    .summary.row
+      .small-4.columns.logo
+        if logo_url
+          img src=logo_url alt="Logo"
+        else
+          img src="<%= image_url 'no-logo.png' %>" alt="Logo is missing"
+      .small-8.columns
+        if url
+          p.url
+            i.icon-link
+            a href=url target="_blank" = url
+        p.street
+          i.icon-pointer
+          span= street
+        p.city
+          span= zipCode
+          span= city
 
-  .edit class=needsDescription
-    if needsDescription
-      p <%= I18n.t('places.messages.no_description') %>
-    else
-      p <%= I18n.t('places.messages.not_up_to_date') %>
+    .description
+      if description
+        markdown description
+      else
+        p
+          span.placeholder <%= I18n.t('places.messages.im_sad') %>
+        p
+          span.placeholder <%= I18n.t('places.messages.i_should_not_be_empty') %>
+        p
+          span.placeholder <%= I18n.t('places.messages.please_gimme_data') %>
+
+  .bottom.edit class=needsDescription
+    .arrow
+    p.submit-message
+      if needsDescription
+        | <%= I18n.t('places.messages.no_description') %>
+      else
+        | <%= I18n.t('places.messages.not_up_to_date') %>
 
     a href=updateUrl class="button"
       i.icon-note

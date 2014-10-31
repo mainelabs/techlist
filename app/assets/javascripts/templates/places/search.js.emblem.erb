@@ -1,19 +1,21 @@
-#search
-  h1.header Techlist #<%= ENV.fetch('CITY') %>
+#search.sidebar
+  h1.header.top Techlist #<%= ENV.fetch('CITY') %>
 
-  div.stats
-    span.counter= placesCount
-    span <%= I18n.t('places.messages.places') %>
+  .content
+    .stats
+      span.counter= placesCount
+      span <%= I18n.t('places.messages.places') %>
 
-  ul.filters
-    each controller
-      li class=isSelected
-        label for=id
-          view Ember.Checkbox id=id value=id checked=isSelected
-            name
+    ul.filters
+      each controller
+        li class=isSelected
+          label for=id
+            view Ember.Checkbox id=id value=id checked=isSelected
+              name
 
-  .add
-    p <%= I18n.t('places.messages.not_on_map') %>
+  .bottom.add
+    .arrow
+    p.submit-message <%= I18n.t('places.messages.not_on_map') %>
     a href="/places/new" class="button"
       i.icon-plus
       | <%= I18n.t('places.messages.add_a_place') %>
