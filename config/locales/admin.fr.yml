@@ -1,8 +1,14 @@
 fr:
   admin:
     actions:
+      accept_place:
+        menu: 'Accepter'
+        flash: 'Vous avez accepté le lieu %{name}'
+      reject_place:
+        menu: 'Refuser'
+        flash: 'Vous avez refusé le lieu %{name}'
       accept_update:
-        menu: 'Appliquer'
+        menu: 'Accepter'
         flash: 'Vous avez appliqué la mise à jour pour le lieu %{name}'
       reject_update:
         menu: 'Refuser'
