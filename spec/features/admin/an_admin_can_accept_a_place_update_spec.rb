@@ -7,7 +7,7 @@ feature 'An admin accepts a place update' do
 
     visit rails_admin.edit_path(model_name: 'PlaceUpdate', id: active.id)
 
-    expect(page).to_not have_link(t('admin.actions.accept_update.menu'))
+    expect(page).to_not have_link(t('admin.actions.accept.menu'))
   end
 
   scenario 'pending place updates have the accept link' do
@@ -16,7 +16,7 @@ feature 'An admin accepts a place update' do
 
     visit rails_admin.edit_path(model_name: 'PlaceUpdate', id: pending.id)
 
-    expect(page).to have_link(t('admin.actions.accept_update.menu'))
+    expect(page).to have_link(t('admin.actions.accept.menu'))
   end
 
   scenario 'accepts the update' do
@@ -24,7 +24,7 @@ feature 'An admin accepts a place update' do
     login_as(create(:admin))
 
     visit rails_admin.edit_path(model_name: 'PlaceUpdate', id: pending.id)
-    click_link(t('admin.actions.accept_update.menu'))
+    click_link(t('admin.actions.accept.menu'))
 
     pending.reload
     expect(pending).to be_active

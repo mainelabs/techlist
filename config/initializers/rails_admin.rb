@@ -1,26 +1,16 @@
-require Rails.root.join('lib', 'rails_admin/accept_place.rb')
-require Rails.root.join('lib', 'rails_admin/reject_place.rb')
-require Rails.root.join('lib', 'rails_admin/accept_update.rb')
-require Rails.root.join('lib', 'rails_admin/reject_update.rb')
+require Rails.root.join('lib', 'rails_admin/accept.rb')
+require Rails.root.join('lib', 'rails_admin/reject.rb')
 
 RailsAdmin.config do |config|
 
   module RailsAdmin
     module Config
       module Actions
-        class AcceptPlace < RailsAdmin::Config::Actions::Base
+        class Accept < RailsAdmin::Config::Actions::Base
           RailsAdmin::Config::Actions.register(self)
         end
 
-        class RejectPlace < RailsAdmin::Config::Actions::Base
-          RailsAdmin::Config::Actions.register(self)
-        end
-
-        class AcceptUpdate < RailsAdmin::Config::Actions::Base
-          RailsAdmin::Config::Actions.register(self)
-        end
-
-        class RejectUpdate < RailsAdmin::Config::Actions::Base
+        class Reject < RailsAdmin::Config::Actions::Base
           RailsAdmin::Config::Actions.register(self)
         end
       end
@@ -44,10 +34,8 @@ RailsAdmin.config do |config|
       new
 
       show
-      accept_place
-      reject_place
-      accept_update
-      reject_update
+      accept
+      reject
       edit
       delete
     end

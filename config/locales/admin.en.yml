@@ -1,15 +1,15 @@
 fr:
   admin:
     actions:
-      accept_place:
+      accept:
         menu: Accept
+      reject:
+        menu: Reject
+      accept_place:
         flash: You have accepted the place %{name}
       reject_place:
-        menu: Reject
         flash: You have rejected the place %{name}
-      accept_update:
-        menu: Accept
+      accept_place_update:
         flash: You have applied the place update for %{name}
-      reject_update:
-        menu: Reject
+      reject_place_update:
         flash: You have rejected the place update for %{name}
