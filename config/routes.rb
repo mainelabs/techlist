@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/feed', to: 'api/v1/places#index', defaults: { format: 'atom' }
   get '*path', to: 'places#index'
 end
