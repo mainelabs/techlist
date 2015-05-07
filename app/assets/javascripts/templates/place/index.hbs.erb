@@ -1,0 +1,66 @@
+<div id="place" class="sidebar">
+  <h1 class="header top">
+    {{name}}
+    <i class="icon-close" title="<%= I18n.t('places.messages.close') %>" on-click="{{close}}"></i>
+  </h1>
+
+  <div class="content">
+    <div class="summary row">
+      <div class="small-4 columns logo">
+        {{#if logo_url}}
+          <img src="{{logo_url}}" alt="Logo" />
+        {{else}}
+          <img src="<%= image_url 'no-logo.png' %>" alt="Logo is missing" />
+        {{/if}}
+      </div>
+      <div class="small-8 columns">
+        {{#if url}}
+          <p class="url">
+            <i class="icon-link"></i>
+            <a href="{{url}}" target="_blank">{{url}}</a>
+          </p>
+        {{/if}}
+        <p class="street">
+          <i class="icon-pointer"></i>
+          <span>{{street}}</span>
+        </p>
+        <p class="city">
+          <span>{{zipCode}}</span>
+          <span>{{city}}</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="description">
+      {{#if description}}
+        {{markdown description}}
+      {{else}}
+        <p>
+          <span class="placeholder"><%= I18n.t('places.messages.im_sad') %></span>
+        </p>
+        <p>
+          <span class="placeholder"><%= I18n.t('places.messages.i_should_not_be_empty') %></span>
+        </p>
+        <p>
+          <span class="placeholder"><%= I18n.t('places.messages.please_gimme_data') %></span>
+        </p>
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="bottom edit {{needsDescription}}">
+    <div class="arrow"></div>
+    <p class="submit-message">
+      {{#if needsDescription}}
+        <%= I18n.t('places.messages.no_description') %>
+      {{else}}
+        <%= I18n.t('places.messages.not_up_to_date') %>
+      {{/if}}
+    </p>
+
+    <a href="{{updateUrl}}" class="button">
+      <i class="icon-note"></i>
+      <%= I18n.t('places.messages.update_this_place') %>
+    </a>
+  </div>
+</div>

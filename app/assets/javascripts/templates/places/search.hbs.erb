@@ -1,0 +1,32 @@
+<div id="search" class="sidebar">
+  <h1 class="header top">Techlist #<%= ENV.fetch('CITY') %></h1>
+
+  <div class="content">
+    <div class="stats">
+      <span class="counter">{{placesCount}}</span>
+      <span><%= I18n.t('places.messages.places') %></span>
+    </div>
+
+    <ul class="filters">
+      {{#each controller}}
+        <li class="{{isSelected}}">
+          <label for="{{id}}">
+            {{#view Ember.Checkbox id=id value=id checked=isSelected}}
+              {{name}}
+            {{/view}}
+          </label>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="bottom add">
+    <div class="arrow">
+      <p class="submit-message"><%= I18n.t('places.messages.not_on_map') %></p>
+      <a href="/places/new" class="button">
+        <i class="icon-plus"></i>
+        <%= I18n.t('places.messages.add_a_place') %>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,0 @@
-#map-app.row.full-height class=displayPlace
-  = outlet
