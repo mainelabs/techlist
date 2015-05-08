@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-ruby '2.1.2'
+ruby '2.2.2'
 
 gem 'active_model_serializers'
 gem 'aasm'
@@ -11,7 +11,7 @@ gem 'devise'
 gem 'email_validator'
 gem 'ember-rails'
 gem 'ember-source'
-gem 'foundation-rails', '~> 5.0'
+gem 'foundation-rails', '~> 5.3.0'
 gem 'geocoder'
 gem 'high_voltage'
 gem 'jquery-rails'
