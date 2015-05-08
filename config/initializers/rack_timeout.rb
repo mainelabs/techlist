@@ -1,1 +1,3 @@
-Rack::Timeout.timeout = (ENV['TIMEOUT_IN_SECONDS'] || 5).to_i
+if Rails.env.production? || Rails.env.staging?
+  Rack::Timeout.timeout = (ENV['RACK_TIMEOUT'] || 10).to_i
+end
