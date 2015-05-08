@@ -12,7 +12,7 @@ class PlaceUpdate < ActiveRecord::Base
     state :rejected
 
     event :accept do
-      transitions from: :pending, to: :active, on_transition: :apply_update
+      transitions from: :pending, to: :active, after: :apply_update
     end
 
     event :reject do
