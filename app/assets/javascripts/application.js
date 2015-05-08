@@ -1,5 +1,4 @@
 //= require jquery
-//= require handlebars
 //= require ember
 //= require ember-data
 //= require leaflet-dist
@@ -21,7 +20,7 @@ App = Ember.Application.create({rootElement: '#ember-app'});
 
 App.ApplicationController = Ember.Controller.extend({
   needs: 'place_index',
-  
+
   displayPlace : function() {
     return this.get('currentPath') == 'places.place.index';
   }.property('displayPlace','currentPath')
