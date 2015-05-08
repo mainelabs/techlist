@@ -2,7 +2,7 @@ App.PlacesSearchController = Ember.ArrayController.extend({
   needs: 'places',
   filters: [],
 
-  updateFilters : function(kind) {
+  updateFilters : function() {
     // This could be far more elegant
     active_filters = []
     this.get('content').forEach(function(kind) {
@@ -13,5 +13,5 @@ App.PlacesSearchController = Ember.ArrayController.extend({
     this.set('filters', active_filters);
   }.observes('@each.isSelected'),
 
-  placesCount: Ember.computed.alias("controllers.places.placesCount")
+  placesCount: Ember.computed.alias('controllers.places.placesCount')
 });

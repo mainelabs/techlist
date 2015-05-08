@@ -1,12 +1,12 @@
-App.PlaceIndexController = Ember.ObjectController.extend({
+App.PlaceIndexController = Ember.Controller.extend({
   actions : {
     close: function() {
-      this.transitionToRoute('places')
+      this.transitionToRoute('places');
     }
   },
 
   updateUrl: function() {
-    return '/places/' + this.get('id') + '/edit'
+    return '/places/' + this.get('model.id') + '/edit';
   }.property('updateUrl', 'model.id'),
 
   needsDescription: function() {

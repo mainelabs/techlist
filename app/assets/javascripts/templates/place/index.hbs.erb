@@ -1,39 +1,39 @@
 <div id="place" class="sidebar">
   <h1 class="header top">
-    {{name}}
-    <i class="icon-close" title="<%= I18n.t('places.messages.close') %>" on-click="{{close}}"></i>
+    {{model.name}}
+    <i class="icon-close" title="<%= I18n.t('places.messages.close') %>" {{action 'close'}}></i>
   </h1>
 
   <div class="content">
     <div class="summary row">
       <div class="small-4 columns logo">
-        {{#if logo_url}}
-          <img src="{{logo_url}}" alt="Logo" />
+        {{#if model.logo_url}}
+          <img src="{{model.logo_url}}" alt="Logo" />
         {{else}}
           <img src="<%= image_url 'no-logo.png' %>" alt="Logo is missing" />
         {{/if}}
       </div>
       <div class="small-8 columns">
-        {{#if url}}
+        {{#if model.url}}
           <p class="url">
             <i class="icon-link"></i>
-            <a href="{{url}}" target="_blank">{{url}}</a>
+            <a href="{{model.url}}" target="_blank">{{model.url}}</a>
           </p>
         {{/if}}
         <p class="street">
           <i class="icon-pointer"></i>
-          <span>{{street}}</span>
+          <span>{{model.street}}</span>
         </p>
         <p class="city">
-          <span>{{zipCode}}</span>
-          <span>{{city}}</span>
+          <span>{{model.zipCode}}</span>
+          <span>{{model.city}}</span>
         </p>
       </div>
     </div>
 
     <div class="description">
-      {{#if description}}
-        {{markdown description}}
+      {{#if model.description}}
+        {{markdown model.description}}
       {{else}}
         <p>
           <span class="placeholder"><%= I18n.t('places.messages.im_sad') %></span>

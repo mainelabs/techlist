@@ -8,12 +8,11 @@
     </div>
 
     <ul class="filters">
-      {{#each controller}}
-        <li class="{{isSelected}}">
-          <label for="{{id}}">
-            {{#view Ember.Checkbox id=id value=id checked=isSelected}}
-              {{name}}
-            {{/view}}
+      {{#each kind in model}}
+        <li class="{{if kind.isSelected 'is-selected'}}">
+          <label for="{{kind.id}}">
+            {{input type="checkbox" id=kind.id checked=kind.isSelected}}
+            {{kind.name}}
           </label>
         </li>
       {{/each}}
@@ -22,6 +21,9 @@
 
   <div class="bottom add">
     <div class="arrow">
+    </div>
+
+    <div>
       <p class="submit-message"><%= I18n.t('places.messages.not_on_map') %></p>
       <a href="/places/new" class="button">
         <i class="icon-plus"></i>
