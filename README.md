@@ -11,7 +11,7 @@ Getting Started
 
 A few things are required on your machine before starting:
 
-* [ruby](https://www.ruby-lang.org/) v2.1.2
+* [ruby](https://www.ruby-lang.org/) v2.2.2
 * [bundler](http://bundler.io/)
 * [Qt](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit) for the capybara gem.
 * [PostgreSQL](http://www.postgresql.org/download/) for the pg gem. Depending on your environment, you might have some [additional libs](http://stackoverflow.com/questions/6040583/cant-find-the-libpq-fe-h-header-when-trying-to-install-pg-gem) to install. Make also sure you have created a postgres user having the same name as your OS username.
