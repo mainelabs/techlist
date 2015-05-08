@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :place_update do
-    association :place, factory: [:place, :in_angers_with_coordinates]
+    place
     name 'Craftsmen Angers'
     kind Kind.codes.first
     state :pending
@@ -10,13 +10,9 @@ FactoryGirl.define do
     description 'This could be a long description.'
     owner_name 'Sébastien Charrier'
     owner_email 'sebastien@craftsmen.io'
-    in_angers
-
-    trait :in_angers do
-      street '25 rue Lenepveu'
-      city 'Angers'
-      zip_code '49100'
-    end
+    street '25 rue Lenepveu'
+    city 'Angers'
+    zip_code '49100'
 
     trait :active do
       state :active

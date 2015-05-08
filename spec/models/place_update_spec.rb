@@ -5,7 +5,7 @@ describe PlaceUpdate do
 
   describe '#from_place' do
     it 'returns a PlaceUpdate based on the given place' do
-      place = create(:place, :in_angers_with_coordinates)
+      place = create(:place)
 
       place_update = PlaceUpdate.from_place(place)
 

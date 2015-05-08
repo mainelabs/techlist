@@ -25,6 +25,6 @@ feature 'A user add a place' do
     visit new_place_path
     click_button t('places.messages.add_the_place')
 
-    expect(page).to have_content('Please review the problems below')
+    expect(page).to have_content(t('simple_form.error_notification.default_message'))
   end
 end

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'An admin accepts a new place' do
   scenario 'only on pending places' do
-    active = create(:place, :in_angers_with_coordinates, :active)
+    active = create(:place, :active)
     login_as(create(:admin))
 
     visit rails_admin.edit_path(model_name: 'Place', id: active.id)
@@ -11,7 +11,7 @@ feature 'An admin accepts a new place' do
   end
 
   scenario 'by clicking on the accept link' do
-    pending = create(:place, :in_angers_with_coordinates)
+    pending = create(:place)
     login_as(create(:admin))
 
     visit rails_admin.edit_path(model_name: 'Place', id: pending.id)

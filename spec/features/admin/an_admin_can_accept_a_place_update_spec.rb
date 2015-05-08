@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'An admin accepts a place update' do
   scenario "not pending place updates don't have the accept link" do
-    active = create(:place_update, :in_angers, :active)
+    active = create(:place_update, :active)
     login_as(create(:admin))
 
     visit rails_admin.edit_path(model_name: 'PlaceUpdate', id: active.id)
@@ -11,7 +11,7 @@ feature 'An admin accepts a place update' do
   end
 
   scenario 'pending place updates have the accept link' do
-    pending = create(:place_update, :in_angers)
+    pending = create(:place_update)
     login_as(create(:admin))
 
     visit rails_admin.edit_path(model_name: 'PlaceUpdate', id: pending.id)
@@ -20,7 +20,7 @@ feature 'An admin accepts a place update' do
   end
 
   scenario 'accepts the update' do
-    pending = create(:place_update, :in_angers)
+    pending = create(:place_update)
     login_as(create(:admin))
 
     visit rails_admin.edit_path(model_name: 'PlaceUpdate', id: pending.id)

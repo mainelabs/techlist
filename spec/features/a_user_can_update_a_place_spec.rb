@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'A user updates a place' do
   scenario 'original values are displayed' do
-    place = create(:place, :in_angers_with_coordinates, :active)
+    place = create(:place, :active)
 
     visit edit_place_path(place)
 
@@ -10,7 +10,7 @@ feature 'A user updates a place' do
   end
 
   scenario 'fills all required fields' do
-    place = create(:place, :in_angers_with_coordinates, :active)
+    place = create(:place, :active)
 
     visit edit_place_path(place)
     fill_in t('simple_form.labels.place.name'), with: 'Updated place name'
@@ -26,7 +26,7 @@ feature 'A user updates a place' do
   end
 
   scenario 'cannot update a pending place' do
-    place = create(:place, :in_angers_with_coordinates)
+    place = create(:place)
 
     expect { visit edit_place_path(place) }.to raise_error
   end

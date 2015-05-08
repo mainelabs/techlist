@@ -9,19 +9,16 @@ FactoryGirl.define do
     description 'This could be a long description.'
     owner_name 'Sébastien Charrier'
     owner_email 'sebastien@craftsmen.io'
-    in_angers
+    street '25 rue Lenepveu'
+    city 'Angers'
+    zip_code '49100'
+    country_code 'FR'
+    latitude 48.8724029
+    longitude 2.7768103
 
-    trait :in_angers do
-      street '25 rue Lenepveu'
-      city 'Angers'
-      zip_code '49100'
-      country_code 'FR'
-    end
-
-    trait :in_angers_with_coordinates do
-      in_angers
-      latitude 48.8724029
-      longitude 2.7768103
+    trait :without_coordinates do
+      latitude nil
+      longitude nil
     end
 
     trait :active do
