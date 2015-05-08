@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  remote: https://rails-assets.org/
   specs:
     aasm (4.1.0)
     actionmailer (4.1.10)
@@ -33,9 +32,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (5.0.1.20140414130214)
-    barber (0.9.0)
-      ember-source (>= 1.0, < 2)
-      execjs (>= 1.2, < 3)
     bcrypt (3.1.10)
     builder (3.2.2)
     capybara (2.4.4)
@@ -76,19 +72,6 @@ GEM
       dotenv (= 2.0.1)
     email_validator (1.5.0)
       activemodel
-    ember-data-source (1.0.0.beta.16.1)
-      ember-source (~> 1.8)
-    ember-handlebars-template (0.1.5)
-      barber (>= 0.9.0)
-      sprockets (>= 2.1, < 3.1)
-    ember-rails (0.18.2)
-      active_model_serializers
-      ember-data-source (>= 1.0.0.beta.5)
-      ember-handlebars-template (>= 0.1.1, < 1.0)
-      ember-source (>= 1.1.0)
-      jquery-rails (>= 1.0.17)
-      railties (>= 3.1)
-    ember-source (1.11.3.1)
     erubis (2.7.0)
     execjs (2.5.2)
     factory_girl (4.5.0)
@@ -100,9 +83,6 @@ GEM
       railties (>= 3.2, < 5.0)
     foreman (0.78.0)
       thor (~> 0.19.1)
-    foundation-rails (5.3.0.1)
-      railties (>= 3.1.0)
-      sass (>= 3.2.0)
     geocoder (1.2.8)
     haml (4.0.6)
       tilt
@@ -148,17 +128,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.10)
       sprockets-rails (~> 2.0)
-    rails-assets-ember (1.11.3)
-      rails-assets-jquery (>= 1.7.0, < 2.2.0)
-    rails-assets-gabesmed--ember-leaflet (0.6.1)
-      rails-assets-ember (>= 1.8, < 2)
-      rails-assets-leaflet-dist (~> 0.7.0)
-      rails-assets-leaflet.markerclusterer (= 0.4)
-    rails-assets-jquery (2.1.4)
-    rails-assets-leaflet-dist (0.7.2)
-    rails-assets-leaflet-plugins (1.3.3)
-    rails-assets-leaflet.markerclusterer (0.4.0)
-    rails-assets-showdown (0.5.0)
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
@@ -273,11 +242,8 @@ DEPENDENCIES
   devise
   dotenv-rails
   email_validator
-  ember-rails
-  ember-source
   factory_girl_rails
   foreman
-  foundation-rails (~> 5.3.0)
   geocoder
   high_voltage
   jquery-rails
@@ -285,9 +251,6 @@ DEPENDENCIES
   pg
   rack-timeout
   rails (~> 4.1.0)
-  rails-assets-gabesmed--ember-leaflet
-  rails-assets-leaflet-plugins
-  rails-assets-showdown
   rails_12factor
   rails_admin
   rails_admin-i18n

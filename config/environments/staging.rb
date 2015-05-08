@@ -10,6 +10,4 @@ Rails.application.configure do
   end
 
   config.action_mailer.default_url_options = { host: 'staging.techlist.com' }
-
-  config.ember.variant = :production
 end
