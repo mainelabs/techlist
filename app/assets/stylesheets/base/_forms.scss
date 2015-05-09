@@ -14,7 +14,6 @@ select {
 }
 
 label {
-  font-weight: 600;
   margin-bottom: $small-spacing / 2;
 
   &.required::after {
@@ -31,11 +30,11 @@ select[multiple=multiple],
 textarea {
   background-color: $base-background-color;
   border: $base-border;
-  border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
   box-sizing: border-box;
+  color: $dark-gray;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: 300;
   margin-bottom: $base-spacing / 2;
   padding: $base-spacing / 3;
   transition: border-color;

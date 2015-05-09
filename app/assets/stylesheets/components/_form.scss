@@ -1,0 +1,23 @@
+.form-section {
+  @include clearfix;
+  margin-bottom: $base-spacing * 2;
+}
+
+.form-labels {
+  @include span-columns(3);
+
+  .hint {
+    color: $medium-gray;
+    font-size: 0.9em;
+  }
+}
+
+.form-inputs {
+  @include span-columns(9);
+}
+
+.form-actions {
+  input {
+    margin-right: $small-spacing;
+  }
+}

@@ -1,11 +1,14 @@
 <%= f.error_notification %>
 
-<div class="row">
-  <div class="small-12 large-4 columns">
-    <h3><%= t('places.titles.general_informations') %></h3>
-    <p class="hint"><%= t('places.hints.general_informations') %></p>
+<section class="form-section">
+  <div class="form-labels">
+    <h3>Informations générales</h3>
+    <p class="hint">
+      Choisissez bien le type de lieu, c'est grace à cette information que nos
+      utilisateurs vous trouveront !
+    </p>
   </div>
-  <div class="small-12 large-8 columns">
+  <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :kind,
                 collection: Kind.all,
@@ -15,49 +18,48 @@
     <%= f.input :twitter_name %>
     <%= f.input :logo_url %>
   </div>
-</div>
+</section>
 
-<hr />
-
-<div class="row">
-  <div class="small-12 large-4 columns">
-    <h3><%= t('places.titles.description') %></h3>
-    <p class="hint"><%= t('places.hints.description') %></p>
+<section class="form-section">
+  <div class="form-labels">
+    <h3>Description</h3>
+    <p class="hint">
+      Décrivez le lieu en quelques mots. Vous pouvez utiliser du markdown pour
+      ajouter du style.
+    </p>
   </div>
-  <div class="small-12 large-8 columns">
+  <div class="form-inputs">
     <%= f.input :description, required: true, input_html: { rows: 10 } %>
   </div>
-</div>
+</section>
 
-<hr />
-
-<div class="row">
-  <div class="small-12 large-4 columns">
-    <h3><%= t('places.titles.address') %></h3>
-    <p class="hint"><%= t('places.hints.address') %></p>
+<section class="form-section">
+  <div class="form-labels">
+    <h3>Adresse</h3>
+    <p class="hint">
+      Le lieu sera automatiquement placé sur la carte en fonction de l'adresse
+      saisie, veillez donc à ce que les informations soient correctes.
+    </p>
   </div>
-  <div class="small-12 large-8 columns">
+  <div class="form-inputs">
     <%= f.input :street %>
-    <div class="row">
-      <div class="small-4 columns">
-        <%= f.input :zip_code %>
-      </div>
-      <div class="small-8 columns">
-        <%= f.input :city %>
-      </div>
+    <div class="place-form-address">
+      <%= f.input :zip_code %>
+      <%= f.input :city %>
     </div>
   </div>
-</div>
+</section>
 
-<hr />
-
-<div class="row">
-  <div class="small-12 large-4 columns">
-    <h3><%= t('places.titles.contact_informations') %></h3>
-    <p class="hint"><%= t('places.hints.contact_informations') %></p>
+<section class="form-section">
+  <div class="form-labels">
+    <h3>Contact</h3>
+    <p class="hint">
+      Nous vérifierons que vous êtes bien le responsable du lieu avec ces
+      informations. L'email doit correspondre à l'adresse de votre site web.
+    </p>
   </div>
-  <div class="small-12 large-8 columns">
+  <div class="form-inputs">
     <%= f.input :owner_name, required: true %>
     <%= f.input :owner_email, required: true %>
   </div>
-</div>
+</section>

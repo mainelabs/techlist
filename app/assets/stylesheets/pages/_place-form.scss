@@ -1,0 +1,8 @@
+.new-place,
+.edit-place {
+  padding: $base-spacing 0;
+
+  > div {
+    @include outer-container;
+  }
+}

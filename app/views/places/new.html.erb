@@ -1,18 +1,17 @@
-<div class="full-page row">
-  <div class="small-12 medium-10 columns medium-centered">
-    <h2><%= t('places.messages.add_a_place') %></h2>
-    <hr />
+<section class="new-place">
+  <div>
+    <h1>Ajouter un nouveau lieu</h1>
 
     <%= simple_form_for(@place) do |f| %>
 
       <%= render partial: 'form', locals: { f: f } %>
 
-      <div class="submit">
-        <%= f.button :submit, t('places.messages.add_the_place') %>
-        <%= t('places.messages.or') %>
-        <%= link_to t('places.messages.back_to_map'), root_path %>
+      <div class="form-actions">
+        <%= f.button :submit, 'Ajouter le lieu' %>
+        ou
+        <%= link_to 'revenir à la liste', root_path %>
       </div>
 
     <% end %>
   </div>
-</div>
+</section>
