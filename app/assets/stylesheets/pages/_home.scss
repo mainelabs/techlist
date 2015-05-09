@@ -1,5 +1,5 @@
 .home-header {
-  padding: ($base-spacing * 2) 0;
+  padding: 0 0 ($base-spacing * 2) 0;
 
   h1 {
     font-size: $base-font-size * 3;
@@ -45,7 +45,7 @@
 }
 
 .home-add-place {
-  padding: ($base-spacing * 2) 0;
+  padding: 0 0 ($base-spacing * 2) 0;
   text-align: center;
 
   > div {

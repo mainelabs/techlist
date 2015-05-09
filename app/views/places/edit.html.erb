@@ -1,6 +1,7 @@
 <section class="edit-place">
   <div>
-    <h1>Mettre à jour un nouveau lieu</h1>
+    <h1>Mettre à jour un lieu</h1>
+    <hr>
 
     <%= simple_form_for(@place_update, url: place_path(@place_update.place), method: :put) do |f| %>
 

@@ -1,8 +1,12 @@
 .new-place,
 .edit-place {
-  padding: $base-spacing 0;
+  padding: 0 0 $base-spacing 0;
 
   > div {
     @include outer-container;
+  }
+
+  hr {
+    margin-bottom: $base-spacing * 2;
   }
 }
