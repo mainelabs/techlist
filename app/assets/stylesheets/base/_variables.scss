@@ -1,9 +1,14 @@
 // Typography
-$base-font-family: $helvetica;
-$heading-font-family: $base-font-family;
+$sans-serif: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$serif: 'Rokkitt';
+$base-font-family: $sans-serif;
+$heading-font-family: $serif;
 
 // Font Sizes
 $base-font-size: 1em;
+
+// Font weights
+$base-font-weight: 300;
 
 // Line height
 $base-line-height: 1.5;
@@ -16,10 +21,11 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #477dca;
+$blue: #4485B0;
+$yellow: #FFDE00;
 $dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$medium-gray: #868686;
+$light-gray: #f0f0f0;
 
 // Font Colors
 $base-background-color: #fff;

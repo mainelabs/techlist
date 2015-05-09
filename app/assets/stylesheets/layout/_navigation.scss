@@ -1,0 +1,13 @@
+nav {
+  background-color: $blue;
+  color: #fff;
+
+  > div {
+    @include outer-container;
+  }
+
+  h1 {
+    font-size: $base-font-size * 2;
+    margin: ($small-spacing / 2) 0;
+  }
+}

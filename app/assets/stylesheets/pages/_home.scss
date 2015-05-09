@@ -1,0 +1,45 @@
+.home-header {
+  padding: ($base-spacing * 2) 0;
+
+  h1 {
+    font-size: $base-font-size * 3;
+  }
+
+  > div {
+    @include outer-container;
+  }
+
+  input[type="search"] {
+    border: none;
+    box-shadow: none;
+    display: inline;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.home-places-list {
+  background-color: $light-gray;
+
+  > div {
+    @include outer-container;
+
+    padding: $base-spacing 0;
+  }
+
+  section {
+    @include clearfix;
+  }
+
+  .place-card {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  h2 {
+    padding: 0 0 $small-spacing 0;
+    margin: 0;
+  }
+}

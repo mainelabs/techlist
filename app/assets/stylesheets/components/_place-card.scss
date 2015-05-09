@@ -1,0 +1,25 @@
+.place-card {
+  @extend .card;
+
+  .place-title {
+    @include clearfix;
+    @include display(flex);
+
+    margin: $small-spacing 0;
+
+    h4 {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    span {
+      @extend .tag;
+    }
+  }
+
+  p {
+    color: $medium-gray;
+    font-size: 0.9em;
+    margin-bottom: $small-spacing / 2;
+  }
+}

@@ -1,0 +1,9 @@
+<article class="place-card">
+  <%= image_tag place.header_image %>
+  <div class="place-title">
+    <h4><%= place.name %></h4>
+    <span><%= t("kinds.codes.#{place.kind}") %></span>
+  </div>
+  <p class="place-location"><%= fa_icon('map-marker') %> <%= place.address %></p>
+  <p class="place-url"><%= fa_icon('link') %> <%= link_to place.url, place.url %></p>
+</article>

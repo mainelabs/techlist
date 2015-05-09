@@ -28,6 +28,19 @@ class Place < ActiveRecord::Base
     [street, zip_code, city, country_code].compact.join(', ')
   end
 
+  def header_image
+    "http://maps.google.com/maps/api/staticmap?sensor=false&size=600x100&zoom=15&center=#{latitude},#{longitude}&markers=color:gray|#{latitude},#{longitude}"
+  end
+
+  def self.latest
+    active.order(created_at: :desc).limit(4)
+  end
+
+  def self.random
+    connection.execute("select setseed(#{rand(-1.0..1.0)})")
+    active.order('random()').limit(4)
+  end
+
   private
 
   def address_changed?

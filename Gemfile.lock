@@ -255,6 +255,7 @@ DEPENDENCIES
   dotenv-rails
   email_validator
   factory_girl_rails
+  font-awesome-rails
   foreman
   geocoder
   high_voltage

@@ -1,0 +1,16 @@
+footer {
+  background-color: $dark-gray;
+  color: #fff;
+  font-size: 0.9em;
+  padding: $base-spacing 0;
+  text-align: center;
+
+  > div {
+    @include outer-container;
+  }
+
+  a,
+  a:hover {
+    color: #fff;
+  }
+}
