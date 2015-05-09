@@ -6,4 +6,4 @@ fr:
       text: 'Obligatoire'
       mark: '*'
     error_notification:
-      default_message: "Merci de corriger les erreurs indiquées:"
+      default_message: "Merci de corriger les erreurs indiquées."

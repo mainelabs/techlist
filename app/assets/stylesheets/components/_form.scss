@@ -21,3 +21,21 @@
     margin-right: $small-spacing;
   }
 }
+
+.field-with-error {
+  #{$all-text-inputs},
+  select,
+  textarea {
+    margin-bottom: 0;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .field-error {
+    color: $red;
+    display: block;
+    margin: ($small-spacing / 2) 0 $small-spacing;
+  }
+}

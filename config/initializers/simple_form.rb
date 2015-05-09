@@ -7,8 +7,8 @@ SimpleForm.setup do |config|
   # whole input.
   config.wrappers :default,
                   class: :input,
-                  hint_class: :field_with_hint,
-                  error_class: :field_with_errors do |b|
+                  hint_class: 'field-with-hint',
+                  error_class: 'field-with-error' do |b|
     ## Extensions enabled by default
     # Any of these extensions can be disabled for a
     # given input by passing: `f.input EXTENSION_NAME => false`.
@@ -43,8 +43,8 @@ SimpleForm.setup do |config|
 
     ## Inputs
     b.use :label_input
-    b.use :hint, wrap_with: { tag: :span, class: :hint }
-    b.use :error, wrap_with: { tag: :span, class: :error }
+    b.use :hint, wrap_with: { tag: :span, class: 'field-hint' }
+    b.use :error, wrap_with: { tag: :span, class: 'field-error' }
 
     ## full_messages_for
     # If you want to display the full error message for the attribute, you can
@@ -74,7 +74,7 @@ SimpleForm.setup do |config|
   config.error_notification_tag = :div
 
   # CSS class to add for error notification helper.
-  config.error_notification_class = 'error_notification'
+  config.error_notification_class = 'error-notification'
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil
