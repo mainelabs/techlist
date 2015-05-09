@@ -22,4 +22,12 @@
     font-size: 0.9em;
     margin-bottom: $small-spacing / 2;
   }
+
+  img {
+    @include filter(grayscale(30%) opacity(0.5));
+  }
+
+  &:hover img {
+    @include filter(none);
+  }
 }

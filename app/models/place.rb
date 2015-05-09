@@ -29,7 +29,7 @@ class Place < ActiveRecord::Base
   end
 
   def header_image
-    "http://maps.google.com/maps/api/staticmap?sensor=false&size=600x100&zoom=15&center=#{latitude},#{longitude}&markers=color:gray|#{latitude},#{longitude}"
+    "http://maps.google.com/maps/api/staticmap?sensor=false&size=600x100&zoom=15&center=#{latitude},#{longitude}&markers=color:yellow|#{latitude},#{longitude}"
   end
 
   def self.latest
