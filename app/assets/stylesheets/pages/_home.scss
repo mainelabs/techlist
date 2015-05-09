@@ -43,3 +43,17 @@
     margin: 0;
   }
 }
+
+.home-add-place {
+  padding: ($base-spacing * 2) 0;
+  text-align: center;
+
+  > div {
+    @include outer-container;
+  }
+
+  a {
+    @extend button;
+    font-size: $base-font-size * 1.3;
+  }
+}
