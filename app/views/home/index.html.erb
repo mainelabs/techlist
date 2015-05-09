@@ -1,12 +1,4 @@
-<header class="home-header">
-  <div>
-    <h1>Trouver un partenaire tech à Angers.</h1>
-    <%= search_field_tag :search,
-                         nil,
-                         placeholder: 'Tapez pour chercher. Par exemple : espace de coworking',
-                         autofocus: true %>
-  </div>
-</header>
+<%= render 'places/search' %>
 
 <section class="home-places-list">
   <div>
