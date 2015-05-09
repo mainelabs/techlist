@@ -41,6 +41,17 @@ class Place < ActiveRecord::Base
     active.order('random()').limit(4)
   end
 
+  def self.count_by_kind
+    facets = {}
+    Kind.codes.each do |code|
+      count = Place.where(kind: code).count
+      if count > 0
+        facets[code] = count
+      end
+    end
+    facets
+  end
+
   private
 
   def address_changed?

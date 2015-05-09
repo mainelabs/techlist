@@ -28,7 +28,13 @@
 
 <section class="home-add-place">
   <div>
-    <h1>Pas encore dans la liste ?</h1>
+    <h1>Actuellement <%= @places_count %> lieux référencés</h1>
+    <p>
+      <%= @places_by_kind.map do |kind, count|
+        t("kinds.human.#{kind}", count: count)
+      end.to_sentence.capitalize %>.
+    </p>
+    <h2>Pas encore dans la liste ?</h2>
     <%= link_to new_place_path do %>
       Ajoutez votre lieu, c'est gratuit !
     <% end %>

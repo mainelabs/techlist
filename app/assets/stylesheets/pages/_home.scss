@@ -56,4 +56,10 @@
     @extend button;
     font-size: $base-font-size * 1.3;
   }
+
+  p {
+    font-size: 1.4em;
+    margin-bottom: $base-spacing;
+    text-align: center;
+  }
 }

@@ -14,6 +14,37 @@ fr:
       investor: Investisseur
       nonprofit: Association
       cluster: Pôle / Communauté
+    human:
+      school:
+        one: un établissement supérieur
+        other: "%{count} établissements supérieurs"
+      lab:
+        one: un laboratoire
+        other: "%{count} laboratoires"
+      company:
+        one: une entreprise
+        other: "%{count} entreprises"
+      media:
+        one: un média
+        other: "%{count} médias"
+      accelerator:
+        one: un accélérateur
+        other: "%{count} accélérateurs"
+      incubator:
+        one: un incubateur
+        other: "%{count} incubateurs"
+      coworking:
+        one: un espace de coworking
+        other: "%{count} espaces de coworking"
+      investor:
+        one: un investisseur
+        other: "%{count} investisseurs"
+      nonprofit:
+        one: une association
+        other: "%{count} associations"
+      cluster:
+        one: un pôle / communauté
+        other: "%{count} pôles / communautés"
   places:
     messages:
       or: ou
