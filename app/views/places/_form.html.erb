@@ -9,14 +9,15 @@
     </p>
   </div>
   <div class="form-inputs">
-    <%= f.input :name %>
+    <%= f.input :name, label: 'Nom du lieu' %>
     <%= f.input :kind,
+                label: 'Type',
                 collection: Kind.all,
                 label_method: lambda { |kind| kind[:name] },
                 value_method: lambda { |kind| kind[:id] } %>
-    <%= f.input :url %>
-    <%= f.input :twitter_name %>
-    <%= f.input :logo_url %>
+    <%= f.input :url, label: 'Site web' %>
+    <%= f.input :twitter_name, label: 'Compte Twitter' %>
+    <%= f.input :logo_url, label: 'Url du logo' %>
   </div>
 </section>
 
@@ -31,7 +32,10 @@
     </p>
   </div>
   <div class="form-inputs">
-    <%= f.input :description, required: true, input_html: { rows: 10 } %>
+    <%= f.input :description,
+                label: 'Description',
+                required: true,
+                input_html: { rows: 10 } %>
   </div>
 </section>
 
@@ -46,10 +50,10 @@
     </p>
   </div>
   <div class="form-inputs">
-    <%= f.input :street %>
+    <%= f.input :street, label: 'Numéro et rue' %>
     <div class="place-form-address">
-      <%= f.input :zip_code %>
-      <%= f.input :city %>
+      <%= f.input :zip_code, label: 'Code postal' %>
+      <%= f.input :city, label: 'Ville' %>
     </div>
   </div>
 </section>
@@ -65,7 +69,7 @@
     </p>
   </div>
   <div class="form-inputs">
-    <%= f.input :owner_name, required: true %>
-    <%= f.input :owner_email, required: true %>
+    <%= f.input :owner_name, label: 'Votre nom', required: true %>
+    <%= f.input :owner_email, label: 'Votre adresse email', required: true %>
   </div>
 </section>

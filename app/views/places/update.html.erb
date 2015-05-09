@@ -1,12 +1,15 @@
-<div class="full-page row">
-  <div class="small-12 medium-10 columns medium-centered">
-    <h2><%= t('places.messages.update_a_place') %></h2>
-    <hr />
+<section class="edit-place">
+  <div>
+    <h1>Mettre à jour un lieu</h1>
+    <hr>
 
-    <p><%= t('places.messages.place_updated') %></p>
+    <div class="place-thank-you">
+      <p>Votre demande de mise à jour a été correctement sauvegardée. Nous la
+        validerons sous peu.</p>
 
-    <p><%= t('places.messages.thanks_for_contributing') %></p>
+      <p>Merci de contribuer à ce projet !</p>
+    </div>
 
-    <%= link_to t('places.messages.back_to_map').capitalize, root_path, class: 'button' %>
+    <%= link_to 'Revenir à la liste', root_path, class: 'button' %>
   </div>
-</div>
+</section>

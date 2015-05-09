@@ -6,20 +6,20 @@ feature 'A user updates a place' do
 
     visit edit_place_path(place)
 
-    expect(find_field(t('simple_form.labels.place.name')).value).to eq(place.name)
+    expect(find_field('Nom').value).to eq(place.name)
   end
 
   scenario 'fills all required fields' do
     place = create(:place, :active)
 
     visit edit_place_path(place)
-    fill_in t('simple_form.labels.place.name'), with: 'Updated place name'
-    fill_in t('simple_form.labels.place.owner_name'), with: place.owner_name
-    fill_in t('simple_form.labels.place.owner_email'), with: place.owner_email
-    click_button t('places.messages.update_the_place')
+    fill_in 'Nom', with: 'Updated place name'
+    fill_in 'Votre nom', with: place.owner_name
+    fill_in 'Votre adresse email', with: place.owner_email
+    click_button 'Mettre à jour le lieu'
 
     place_update = PlaceUpdate.last
-    expect(page).to have_content(t('places.messages.place_updated'))
+    expect(page).to have_content('a été correctement sauvegardée')
     expect(place_update.place).to eq(place)
     expect(place_update.name).to eq('Updated place name')
     expect(place_update.state).to eq('pending')
