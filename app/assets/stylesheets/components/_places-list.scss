@@ -11,6 +11,10 @@
     @include clearfix;
   }
 
+  .cards-container {
+    @include clearfix;
+  }
+
   .place-card {
     @include span-columns(6);
     @include omega(2n);

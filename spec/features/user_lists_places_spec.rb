@@ -12,6 +12,14 @@ feature 'A user lists places' do
     expect(page).to have_content(t("kinds.codes.#{place.kind}"))
   end
 
+  scenario 'and views the total count' do
+    create_list(:place, 7, :active)
+
+    visit places_path
+
+    expect(page).to have_content('7 lieux')
+  end
+
   scenario 'and navigates between pages' do
     create_list(:place, 30, :active)
     last_place = create(:place, :active, updated_at: 1.day.ago)
