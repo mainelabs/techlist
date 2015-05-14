@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'A user updates a place' do
-  scenario 'original values are displayed' do
+  scenario 'and views fields already filled with original values' do
     place = create(:place, :active)
 
     visit edit_place_path(place)
@@ -9,7 +9,7 @@ feature 'A user updates a place' do
     expect(find_field('Nom').value).to eq(place.name)
   end
 
-  scenario 'fills all required fields' do
+  scenario 'and fills all required fields' do
     place = create(:place, :active)
 
     visit edit_place_path(place)
@@ -25,7 +25,7 @@ feature 'A user updates a place' do
     expect(place_update.state).to eq('pending')
   end
 
-  scenario 'cannot update a pending place' do
+  scenario 'but not pending ones' do
     place = create(:place)
 
     expect { visit edit_place_path(place) }.to raise_error

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'A user add a place' do
-  scenario 'fills all the required fields' do
+feature 'A user adds a place' do
+  scenario 'by filling all the required fields' do
     place = build(:place)
     Place.geocoding_service = double('geocoding service', coordinates: nil)
 
@@ -19,7 +19,7 @@ feature 'A user add a place' do
     expect(page).to have_content('a été correctement sauvegardé')
   end
 
-  scenario 'omit some required fields' do
+  scenario 'omitting some required fields' do
     Place.geocoding_service = double('geocoding service', coordinates: nil)
 
     visit new_place_path
