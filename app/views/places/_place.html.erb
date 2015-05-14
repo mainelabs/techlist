@@ -1,9 +1,17 @@
 <article class="place-card">
   <%= image_tag place.header_image %>
-  <div class="place-title">
+  <header>
     <h4><%= place.name %></h4>
     <span><%= t("kinds.codes.#{place.kind}") %></span>
-  </div>
-  <p class="place-location"><%= fa_icon('map-marker') %> <%= place.address %></p>
-  <p class="place-url"><%= fa_icon('link') %> <%= link_to place.url, place.url %></p>
+  </header>
+
+  <footer>
+    <p class="url"><%= link_to place.url, place.url, target: '_blank' %></p>
+    <p class="updated-at">
+      <%= fa_icon('clock-o') %>
+      <time datetime="<%= place.updated_at %>">
+        Il y a <%= time_ago_in_words(place.updated_at) %>
+      </time>
+    </p>
+  </footer>
 </article>

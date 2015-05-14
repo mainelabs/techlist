@@ -7,7 +7,6 @@ feature 'A user lists places' do
     visit places_path
 
     expect(page).to have_content(place.name)
-    expect(page).to have_content(place.address)
     expect(page).to have_content(place.url)
     expect(page).to have_content(t("kinds.codes.#{place.kind}"))
   end

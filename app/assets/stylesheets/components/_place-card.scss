@@ -2,7 +2,7 @@
   @extend .card;
   white-space: nowrap;
 
-  .place-title {
+  header {
     @include clearfix;
     @include display(flex);
 
@@ -17,15 +17,33 @@
 
     span {
       @extend .tag;
+      padding: $base-spacing * 2;
     }
   }
 
   p {
+    margin: 0;
+  }
+
+  footer {
     color: $medium-gray;
+    display: flex;
     font-size: 0.9em;
-    margin-bottom: $small-spacing / 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin: 0;
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .url {
+      flex: 2;
+    }
+
+    .updated-at {
+      flex: 1;
+      text-align: right;
+    }
   }
 
   img {
