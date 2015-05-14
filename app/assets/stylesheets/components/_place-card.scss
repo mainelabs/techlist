@@ -1,5 +1,6 @@
 .place-card {
   @extend .card;
+  white-space: nowrap;
 
   .place-title {
     @include clearfix;
@@ -9,7 +10,9 @@
 
     h4 {
       flex: 1;
-      margin-bottom: 0;
+      margin: 0 $small-spacing 0 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     span {
@@ -21,6 +24,8 @@
     color: $medium-gray;
     font-size: 0.9em;
     margin-bottom: $small-spacing / 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   img {
