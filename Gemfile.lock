@@ -222,6 +222,8 @@ GEM
     thread_safe (0.3.5)
     tilt (1.4.1)
     timecop (0.7.3)
+    turbolinks (2.5.3)
+      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.1)
@@ -260,6 +262,7 @@ DEPENDENCIES
   geocoder
   high_voltage
   jquery-rails
+  kaminari
   neat
   newrelic_rpm (>= 3.7.3)
   pg
@@ -279,6 +282,7 @@ DEPENDENCIES
   thor
   thor-rails
   timecop
+  turbolinks
   uglifier
   unicorn
   webmock

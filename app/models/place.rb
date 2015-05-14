@@ -32,8 +32,12 @@ class Place < ActiveRecord::Base
     "http://maps.google.com/maps/api/staticmap?sensor=false&size=600x100&zoom=15&center=#{latitude},#{longitude}&markers=color:yellow|#{latitude},#{longitude}&key=#{ENV.fetch('GOOGLE_MAPS_KEY')}"
   end
 
+  def self.ordered_by_update
+    active.order(updated_at: :desc)
+  end
+
   def self.latest
-    active.order(created_at: :desc).limit(4)
+    ordered_by_update.limit(4)
   end
 
   def self.random

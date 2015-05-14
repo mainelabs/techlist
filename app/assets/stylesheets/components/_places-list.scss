@@ -1,0 +1,23 @@
+.places-list {
+  background-color: $light-gray;
+
+  > div {
+    @include outer-container;
+
+    padding: $base-spacing 0 0;
+  }
+
+  section {
+    @include clearfix;
+  }
+
+  .place-card {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  h2 {
+    padding: 0 0 $small-spacing 0;
+    margin: 0;
+  }
+}

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :place do
-    name 'Craftsmen Angers'
+    sequence(:name) { |n| "Place #{n}" }
     kind Kind.codes.first
     state :pending
     url 'http://craftsmen.io'

@@ -1,4 +1,8 @@
 class PlacesController < ApplicationController
+  def index
+    @places = Place.ordered_by_update.page(params[:page])
+  end
+
   def new
     @place = Place.new
   end

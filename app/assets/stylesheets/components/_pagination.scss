@@ -1,0 +1,37 @@
+.pagination {
+  $pagination-link-size: 2em;
+
+  padding-bottom: $base-spacing;
+  text-align: center;
+
+  a {
+    @extend .fa;
+    background-color: $medium-gray;
+    border-radius: 50%;
+    color: $light-gray;
+    display: inline-block;
+    font-size: 1.5em;
+    height: $pagination-link-size;
+    line-height: $pagination-link-size;
+    margin-right: $small-spacing;
+    width: $pagination-link-size;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &[rel=previous] {
+      @extend .fa-chevron-left;
+      padding-right: 3px;
+    }
+
+    &[rel=next] {
+      @extend .fa-chevron-right;
+      padding-left: 3px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

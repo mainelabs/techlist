@@ -1,0 +1,11 @@
+<%= render 'search' %>
+
+<section class="places-list">
+  <div id="places">
+    <%= render @places %>
+  </div>
+  <nav class="pagination">
+    <%= link_to_previous_page @places, '<span>Précédente</span>'.html_safe %>
+    <%= link_to_next_page @places, '<span>Suivante</span>'.html_safe %>
+  </nav>
+</section>
