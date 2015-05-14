@@ -22,8 +22,9 @@ $base-z-index: 0;
 
 // Colors
 $dark-gray: #333;
-$medium-gray: #6e6e6e;
-$light-gray: #f0f0f0;
+$medium-gray: #b4b4b4;
+$light-gray: #eaeaea;
+$lightest-gray: lighten($light-gray, 6%);
 
 $blue: #4485B0;
 $dark-blue: darken($blue, 15%);
