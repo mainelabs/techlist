@@ -2,9 +2,11 @@
   <div>
     <h1><%= link_to 'Angers/io', root_path %></h1>
     <ul class="navigation-links">
-      <li>
+      <li><%= link_to 'Tous les lieux', places_path %></li>
+      <li class="cta">
         <%= link_to new_place_path do %>
-          Pas encore dans la liste ? Ajoutez votre lieu !
+          <%= fa_icon('plus') %>
+          Ajouter un lieu
         <% end %>
       </li>
     </ul>

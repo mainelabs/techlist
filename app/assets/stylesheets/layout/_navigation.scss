@@ -1,7 +1,8 @@
 .navigation-main {
   $navigation-height: 60px;
+  $navigation-background: $blue;
 
-  background-color: $blue;
+  background-color: $navigation-background;
   color: #fff;
   width: 100%;
 
@@ -19,9 +20,24 @@
 
   li {
     display: inline-block;
-    vertical-align: baseline;
     line-height: $navigation-height;
+    margin-right: $small-spacing;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.cta a {
+      background-color: lighten($navigation-background, 5%);
+      border-radius: $base-border-radius;
+      padding: $small-spacing;
+
+      i {
+        margin-right: $small-spacing / 2;
+      }
+    }
   }
+
   a,
   a:hover {
     color: #fff;
