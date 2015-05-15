@@ -23,7 +23,7 @@ $(document).on('ready page:load', function() {
         throttle = setTimeout(function() {
           var $form = $(self).closest('form');
 
-          $.get($form.data('url'), $form.serialize()).always(function(response) {
+          $.get($form.attr('action'), $form.serialize()).always(function(response) {
             var $response = $(response.responseText);
             var count = $response.find('#places-count').data('count');
 
