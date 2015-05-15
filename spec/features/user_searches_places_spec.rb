@@ -26,4 +26,10 @@ feature 'A user searches places' do
 
     expect(page).to have_content('Craftsmen', count: 10)
   end
+
+  scenario 'and and view a message if not matching places' do
+    visit places_path
+
+    expect(page).to have_content('Aucun résultat')
+  end
 end

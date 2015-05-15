@@ -1,5 +1,6 @@
 .places-list {
   background-color: $lightest-gray;
+  flex: 1;
 
   > div {
     @include outer-container;
@@ -23,5 +24,19 @@
   h2 {
     padding: 0 0 $small-spacing 0;
     margin: 0;
+  }
+
+  .places-none {
+    padding-bottom: $base-spacing;
+
+    p {
+      font-size: 1.4em;
+      margin-bottom: $base-spacing;
+    }
+
+    a {
+      @extend .button;
+      font-size: $base-font-size * 1.3;
+    }
   }
 }

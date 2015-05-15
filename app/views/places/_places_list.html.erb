@@ -1,14 +1,28 @@
-<div>
-  <h2 id="places-count" data-count="<%= @places.total_count %>">
-    <%= pluralize(@places.total_count, 'lieu', 'lieux') %>
-  </h2>
+<% if @places.total_count > 0 %>
+  <div>
+    <h2 id="places-count" data-count="<%= @places.total_count %>">
+      <%= pluralize(@places.total_count, 'lieu', 'lieux') %>
+    </h2>
 
-  <div class="cards-container">
-    <%= render @places %>
+    <div class="cards-container">
+      <%= render @places %>
+    </div>
+
+    <nav class="pagination">
+      <%= link_to_previous_page @places, '<span>Précédente</span>'.html_safe, params: params %>
+      <%= link_to_next_page @places, '<span>Suivante</span>'.html_safe, params: params %>
+    </nav>
   </div>
-
-  <nav class="pagination">
-    <%= link_to_previous_page @places, '<span>Précédente</span>'.html_safe, params: params %>
-    <%= link_to_next_page @places, '<span>Suivante</span>'.html_safe, params: params %>
-  </nav>
-</div>
+<% else %>
+  <div class="places-none">
+    <h2>Oh. Aucun résultat.</h2>
+    <p>
+      Aucun lieu ne correspond à votre recherche. Essayez peut être de chercher
+      avec des termes plus génériques ? Si vous avez cherché le nom d'un lieu dont vous êtes le propriétaire, vous
+      pouvez l'ajouter à la liste, c'est gratuit !
+    </p>
+    <%= link_to new_place_path do %>
+      Ajouter un lieu
+    <% end %>
+  </div>
+<% end %>
