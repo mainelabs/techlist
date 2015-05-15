@@ -1,6 +1,8 @@
 class PlacesController < ApplicationController
+  has_scope :q
+
   def index
-    @places = Place.ordered_by_update.page(params[:page])
+    @places = apply_scopes(Place).ordered_by_update.page(params[:page])
   end
 
   def new

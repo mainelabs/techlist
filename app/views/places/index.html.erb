@@ -9,8 +9,8 @@
     </div>
 
     <nav class="pagination">
-      <%= link_to_previous_page @places, '<span>Précédente</span>'.html_safe %>
-      <%= link_to_next_page @places, '<span>Suivante</span>'.html_safe %>
+      <%= link_to_previous_page @places, '<span>Précédente</span>'.html_safe, params: params %>
+      <%= link_to_next_page @places, '<span>Suivante</span>'.html_safe, params: params %>
     </nav>
   </div>
 </section>

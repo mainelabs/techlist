@@ -1,9 +1,13 @@
 <header class="places-search">
   <div>
     <h1>Trouver un partenaire tech à Angers.</h1>
-    <%= search_field_tag :search,
-                         nil,
-                         placeholder: 'Tapez pour chercher. Par exemple : espace de coworking',
-                         autofocus: true %>
+    <%= form_tag nil, method: :get, data: { url: url_for(page: 1) } do %>
+      <%= search_field_tag :search,
+                           params[:q],
+                           name: :q,
+                           placeholder: 'Tapez pour chercher. Par exemple : espace de coworking',
+                           autofocus: true %>
+      <%= submit_tag 'Chercher', id: 'search-button' %>
+    <% end %>
   </div>
 </header>
