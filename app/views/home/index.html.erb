@@ -1,34 +1,39 @@
 <%= render 'places/search' %>
 
-<section class="places-list">
-  <div>
-    <section>
-      <h2>Les dernières mises à jour</h2>
-      <div class="places-latest">
-        <%= render @latest %>
-      </div>
-    </section>
+<div id="no-search">
+  <section class="places-list">
+    <div>
+      <section>
+        <h2>Les dernières mises à jour</h2>
+        <div class="places-latest">
+          <%= render @latest %>
+        </div>
+      </section>
 
-    <section>
-      <h2>Quelques lieux au hasard</h2>
-      <div class="places-random">
-        <%= render @random %>
-      </div>
-    </section>
-  </div>
-</section>
+      <section>
+        <h2>Quelques lieux au hasard</h2>
+        <div class="places-random">
+          <%= render @random %>
+        </div>
+      </section>
+    </div>
+  </section>
 
-<section class="home-add-place">
-  <div>
-    <h1>Actuellement <%= @places_count %> lieux référencés</h1>
-    <p>
-      <%= @places_by_kind.map do |kind, count|
-        t("kinds.human.#{kind}", count: count)
-      end.to_sentence.capitalize %>.
-    </p>
-    <h2>Pas encore dans la liste ?</h2>
-    <%= link_to new_place_path do %>
-      Ajoutez votre lieu, c'est gratuit !
-    <% end %>
-  </div>
+  <section class="home-add-place">
+    <div>
+      <h1>Actuellement <%= @places_count %> lieux référencés</h1>
+      <p>
+        <%= @places_by_kind.map do |kind, count|
+          t("kinds.human.#{kind}", count: count)
+        end.to_sentence.capitalize %>.
+      </p>
+      <h2>Pas encore dans la liste ?</h2>
+      <%= link_to new_place_path do %>
+        Ajoutez votre lieu, c'est gratuit !
+      <% end %>
+    </div>
+  </section>
+</div>
+
+<section id="search-results" class="places-list">
 </section>

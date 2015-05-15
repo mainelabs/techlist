@@ -1,16 +1,5 @@
 <%= render 'search' %>
 
-<section class="places-list">
-  <div>
-    <h2><%= pluralize(@places.total_count, 'lieu', 'lieux') %></h2>
-
-    <div class="cards-container">
-      <%= render @places %>
-    </div>
-
-    <nav class="pagination">
-      <%= link_to_previous_page @places, '<span>Précédente</span>'.html_safe, params: params %>
-      <%= link_to_next_page @places, '<span>Suivante</span>'.html_safe, params: params %>
-    </nav>
-  </div>
+<section id="search-results" class="places-list">
+  <%= render 'places_list' %>
 </section>

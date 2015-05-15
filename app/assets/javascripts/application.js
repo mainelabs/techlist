@@ -1,4 +1,4 @@
 //= require jquery
 //= require turbolinks
-// require places
+//= require search
 //= require_self

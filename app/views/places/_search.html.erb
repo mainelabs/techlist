@@ -1,7 +1,7 @@
 <header class="places-search">
   <div>
     <h1>Trouver un partenaire tech à Angers.</h1>
-    <%= form_tag nil, method: :get, data: { url: url_for(page: 1) } do %>
+    <%= form_tag nil, method: :get, data: { url: url_for(controller: :places, action: :index, page: 1) } do %>
       <%= search_field_tag :search,
                            params[:q],
                            name: :q,

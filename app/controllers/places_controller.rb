@@ -3,6 +3,11 @@ class PlacesController < ApplicationController
 
   def index
     @places = apply_scopes(Place).ordered_by_update.page(params[:page])
+
+    respond_to do |format|
+      format.js { render partial: 'places_list' }
+      format.html
+    end
   end
 
   def new
