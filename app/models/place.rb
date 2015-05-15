@@ -1,5 +1,6 @@
 class Place < ActiveRecord::Base
   include PlaceConcern
+  include PgSearch
 
   class_attribute :geocoding_service
   self.geocoding_service = Geocoder
@@ -8,6 +9,19 @@ class Place < ActiveRecord::Base
   before_save :set_coordinates, if: :geocoding_necessary?
 
   scope :displayable, -> { active.where.not(longitude: nil, latitude: nil) }
+  pg_search_scope :q,
+    against: {
+      name: 'A',
+      description: 'B',
+      twitter_name: 'B',
+      url: 'B',
+      street: 'C',
+      city: 'C',
+      zip_code: 'C'
+    },
+    using: {
+      tsearch: { dictionary: 'french' }
+    }
 
   include AASM
   aasm column: 'state' do

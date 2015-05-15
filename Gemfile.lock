@@ -121,6 +121,10 @@ GEM
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     pg (0.18.1)
+    pg_search (1.0.3)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     rack (1.5.3)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -266,6 +270,7 @@ DEPENDENCIES
   neat
   newrelic_rpm (>= 3.7.3)
   pg
+  pg_search
   rack-timeout
   rails (~> 4.1.0)
   rails_12factor

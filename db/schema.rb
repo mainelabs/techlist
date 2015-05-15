@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141016202413) do
+ActiveRecord::Schema.define(version: 20150515185631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,14 @@ ActiveRecord::Schema.define(version: 20141016202413) do
     t.string   "twitter_name"
     t.string   "country_code", default: "FR"
   end
+
+  add_index "places", ["city"], name: "index_places_on_city", using: :btree
+  add_index "places", ["description"], name: "index_places_on_description", using: :btree
+  add_index "places", ["name"], name: "index_places_on_name", using: :btree
+  add_index "places", ["street"], name: "index_places_on_street", using: :btree
+  add_index "places", ["twitter_name"], name: "index_places_on_twitter_name", using: :btree
+  add_index "places", ["url"], name: "index_places_on_url", using: :btree
+  add_index "places", ["zip_code"], name: "index_places_on_zip_code", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

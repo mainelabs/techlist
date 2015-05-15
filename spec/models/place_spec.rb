@@ -58,6 +58,49 @@ describe Place do
 
       expect(Place.geocoding_service).not_to have_received(:coordinates)
     end
+  end
 
+  describe '#q' do
+    it 'searches on name' do
+      create(:place, name: 'Craftsmen')
+
+      expect(Place.q('craftsmen').size).to eq(1)
+    end
+
+    it 'searches on description' do
+      create(:place, description: 'Unicorn tamers')
+
+      expect(Place.q('unicorn').size).to eq(1)
+    end
+
+    it 'searches on street' do
+      create(:place, street: 'Unicors paradize')
+
+      expect(Place.q('paradize').size).to eq(1)
+    end
+
+    it 'searches on city' do
+      create(:place, city: 'Angers')
+
+      expect(Place.q('angers').size).to eq(1)
+    end
+
+    it 'searches on zip_code' do
+      create(:place, zip_code: '49000')
+
+      expect(Place.q('49000').size).to eq(1)
+    end
+
+    it 'searches on url' do
+      create(:place, url: 'http://craftsmen')
+
+      expect(Place.q('craftsmen').size).to eq(1)
+    end
+
+    it 'searches on twitter_name' do
+      create(:place, twitter_name: 'craftsmenhq')
+
+      expect(Place.q('craftsmenhq').size).to eq(1)
+    end
   end
 end
