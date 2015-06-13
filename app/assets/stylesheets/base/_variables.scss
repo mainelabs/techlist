@@ -26,18 +26,18 @@ $medium-gray: #b4b4b4;
 $light-gray: #eaeaea;
 $lightest-gray: lighten($light-gray, 6%);
 
-$blue: #4485B0;
+$blue: #4485b0;
 $dark-blue: darken($blue, 15%);
-$yellow: #FFDE00;
+$yellow: #ffde00;
 $green: #5fcf80;
-$red: #ed5a5a;
-$dark-red: darken($red, 15%);
+$red: #eb5e5e;
+$dark-red: darken($red, 7%);
 
 // Font Colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
-$action-color: $blue;
-$dark-action-color: $dark-blue;
+$action-color: $red;
+$dark-action-color: $dark-red;
 
 // Border
 $base-border-color: $light-gray;
