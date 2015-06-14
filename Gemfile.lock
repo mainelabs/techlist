@@ -32,10 +32,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (5.0.1.20140414130214)
-    babel-source (5.4.3)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     bcrypt (3.1.10)
     bitters (1.0.0)
       bourbon (>= 3.2)
@@ -218,9 +214,6 @@ GEM
       spring (>= 0.9.1)
     sprockets (3.0.3)
       rack (~> 1.0)
-    sprockets-es6 (0.6.1)
-      babel-transpiler
-      sprockets (~> 3.0.0.beta)
     sprockets-rails (2.3.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -291,7 +284,6 @@ DEPENDENCIES
   simplecov
   spring
   spring-commands-rspec
-  sprockets-es6
   thor
   thor-rails
   timecop
