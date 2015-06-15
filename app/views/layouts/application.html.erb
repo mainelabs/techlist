@@ -34,6 +34,8 @@ city = ENV.fetch('CITY')
 
     <%= stylesheet_link_tag 'application' %>
     <%= csrf_meta_tags %>
+
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" %>
   </head>
 
   <body>

@@ -1,0 +1,82 @@
+.show-place {
+  $image-size: 160px;
+  $padding-left: $image-size + 20px;
+  $place-header-height: 160px;
+
+  .place-header {
+    background-color: $red;
+    color: #fff;
+    height: $place-header-height;
+    position: relative;
+
+    h1 {
+      vertical-align: bottom;
+      padding-top: $place-header-height / 2;
+      margin: 0 0 0 $padding-left;
+    }
+  }
+
+  .place-logo {
+    background-color: #fff;
+    border-radius: $base-border-radius * 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: $image-size;
+    height: $image-size;
+    text-align: center;
+    bottom: -40px;
+
+    img {
+      border-radius: $base-border-radius * 2;
+      max-width: 95%;
+      max-height: 95%;
+    }
+  }
+
+  .place-details {
+    background-color: $lightest-gray;
+    height: 50px;
+    line-height: 50px;
+
+    a {
+      color: $dark-gray;
+    }
+
+    i {
+      margin-right: $small-spacing / 2;
+    }
+
+    span {
+      font-size: $base-font-size * 0.9;
+      margin-right: $small-spacing;
+    }
+
+    .container {
+      padding-left: $padding-left;
+    }
+  }
+
+  .place-description {
+    padding: $base-spacing * 3 0;
+
+    .container {
+      @include outer-container;
+
+      padding-left: $padding-left;
+    }
+  }
+
+  .place-contact {
+    background-color: $lightest-gray;
+    padding: $base-spacing * 2;
+    text-align: center;
+
+  }
+
+  .place-map {
+    height: 300px;
+    width: 100%;
+  }
+}

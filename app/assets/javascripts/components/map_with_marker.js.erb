@@ -1,0 +1,20 @@
+(function($) {
+  $.fn.map_with_marker = function() {
+    var center = new google.maps.LatLng(this.data('latitude'), this.data('longitude'));
+    var options = {
+      scrollwheel: false,
+      disableDefaultUI: true,
+      zoom: 14,
+      center: center,
+    };
+
+    var map = new google.maps.Map(this[0], options);
+    var marker = new google.maps.Marker({
+      map: map,
+      position: center,
+      icon: '<%= image_path('marker.png') %>'
+    });
+
+    return this;
+  }
+}(jQuery));

@@ -1,0 +1,60 @@
+<section class="show-place">
+  <header class="place-header">
+    <div class="container">
+      <div class="place-logo">
+        <%= image_tag @place.logo_url %>
+      </div>
+      <h1><%= @place.name %></h1>
+    </div>
+  </header>
+
+  <section class="place-details">
+    <div class="container">
+      <span>
+        <%= link_to @place.url, target: '_blank' do %>
+          <%= fa_icon('external-link') %>
+          <%= @place.url %>
+        <% end %>
+      </span>
+      <span>
+        <%= fa_icon('map-marker') %>
+        <%= @place.city.capitalize %>
+      </span>
+    </div>
+  </section>
+
+  <section class="place-description">
+    <div class="container">
+      <%= markdown @place.description %>
+    </div>
+  </section>
+
+  <section class="place-contact">
+    <div class="container">
+      <h2>Contacter <%= @place.name %></h2>
+      <p>
+        Vous pouvez contacter <%= @place.name %> via le
+        <%= link_to @place.url, target: '_blank' do %>
+          <%= fa_icon('external-link') %>
+          site web
+        <% end %>
+        <% if @place.twitter_name? %>
+          ou sur
+          <%= link_to "http://twitter.com/#{@place.twitter_name}" do %>
+            <%= fa_icon('twitter') %>
+            Twitter
+          <% end %>
+        <% end %>
+        .
+      </p>
+      <p>
+        À moins que vous ne préfériez vous rendre directement sur place,
+        <%= @place.human_address %> ?
+      </p>
+    </div>
+  </section>
+
+  <section class="place-location">
+    <%= tag :div, class: 'place-map', data: { latitude: @place.latitude, longitude: @place.longitude } %>
+  </section>
+</section>

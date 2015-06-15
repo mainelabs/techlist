@@ -1,7 +1,13 @@
 <article class="place-card">
-  <%= image_tag place.header_image %>
+  <%= link_to place_path(place) do %>
+    <%= image_tag place.header_image %>
+  <% end %>
   <header>
-    <h4><%= place.name %></h4>
+    <h4>
+      <%= link_to place_path(place) do %>
+        <%= place.name %>
+      <% end %>
+    </h4>
     <span><%= t("kinds.codes.#{place.kind}") %></span>
   </header>
 

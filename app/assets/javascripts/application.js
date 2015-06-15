@@ -5,4 +5,5 @@
 
 $(document).on('ready page:load', function() {
   $('#search').live_search($('#search-results'), $('#no-search'));
+  $('.place-map').map_with_marker();
 });

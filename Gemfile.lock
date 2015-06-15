@@ -172,6 +172,7 @@ GEM
     rake (10.4.2)
     recipient_interceptor (0.1.2)
       mail
+    redcarpet (3.3.1)
     remotipart (1.2.1)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
@@ -277,6 +278,7 @@ DEPENDENCIES
   rails_admin
   rails_admin-i18n
   recipient_interceptor
+  redcarpet
   rspec-rails (~> 3.0.0)
   sass-rails
   shoulda-matchers
