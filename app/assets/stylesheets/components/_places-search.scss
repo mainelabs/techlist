@@ -1,8 +1,10 @@
 .places-search {
+  background-color: $red;
   padding: 0 0 ($base-spacing * 2) 0;
 
   h1 {
     font-size: $base-font-size * 3;
+    color: #fff;
   }
 
   > div {
@@ -10,8 +12,15 @@
   }
 
   input[type="search"] {
+    @include placeholder {
+      color: #fff;
+      opacity: 0.7;
+    }
+
+    background-color: $red;
     border: none;
     box-shadow: none;
+    color: #fff;
     display: inline;
     font-size: 1.5em;
     font-weight: 300;

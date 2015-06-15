@@ -1,9 +1,9 @@
 .navigation-main {
   $navigation-height: 60px;
-  $navigation-background: $red;
+  $navigation-background: #fff;
 
   background-color: $navigation-background;
-  color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
 
   > div {
@@ -16,6 +16,14 @@
     font-size: $base-font-size * 1.5;
     line-height: $navigation-height;
     margin: 0;
+
+    a {
+      color: $dark-gray;
+
+      .extension {
+        color: $red;
+      }
+    }
   }
 
   li {
@@ -28,7 +36,7 @@
     }
 
     &.cta a {
-      background-color: lighten($navigation-background, 5%);
+      background-color: lighten($red, 33%);
       border-radius: $base-border-radius;
       padding: $small-spacing;
 
@@ -36,10 +44,5 @@
         margin-right: $small-spacing / 2;
       }
     }
-  }
-
-  a,
-  a:hover {
-    color: #fff;
   }
 }
