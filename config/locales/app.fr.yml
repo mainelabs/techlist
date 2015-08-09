@@ -60,3 +60,6 @@ fr:
         owner_email: Votre adresse email
       place_update:
         <<: *place
+  feed:
+    title: Derniers lieux ajoutés
+    link_to_map_marker: Lien vers le marqueur sur la carte

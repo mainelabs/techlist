@@ -35,6 +35,7 @@ places_count = Place.displayable.count
 
     <%= stylesheet_link_tag 'application' %>
     <%= csrf_meta_tags %>
+    <%= auto_discovery_link_tag :atom, "/feed" %>
   </head>
 
   <body>
