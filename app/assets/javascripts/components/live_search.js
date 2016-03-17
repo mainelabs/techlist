@@ -1,6 +1,9 @@
 (function($) {
   $.fn.live_search = function(results, reset) {
-    new LiveSearch(this, results, reset);
+    if ($(this).data('live-search') == undefined) {
+      $(this).data('live-search', new LiveSearch(this, results, reset));
+    }
+
     return this;
   }
 
@@ -22,33 +25,33 @@
     };
 
     this.search = function() {
-      this._cancel_debounced();
+      this._cancelDebounced();
 
       if (!this.el.val().length) {
-        this._reset_results();
+        this._resetResults();
       } else {
-        this._execute_search();
+        this._executeSearch();
       }
     };
 
-    this._reset_results= function() {
-      if (this._has_reset_node()) {
-        this._hide_results();
+    this._resetResults= function() {
+      if (this._hasResetNode()) {
+        this._hideResults();
       } else {
-        this._execute_search();
+        this._executeSearch();
       }
     };
 
-    this._execute_search = function() {
+    this._executeSearch = function() {
       this._debounce(function() {
         $.get(self.url, self.form.serialize()).always(function(response) {
-          var parsed_response = self._parse_response(response);
+          var parsed_response = self._parseResponse(response);
 
           if (parsed_response[0] > 0) {
-            self._show_results(parsed_response[1]);
+            self._showResults(parsed_response[1]);
           } else {
             self._debounce(function() {
-              self._show_results(parsed_response[1]);
+              self._showResults(parsed_response[1]);
             });
           }
         });
@@ -59,13 +62,13 @@
       this.timer = setTimeout(function() { callback.apply(self); }, 500);
     };
 
-    this._cancel_debounced = function() {
+    this._cancelDebounced = function() {
       if (this.timer) {
         clearTimeout(this.timer);
       }
     };
 
-    this._parse_response = function(response) {
+    this._parseResponse = function(response) {
       response = $(response.responseText);
       return [
         response.find('#places-count').data('count'),
@@ -73,8 +76,8 @@
       ];
     };
 
-    this._show_results = function(content) {
-      if (this._has_reset_node()) {
+    this._showResults = function(content) {
+      if (this._hasResetNode()) {
         this.reset.hide();
       }
       this.results
@@ -82,14 +85,14 @@
         .html(content);
     };
 
-    this._hide_results = function() {
-      if (this._has_reset_node()) {
+    this._hideResults = function() {
+      if (this._hasResetNode()) {
         this.reset.show();
       }
       this.results.hide();
     };
 
-    this._has_reset_node = function() {
+    this._hasResetNode = function() {
       return this.reset.length > 0;
     };
   }
