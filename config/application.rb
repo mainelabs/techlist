@@ -35,7 +35,7 @@ module Techlist
     config.i18n.enforce_available_locales = true
     config.i18n.default_locale = :fr
 
-    config.serve_static_assets = true
+    config.serve_static_files = true
 
     config.autoload_paths << config.root.join('lib')
   end
