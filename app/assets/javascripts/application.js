@@ -4,6 +4,6 @@
 //= require_self
 
 $(document).on('ready page:load', function() {
-  $('#search').live_search($('#search-results'), $('#no-search'));
-  $('.place-map').map_with_marker();
+  $('#search').liveSearch($('#search-results'), $('#no-search'));
+  $('.place-map').mapWithMarker();
 });

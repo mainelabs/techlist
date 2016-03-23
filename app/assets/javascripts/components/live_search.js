@@ -1,5 +1,5 @@
 (function($) {
-  $.fn.live_search = function(results, reset) {
+  $.fn.liveSearch = function(results, reset) {
     if ($(this).data('live-search') == undefined) {
       $(this).data('live-search', new LiveSearch(this, results, reset));
     }
