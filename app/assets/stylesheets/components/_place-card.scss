@@ -4,8 +4,8 @@
 
   header {
     @include clearfix;
-    @include display(flex);
 
+    display: flex;
     margin: $small-spacing 0;
 
     h4 {
