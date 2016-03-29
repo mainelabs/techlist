@@ -1,11 +1,11 @@
 (function($) {
   $.fn.liveSearch = function(results, reset) {
-    if ($(this).data('live-search') == undefined) {
+    if ($(this).data('live-search') === undefined) {
       $(this).data('live-search', new LiveSearch(this, results, reset));
     }
 
     return this;
-  }
+  };
 
   var LiveSearch = function(el, results, reset) {
     this.el = el;
@@ -17,8 +17,8 @@
     var self = this;
 
     this.el
-      .on('focus', function() { self.select() })
-      .on('input', function() { self.search() });
+      .on('focus', function() { self.select(); })
+      .on('input', function() { self.search(); });
 
     this.select = function() {
       this.el.select();
@@ -45,13 +45,13 @@
     this._executeSearch = function() {
       this._debounce(function() {
         $.get(self.url, self.form.serialize()).always(function(response) {
-          var parsed_response = self._parseResponse(response);
+          var parsedResponse = self._parseResponse(response);
 
-          if (parsed_response[0] > 0) {
-            self._showResults(parsed_response[1]);
+          if (parsedResponse[0] > 0) {
+            self._showResults(parsedResponse[1]);
           } else {
             self._debounce(function() {
-              self._showResults(parsed_response[1]);
+              self._showResults(parsedResponse[1]);
             });
           }
         });
@@ -95,5 +95,5 @@
     this._hasResetNode = function() {
       return this.reset.length > 0;
     };
-  }
+  };
 }(jQuery));
