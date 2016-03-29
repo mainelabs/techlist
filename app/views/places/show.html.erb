@@ -57,4 +57,17 @@
   <section class="place-location">
     <%= tag :div, class: 'place-map', data: { latitude: @place.latitude, longitude: @place.longitude } %>
   </section>
+
+  <section class="place-edit">
+    <div class="container">
+      <h2>Des informations ont changé ?</h2>
+
+      <p>Cette page a été mise à jour le <time datetime="<%= @place.updated_at %>"><%= l @place.updated_at, format: :date %></time>.</p>
+      <p>Si ce lieu a changé depuis, n'hésitez pas à le mettre à jour, ça ne prend que quelques secondes !</p>
+
+      <%= link_to edit_place_path(@place) do %>
+        Mettre à jour ce lieu
+      <% end %>
+    </div>
+  </section>
 </section>

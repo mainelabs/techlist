@@ -20,6 +20,8 @@ feature 'A user views a place' do
     expect(page).to have_content(place.city)
     expect(page).to have_content(place.description)
     expect(page).to have_link('Twitter', href: "http://twitter.com/#{place.twitter_name}")
+    expect(page).to have_content(l(place.updated_at, format: :date))
+    expect(page).to have_link('Mettre à jour ce lieu', href: edit_place_path(place))
   end
 
   scenario 'without a twitter link displayed' do
@@ -28,5 +30,14 @@ feature 'A user views a place' do
     visit place_path(place)
 
     expect(page).to_not have_link('Twitter')
+  end
+
+  scenario 'clicks on the update link' do
+    place = create(:place, :active)
+
+    visit place_path(place)
+    click_link 'Mettre à jour ce lieu'
+
+    expect(current_path).to eq(edit_place_path(place))
   end
 end
