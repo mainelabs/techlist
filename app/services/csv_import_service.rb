@@ -1,4 +1,5 @@
 require 'pathname'
+require 'csv'
 
 class CsvImportService
   include ActiveModel::Model
