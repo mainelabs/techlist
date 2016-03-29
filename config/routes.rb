@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :places
+    resources :place_updates
+    resources :users
+
+    root to: "places#index"
+  end
+
   root 'home#index'
 
   devise_for :users
