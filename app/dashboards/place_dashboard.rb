@@ -31,7 +31,8 @@ class PlaceDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :kind,
-    :street,
+    :city,
+    :created_at,
   ]
 
   SHOW_PAGE_ATTRIBUTES = [

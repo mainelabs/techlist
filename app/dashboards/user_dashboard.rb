@@ -21,8 +21,7 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :email,
-    :encrypted_password,
-    :reset_password_token,
+    :last_sign_in_at,
   ]
 
   SHOW_PAGE_ATTRIBUTES = [
