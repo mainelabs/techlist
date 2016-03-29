@@ -4,6 +4,7 @@ ruby '2.3.0'
 
 gem 'active_model_serializers'
 gem 'aasm'
+gem 'administrate'
 gem 'autoprefixer-rails'
 gem 'bitters'
 gem 'bourbon', '~> 4'
