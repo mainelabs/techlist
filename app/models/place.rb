@@ -2,6 +2,8 @@ class Place < ActiveRecord::Base
   include PlaceConcern
   include PgSearch
 
+  has_many :place_updates
+
   class_attribute :geocoding_service
   self.geocoding_service = Geocoder
   geocoded_by :address

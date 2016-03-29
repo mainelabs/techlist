@@ -24,6 +24,7 @@ class PlaceDashboard < Administrate::BaseDashboard
     logo_url: Field::String,
     twitter_name: Field::String,
     country_code: Field::String,
+    place_updates: Field::HasMany
   }
 
   COLLECTION_ATTRIBUTES = [
@@ -52,6 +53,7 @@ class PlaceDashboard < Administrate::BaseDashboard
     :logo_url,
     :twitter_name,
     :country_code,
+    :place_updates
   ]
 
   FORM_ATTRIBUTES = [
@@ -69,7 +71,7 @@ class PlaceDashboard < Administrate::BaseDashboard
     :longitude,
     :logo_url,
     :twitter_name,
-    :country_code,
+    :country_code
   ]
 
   def display_resource(place)
