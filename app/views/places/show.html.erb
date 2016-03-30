@@ -1,3 +1,5 @@
+<% title("#{@place.name} | #{@place.normalized_city}") %>
+
 <section class="show-place">
   <header class="place-header">
     <div class="container">
@@ -18,7 +20,7 @@
       </span>
       <span>
         <%= fa_icon('map-marker') %>
-        <%= @place.city.capitalize %>
+        <%= @place.normalized_city %>
       </span>
     </div>
   </section>

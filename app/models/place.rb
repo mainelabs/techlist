@@ -49,6 +49,10 @@ class Place < ActiveRecord::Base
     "#{street} à #{city.capitalize}"
   end
 
+  def normalized_city
+    city.capitalize
+  end
+
   def header_image
     "http://maps.google.com/maps/api/staticmap?sensor=false&size=600x100&zoom=15&center=#{latitude},#{longitude}&markers=color:yellow|#{latitude},#{longitude}&key=#{ENV.fetch('GOOGLE_MAPS_KEY')}"
   end

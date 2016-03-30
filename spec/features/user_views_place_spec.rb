@@ -15,6 +15,7 @@ feature 'A user views a place' do
 
     visit place_path(place)
 
+    expect(page).to have_title("#{place.name} | #{place.normalized_city}")
     expect(page).to have_content(place.name)
     expect(page).to have_content(place.url)
     expect(page).to have_content(place.city)

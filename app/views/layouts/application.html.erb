@@ -8,7 +8,7 @@ city = ENV.fetch('CITY')
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= t('meta.title', city: city) %></title>
+    <title><%= (yield :title).presence || t('meta.title', city: city.capitalize) %></title>
     <meta name="description" content="<%= t('meta.description', count: @places_count) %>" />
 
     <!-- Schema.org markup for Google+ -->

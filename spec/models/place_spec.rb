@@ -60,6 +60,14 @@ describe Place do
     end
   end
 
+  describe '#normalized_city' do
+    it 'returns the city name capitalized' do
+      place = build(:place, city: 'angers')
+
+      expect(place.normalized_city).to eq('Angers')
+    end
+  end
+
   describe '#q' do
     it 'searches on name' do
       create(:place, name: 'Craftsmen')
