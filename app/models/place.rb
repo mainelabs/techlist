@@ -1,10 +1,14 @@
 class Place < ActiveRecord::Base
+  extend FriendlyId
+  include AASM
   include PlaceConcern
   include PgSearch
 
   class_attribute :geocoding_service
   self.geocoding_service = Geocoder
   geocoded_by :address
+
+  friendly_id :name, use: :slugged
 
   before_save :set_coordinates, if: :geocoding_necessary?
 
@@ -23,7 +27,6 @@ class Place < ActiveRecord::Base
       tsearch: { dictionary: 'french' }
     }
 
-  include AASM
   aasm column: 'state' do
     state :pending, initial: true
     state :active

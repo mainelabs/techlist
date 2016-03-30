@@ -23,11 +23,11 @@ class PlacesController < ApplicationController
   end
 
   def edit
-    @place_update = PlaceUpdate.from_place(Place.displayable.find(params[:id]))
+    @place_update = PlaceUpdate.from_place(find_place(params[:id]))
   end
 
   def update
-    @place_update = PlaceUpdate.from_place(Place.displayable.find(params[:id]))
+    @place_update = PlaceUpdate.from_place(find_place(params[:id]))
     @place_update.attributes = place_params(:place_update)
 
     if !@place_update.save(context: :user_input)
@@ -36,10 +36,14 @@ class PlacesController < ApplicationController
   end
 
   def show
-    @place = Place.find(params[:id])
+    @place = find_place(params[:id])
   end
 
   private
+
+  def find_place(id)
+    Place.friendly.displayable.find(id)
+  end
 
   def place_params(model = :place)
     params.require(model)
