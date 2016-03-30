@@ -1,4 +1,9 @@
-<% title("#{@place.name} | #{@place.normalized_city}") %>
+<%
+  content_for(:meta_title, truncate("#{@place.name} | #{@place.normalized_city}", length: 70))
+  content_for(:meta_description, truncate(@place.description, length: 155))
+  content_for(:meta_city, @place.normalized_city)
+  content_for(:meta_twitter_account, @place.twitter_name)
+%>
 
 <section class="show-place">
   <header class="place-header">
