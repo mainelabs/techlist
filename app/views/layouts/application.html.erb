@@ -2,7 +2,7 @@
 meta_city = (yield :meta_city).presence || ENV.fetch('CITY').capitalize
 meta_title = (yield :meta_title).presence || t('meta.title', city: meta_city)
 meta_description = (yield :meta_description).presence || t('meta.description', count: @places_count)
-meta_image = (yield :meta_image).presence || image_url('map-icon.png')
+meta_image = (yield :meta_image).presence || image_url('social-logo.png')
 meta_twitter_account = (yield :meta_twitter_account).presence || ENV['TWITTER_ACCOUNT']
 %>
 
