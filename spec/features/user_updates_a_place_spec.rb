@@ -28,6 +28,6 @@ feature 'A user updates a place' do
   scenario 'but not pending ones' do
     place = create(:place)
 
-    expect { visit edit_place_path(place) }.to raise_error
+    expect { visit edit_place_path(place) }.to raise_error(ActiveRecord::RecordNotFound)
   end
 end
