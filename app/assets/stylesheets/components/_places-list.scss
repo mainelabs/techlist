@@ -34,9 +34,11 @@
       margin-bottom: $base-spacing;
     }
 
-    a {
+    .add-place {
       @extend .button;
+
       font-size: $base-font-size * 1.3;
+      margin-right: $small-spacing;
     }
   }
 }

@@ -27,9 +27,18 @@ feature 'A user searches places' do
     expect(page).to have_content('Craftsmen', count: 10)
   end
 
-  scenario 'and and view a message if not matching places' do
+  scenario 'and views a message if no matching places' do
     visit places_path
 
     expect(page).to have_content('Aucun résultat')
+  end
+
+  scenario 'and returns to the complete list if no matching places' do
+    create(:place)
+
+    visit places_path(q: 'somethingyouwillneverfind')
+    click_link 'revenir à la liste complète'
+
+    expect(current_path).to eq(places_path)
   end
 end

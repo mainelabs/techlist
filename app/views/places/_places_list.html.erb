@@ -21,8 +21,8 @@
       avec des termes plus génériques ? Si vous avez cherché le nom d'un lieu dont vous êtes le propriétaire, vous
       pouvez l'ajouter à la liste, c'est gratuit !
     </p>
-    <%= link_to new_place_path do %>
-      Ajouter un lieu
-    <% end %>
+    <%= link_to 'Ajouter un lieu', new_place_path, class: 'add-place' %>
+    ou
+    <%= link_to 'revenir à la liste complète', places_path %>
   </div>
 <% end %>
