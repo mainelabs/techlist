@@ -27,4 +27,11 @@ feature 'A user adds a place' do
 
     expect(page).to have_content(t('simple_form.error_notification.default_message'))
   end
+
+  scenario 'changind his mind and returning to the list' do
+    visit new_place_path
+    click_link 'revenir à la liste'
+
+    expect(current_path).to eq(places_path)
+  end
 end
