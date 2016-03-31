@@ -1,6 +1,7 @@
 .places-search {
   background-color: $red;
   padding: 0 0 ($base-spacing * 2) 0;
+  text-align: center;
 
   h1 {
     font-size: $base-font-size * 3;
@@ -11,24 +12,44 @@
     @include outer-container;
   }
 
-  input[type="search"] {
-    @include placeholder {
-      color: #fff;
-      opacity: 0.7;
+  .places-search-bar {
+    margin: auto;
+    position: relative;
+    width: 60%;
+
+    input[type=search] {
+      @include appearance(none);
+      @include transition(border-color);
+
+      background-color: #fff;
+      border-radius: $base-border-radius;
+      border: 0;
+      box-shadow: none;
+      box-sizing: border-box;
+      display: block;
+      font-size: 1.5em;
+      font-weight: 300;
+      margin: 0;
+      padding: $base-spacing / 4;
+      position: relative;
+      width: 100%;
+
+      @include placeholder {
+        opacity: 0.7;
+      }
     }
 
-    background-color: $red;
-    border: none;
-    box-shadow: none;
-    color: #fff;
-    display: inline;
-    font-size: 1.5em;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-  }
+    button[type=submit] {
+      @include position(absolute, 0 0 0 null);
 
-  input[type="submit"] {
-    display: none;
+      background: #fff;
+      border: 0;
+      border-radius: none;
+      box-shadow: none;
+      color: $red;
+      font-size: 1.5em;
+      outline: none;
+      padding: 5px 10px;
+    }
   }
 }

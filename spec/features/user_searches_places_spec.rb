@@ -7,7 +7,7 @@ feature 'A user searches places' do
 
     visit places_path
     fill_in 'search', with: 'craftsmen'
-    click_button 'Chercher'
+    click_button 'search-button'
 
     expect(page).to have_content('Craftsmen', count: 2)
   end
