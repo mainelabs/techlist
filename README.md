@@ -28,18 +28,17 @@ Before launching the app, you should get a Google Maps API key. Everything is ex
 
 > Note that this step is not required : the file `.sample.env` comes with a generic key, working for the domain `localhost`. But you really should generate your own key.
 
-After setting up, you can run the application using [foreman]:
+After setting up, you can run the application:
 
-    % foreman start
+    % rails server
 
-And go check [http://localhost:7000](http://localhost:7000) in your browser.
+And go check [http://localhost:3000](http://localhost:3000) in your browser.
 
 License
 -------
 
 Techlist is released under the [MIT License].
 
-[foreman]: http://ddollar.github.io/foreman/
 [Mainelabs]: http://mainelabs.fr
 [Angers technopole]: http://angerstechnopole.com/
 [Angers]: http://angers.fr

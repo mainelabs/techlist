@@ -36,7 +36,6 @@ gem 'uglifier'
 gem 'unicorn'
 
 group :development do
-  gem 'foreman'
   gem 'spring'
   gem 'spring-commands-rspec'
 end

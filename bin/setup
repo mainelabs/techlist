@@ -15,6 +15,3 @@ fi
 
 # Set up the database
 bundle exec rake db:setup
-
-# Pick a port for Foreman
-echo "port: 7000" > .foreman
