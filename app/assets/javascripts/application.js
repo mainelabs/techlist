@@ -13,3 +13,9 @@ $(document).on('turbolinks:load', function() {
 
   $('.place-map').mapWithMarker();
 });
+
+// Workaround to have the good cache value in turbolink when restoring the page
+$(document).on('turbolinks:before-cache', function() {
+  var field = $('.search-field');
+  field.val(field.attr('value'));
+});
