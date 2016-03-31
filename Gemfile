@@ -31,7 +31,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'thor'
 gem 'thor-rails'
-gem 'turbolinks'
+gem 'turbolinks', '~> 5.0.0.beta'
 gem 'uglifier'
 gem 'unicorn'
 

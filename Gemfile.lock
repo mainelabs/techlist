@@ -259,8 +259,9 @@ GEM
     thread_safe (0.3.5)
     tilt (2.0.2)
     timecop (0.8.0)
-    turbolinks (2.5.3)
-      coffee-rails
+    turbolinks (5.0.0.beta2)
+      turbolinks-source
+    turbolinks-source (5.0.0.beta3)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.0)
@@ -323,7 +324,7 @@ DEPENDENCIES
   thor
   thor-rails
   timecop
-  turbolinks
+  turbolinks (~> 5.0.0.beta)
   uglifier
   unicorn
   webmock

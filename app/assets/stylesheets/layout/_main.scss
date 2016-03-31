@@ -16,3 +16,8 @@ main {
 .container {
   @include outer-container;
 }
+
+.turbolinks-progress-bar {
+  height: 2px;
+  background-color: $red;
+}
