@@ -4,7 +4,6 @@
   text-align: center;
 
   h1 {
-    font-size: $base-font-size * 3;
     color: #fff;
   }
 
@@ -13,9 +12,10 @@
   }
 
   .places-search-bar {
+    font-size: 1.2em;
     margin: auto;
     position: relative;
-    width: 60%;
+    width: 90%;
 
     input[type=search] {
       @include appearance(none);
@@ -27,7 +27,6 @@
       box-shadow: none;
       box-sizing: border-box;
       display: block;
-      font-size: 1.5em;
       font-weight: 300;
       margin: 0;
       padding: $base-spacing / 4;
@@ -47,9 +46,19 @@
       border-radius: none;
       box-shadow: none;
       color: $red;
-      font-size: 1.5em;
       outline: none;
       padding: 5px 10px;
+    }
+  }
+
+  @include media($medium-screen) {
+    h1 {
+      font-size: $base-font-size * 3;
+    }
+
+    .places-search-bar {
+      font-size: 1.5em;
+      width: 70%;
     }
   }
 }

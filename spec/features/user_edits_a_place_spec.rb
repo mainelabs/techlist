@@ -31,7 +31,7 @@ feature 'A user edits a place' do
     place = create(:place, :active, kind: 'company')
 
     visit edit_place_path(place)
-    click_link 'revenir sur la page du lieu'
+    click_link 'annuler'
 
     expect(current_path).to eq(place_path(place))
   end

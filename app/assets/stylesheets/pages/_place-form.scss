@@ -3,11 +3,22 @@
   padding: 0 0 $base-spacing 0;
 
   > div {
-    @include outer-container;
+    padding: 0 $base-spacing;
   }
 
   hr {
-    margin-bottom: $base-spacing * 2;
+    display: none;
+  }
+
+  @include media($medium-screen) {
+    > div {
+      @include outer-container;
+    }
+
+    hr {
+      display: block;
+      margin-bottom: $base-spacing * 2;
+    }
   }
 }
 

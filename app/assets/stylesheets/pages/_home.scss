@@ -16,4 +16,14 @@
     margin-bottom: $base-spacing;
     text-align: center;
   }
+
+  .its-free {
+    display: none;
+  }
+
+  @include media($small-screen) {
+    .its-free {
+      display: inline;
+    }
+  }
 }

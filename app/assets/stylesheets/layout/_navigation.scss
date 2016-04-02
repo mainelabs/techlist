@@ -29,19 +29,26 @@
   li {
     display: inline-block;
     line-height: $navigation-height;
-    margin-right: $small-spacing;
+    margin-right: $small-spacing / 2;
+    font-size: $base-font-size * 0.8;
 
     &:last-child {
       margin-right: 0;
     }
 
-    &.cta a {
-      background-color: lighten($red, 33%);
-      border-radius: $base-border-radius;
-      padding: $small-spacing;
+    @include media($small-screen) {
+      font-size: $base-font-size;
+    }
 
-      i {
-        margin-right: $small-spacing / 2;
+    @include media($medium-screen) {
+      &.cta a {
+        background-color: lighten($red, 33%);
+        border-radius: $base-border-radius;
+        padding: $small-spacing;
+
+        i {
+          margin-right: $small-spacing / 2;
+        }
       }
     }
   }

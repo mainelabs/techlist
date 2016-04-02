@@ -16,11 +16,6 @@
     @include clearfix;
   }
 
-  .place-card {
-    @include span-columns(6);
-    @include omega(2n);
-  }
-
   h2 {
     padding: 0 0 $small-spacing 0;
     margin: 0;
@@ -39,6 +34,13 @@
 
       font-size: $base-font-size * 1.3;
       margin-right: $small-spacing;
+    }
+  }
+
+  @include media($medium-screen) {
+    .place-card {
+      @include span-columns(6);
+      @include omega(2n);
     }
   }
 }
