@@ -33,6 +33,15 @@ feature 'A user views a place' do
     expect(page).to_not have_link('Twitter')
   end
 
+  scenario 'with no description' do
+    place = create(:place, :active, description: '')
+
+    visit place_path(place)
+
+    expect(page).to have_content("il semble bien que nous n'ayons pas encore d'informations")
+    expect(page).to have_link("d'aller là", href: edit_place_path(place))
+  end
+
   scenario 'clicks on the update link' do
     place = create(:place, :active)
 

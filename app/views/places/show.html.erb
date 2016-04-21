@@ -32,7 +32,15 @@
 
   <section class="place-description">
     <div class="container">
-      <%= markdown @place.description %>
+      <% if @place.description? %>
+        <%= markdown @place.description %>
+      <% else %>
+        <p class="blank-slate">
+          Oh, il semble bien que nous n'ayons pas encore d'informations sur <strong><%= @place.name %></strong>. Vous pouvez
+          nous les transmettre par fax, minitel ou signaux de fumée, mais le plus simple reste
+          <%= link_to "d'aller là", edit_place_path(@place) %>.
+        </p>
+      <% end %>
     </div>
   </section>
 
