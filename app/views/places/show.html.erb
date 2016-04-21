@@ -56,7 +56,7 @@
       </p>
       <p>
         À moins que vous ne préfériez vous rendre directement sur place,
-        <%= map_link_to @place %> ?
+        <%= map_link_to @place %> ?
       </p>
     </div>
   </section>
@@ -67,10 +67,10 @@
 
   <section class="place-edit">
     <div class="container">
-      <h2>Des informations ont changé ?</h2>
+      <h2>Des informations ont changé ?</h2>
 
       <p>Cette page a été mise à jour le <time datetime="<%= @place.updated_at %>"><%= l @place.updated_at, format: :date %></time>.</p>
-      <p>Si ce lieu a changé depuis, n'hésitez pas à le mettre à jour, ça ne prend que quelques secondes !</p>
+      <p>Si ce lieu a changé depuis, n'hésitez pas à le mettre à jour, ça ne prend que quelques secondes !</p>
 
       <%= link_to edit_place_path(@place) do %>
         Mettre à jour ce lieu
