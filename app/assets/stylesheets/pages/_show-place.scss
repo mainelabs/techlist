@@ -32,8 +32,17 @@
     }
 
     span {
+      display: inline-block;
+      float: left;
       font-size: $base-font-size * 0.9;
-      margin-right: $small-spacing;
+      margin: 0;
+      max-width: 50%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    span:last-child {
+      padding-left: $small-spacing;
     }
   }
 
