@@ -18,14 +18,18 @@
   <section class="place-details">
     <div class="container">
       <span>
-        <%= link_to @place.url, target: '_blank' do %>
-          <%= fa_icon('external-link') %>
-          <%= @place.url %>
-        <% end %>
+        <%= fa_icon('tag') %>
+        <%= t("kinds.codes.#{@place.kind}") %>
       </span>
       <span>
         <%= fa_icon('map-marker') %>
         <%= @place.normalized_city %>
+      </span>
+      <span class="place-website">
+        <%= link_to @place.url, target: '_blank' do %>
+          <%= fa_icon('external-link') %>
+          <%= @place.url %>
+        <% end %>
       </span>
     </div>
   </section>

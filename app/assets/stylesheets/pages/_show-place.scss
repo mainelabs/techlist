@@ -38,11 +38,26 @@
       margin: 0;
       max-width: 50%;
       overflow: hidden;
+      padding-left: $small-spacing;
       white-space: nowrap;
     }
 
-    span:last-child {
-      padding-left: $small-spacing;
+    span:first-child {
+      padding-left: 0;
+    }
+
+    .place-website {
+      display: none;
+    }
+
+    @include media($large-screen) {
+      span {
+        max-width: none;
+      }
+
+      .place-website {
+        display: inline-block;
+      }
     }
   }
 
