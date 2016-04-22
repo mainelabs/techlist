@@ -9,7 +9,7 @@
   <header class="place-header">
     <div class="container">
       <div class="place-logo">
-        <%= image_tag @place.logo_url %>
+        <%= image_tag @place.logo_url if @place.logo_url? %>
       </div>
       <h1><%= @place.name %></h1>
     </div>
