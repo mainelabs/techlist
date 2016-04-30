@@ -125,7 +125,6 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kgio (2.10.0)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -148,6 +147,7 @@ GEM
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
+    puma (3.1.0)
     rack (1.6.4)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -199,7 +199,6 @@ GEM
       activesupport (= 4.2.6)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    raindrops (0.16.0)
     rake (11.1.2)
     recipient_interceptor (0.1.2)
       mail
@@ -266,10 +265,6 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
-    unicorn (5.0.1)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
     warden (1.2.6)
       rack (>= 1.0)
     webmock (1.24.2)
@@ -307,6 +302,7 @@ DEPENDENCIES
   newrelic_rpm (>= 3.7.3)
   pg
   pg_search
+  puma
   rack-timeout
   rails (~> 4.2)
   rails_12factor
@@ -326,7 +322,6 @@ DEPENDENCIES
   timecop
   turbolinks (~> 5.0.0.beta)
   uglifier
-  unicorn
   webmock
 
 BUNDLED WITH
