@@ -1,14 +1,13 @@
 body {
-  @include display(flex);
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   margin: 0;
 }
 
 main {
-  @include display(flex);
-  @include flex-direction(column);
-
+  display: flex;
+  flex-direction: column;
   flex: 1;
   width: 100%;
 }
