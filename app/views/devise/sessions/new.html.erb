@@ -1,16 +1,9 @@
-<div class="row">
-  <div class="small-12 medium-8 columns medium-centered">
-    <h3>Sign in</h3>
-    <hr>
+<div class="login-form">
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.input :email, autofocus: true, required: true %>
+    <%= f.input :password, label: 'Mot de passe', required: true %>
+    <%= f.input :remember_me, label: 'se souvenir de moi', as: :boolean if devise_mapping.rememberable? %>
 
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <%= f.input :email, autofocus: true, required: true %>
-      <%= f.input :password, required: true %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-
-      <%= f.button :submit, 'Sign in' %>
-    <% end %>
-
-    <%= render 'devise/shared/links' %>
-  </div>
+    <%= f.button :submit, 'Se connecter' %>
+  <% end %>
 </div>

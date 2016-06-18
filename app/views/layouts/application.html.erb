@@ -42,7 +42,7 @@ meta_twitter_account = (yield :meta_twitter_account).presence || ENV['TWITTER_AC
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" %>
   </head>
 
-  <body>
+  <body class="<%= body_class %>">
     <%= render 'navigation' %>
 
     <main>
