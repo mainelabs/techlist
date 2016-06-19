@@ -13,6 +13,4 @@ Rails.application.routes.draw do
       resources :kinds, only: [:index]
     end
   end
-
-  get '*path', to: 'places#index'
 end
