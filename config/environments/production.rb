@@ -89,4 +89,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { host: 'techlist.com' }
+
+  # Use standard router for exceptions
+  config.exceptions_app = self.routes
 end

@@ -13,4 +13,6 @@ Rails.application.routes.draw do
       resources :kinds, only: [:index]
     end
   end
+
+  match '/404', to: 'errors#not_found', code: 404, via: :all
 end

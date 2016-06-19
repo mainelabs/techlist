@@ -1,0 +1,5 @@
+.error-not-found {
+  > div {
+    @include outer-container;
+  }
+}
