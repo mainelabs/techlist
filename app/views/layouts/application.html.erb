@@ -4,6 +4,7 @@ meta_title = (yield :meta_title).presence || t('meta.title', city: meta_city)
 meta_description = (yield :meta_description).presence || t('meta.description', count: @places_count)
 meta_image = (yield :meta_image).presence || image_url('social-logo.png')
 meta_twitter_account = (yield :meta_twitter_account).presence || ENV['TWITTER_ACCOUNT']
+meta_robots = (yield :meta_robots).presence
 %>
 
 <!DOCTYPE html>
@@ -35,6 +36,11 @@ meta_twitter_account = (yield :meta_twitter_account).presence || ENV['TWITTER_AC
     <meta property="og:image" content="<%= meta_image %>" />
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_city %>" />
+
+    <% if meta_robots.present? %>
+    <!-- Robots -->
+    <meta name="robots" content="<%= meta_robots %>">
+    <% end %>
 
     <%= stylesheet_link_tag 'application' %>
     <%= csrf_meta_tags %>

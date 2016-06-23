@@ -7,6 +7,7 @@ feature 'A user updates a place' do
     visit edit_place_path(place)
 
     expect(find_field('Nom').value).to eq(place.name)
+    expect(page).to have_css("meta[name='robots'][content='noindex']", visible: false)
   end
 
   scenario 'and fills all required fields' do
