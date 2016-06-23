@@ -42,6 +42,24 @@ feature 'A user views a place' do
     expect(page).to have_link("d'aller là", href: edit_place_path(place))
   end
 
+  scenario 'with an url without protocol' do
+    place = create(:place, :active, url: 'www.somewhere.com')
+
+    visit place_path(place)
+
+    expect(page).to have_link('http://www.somewhere.com', href: 'http://www.somewhere.com')
+    expect(page).to have_link('site web', href: 'http://www.somewhere.com')
+  end
+
+  scenario 'with an https url' do
+    place = create(:place, :active, url: 'https://www.somewhere.com')
+
+    visit place_path(place)
+
+    expect(page).to have_link('https://www.somewhere.com', href: 'https://www.somewhere.com')
+    expect(page).to have_link('site web', href: 'https://www.somewhere.com')
+  end
+
   scenario 'clicks on the update link' do
     place = create(:place, :active)
 

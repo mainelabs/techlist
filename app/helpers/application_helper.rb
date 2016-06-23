@@ -14,4 +14,12 @@ module ApplicationHelper
   def map_link_to(place)
     link_to place.human_address, "http://www.google.com/maps/place/#{place.latitude},#{place.longitude}", target: '_blank'
   end
+
+  def normalize_url(url)
+    if !url.match(/^http(s)?\:\/\//)
+      "http://#{url}"
+    else
+      url
+    end
+  end
 end

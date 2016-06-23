@@ -12,7 +12,7 @@
   </header>
 
   <footer>
-    <p class="url"><%= link_to place.url, place.url, target: '_blank' %></p>
+    <p class="url"><%= link_to normalize_url(place.url), normalize_url(place.url), target: '_blank' %></p>
     <p class="updated-at">
       <%= fa_icon('clock-o') %>
       <time datetime="<%= place.updated_at %>">

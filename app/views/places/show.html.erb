@@ -26,9 +26,9 @@
         <%= @place.normalized_city %>
       </span>
       <span class="place-website">
-        <%= link_to @place.url, target: '_blank' do %>
+        <%= link_to normalize_url(@place.url), target: '_blank' do %>
           <%= fa_icon('external-link') %>
-          <%= @place.url %>
+          <%= normalize_url(@place.url) %>
         <% end %>
       </span>
     </div>
@@ -53,7 +53,7 @@
       <h2>Contacter <%= @place.name %></h2>
       <p>
         Vous pouvez contacter <%= @place.name %> via le
-        <%= link_to @place.url, target: '_blank' do %>
+        <%= link_to normalize_url(@place.url), target: '_blank' do %>
           <%= fa_icon('external-link') %>
           site web
         <% end %>
