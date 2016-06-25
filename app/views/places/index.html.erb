@@ -1,3 +1,5 @@
+<% content_for(:meta_robots, 'noindex') if params[:page] %>
+
 <%= render 'search' %>
 
 <section id="search-results" class="places-list">

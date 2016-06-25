@@ -28,5 +28,6 @@ feature 'A user lists places' do
     click_link 'Suivante'
 
     expect(page).to have_content(last_place.name)
+    expect(page).to have_css("meta[name='robots'][content='noindex']", visible: false)
   end
 end
