@@ -3,6 +3,7 @@ class PlacesController < ApplicationController
 
   def index
     @places = apply_scopes(Place).ordered_by_update.page(params[:page])
+    @paginate_params = paginate_params
   end
 
   def new
@@ -38,6 +39,10 @@ class PlacesController < ApplicationController
 
   def find_place(id)
     Place.friendly.displayable.find(id)
+  end
+
+  def paginate_params
+    params.permit(:page)
   end
 
   def place_params(model = :place)
