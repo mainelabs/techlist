@@ -43,7 +43,7 @@ end
 group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.4'
+  gem 'rspec-rails'
 end
 
 group :test do
