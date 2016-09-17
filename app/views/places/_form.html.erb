@@ -12,9 +12,7 @@
     <%= f.input :name, label: 'Nom du lieu' %>
     <%= f.input :kind,
                 label: 'Type',
-                collection: Kind.all,
-                label_method: lambda { |kind| kind[:name] },
-                value_method: lambda { |kind| kind[:id] } %>
+                collection: Kind.all %>
     <%= f.input :url, label: 'Site web' %>
     <%= f.input :twitter_name, label: 'Compte Twitter' %>
     <%= f.input :logo_url, label: 'Url du logo' %>
