@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330184338) do
+ActiveRecord::Schema.define(version: 20160928204420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,9 +27,8 @@ ActiveRecord::Schema.define(version: 20160330184338) do
     t.string   "queue",      limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
   end
-
-  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "place_updates", force: :cascade do |t|
     t.integer  "place_id"
@@ -69,15 +67,26 @@ ActiveRecord::Schema.define(version: 20160330184338) do
     t.string   "twitter_name", limit: 255
     t.string   "country_code", limit: 255, default: "FR"
     t.string   "slug"
+    t.index ["city"], name: "index_places_on_city", using: :btree
+    t.index ["description"], name: "index_places_on_description", using: :btree
+    t.index ["name"], name: "index_places_on_name", using: :btree
+    t.index ["street"], name: "index_places_on_street", using: :btree
+    t.index ["twitter_name"], name: "index_places_on_twitter_name", using: :btree
+    t.index ["url"], name: "index_places_on_url", using: :btree
+    t.index ["zip_code"], name: "index_places_on_zip_code", using: :btree
   end
 
-  add_index "places", ["city"], name: "index_places_on_city", using: :btree
-  add_index "places", ["description"], name: "index_places_on_description", using: :btree
-  add_index "places", ["name"], name: "index_places_on_name", using: :btree
-  add_index "places", ["street"], name: "index_places_on_street", using: :btree
-  add_index "places", ["twitter_name"], name: "index_places_on_twitter_name", using: :btree
-  add_index "places", ["url"], name: "index_places_on_url", using: :btree
-  add_index "places", ["zip_code"], name: "index_places_on_zip_code", using: :btree
+  create_table "searches", force: :cascade do |t|
+    t.string   "page_title"
+    t.text     "page_description"
+    t.string   "results_one"
+    t.string   "results_other"
+    t.string   "slug"
+    t.string   "q"
+    t.string   "kind"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "",    null: false
@@ -93,9 +102,8 @@ ActiveRecord::Schema.define(version: 20160330184338) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin",                              default: false, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
