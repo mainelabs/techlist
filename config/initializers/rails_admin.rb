@@ -41,6 +41,30 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Search do
+    list do
+      filters [:kind]
+      field :page_title
+      field :slug
+      field :kind
+      field :q
+    end
+
+    edit do
+      field :page_title
+      field :page_description
+      field :results_one
+      field :results_other
+      field :slug
+      field :kind, :enum do
+        enum do
+          Kind.codes
+        end
+      end
+      field :q
+    end
+  end
+
   config.model Place do
     list do
       filters [:state, :kind]
