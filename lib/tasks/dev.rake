@@ -40,7 +40,7 @@ namespace :dev do
            longitude: -0.551269,
            url: 'http://playmoweb.com',
            twitter_name: 'playmoweb',
-           description: 'Applications mobiles'
+           description: 'Applications mobiles',
            logo_url: 'https://pbs.twimg.com/profile_images/572349272830402560/MojlFbrG.png')
     create(:place,
            :active,
@@ -92,19 +92,22 @@ de main de temps en temps, ou simplement en parlant de nous.
 
     create(:search,
       page_title: 'Créer une application mobile à Angers',
-      results_one: 'Une entreprise',
-      results_other: '{%count} entreprises',
+      page_description: nil,
+      results_one: 'entreprise',
+      results_other: 'entreprises',
       slug: 'applications-mobiles-angers',
       kind: 'company',
-      q: 'application AND mobile'
+      q: 'applications mobiles'
     )
 
     create(:search,
       page_title: 'Trouver une entreprise tech à Angers',
-      results_one: 'Une entreprise',
-      results_other: '{%count} entreprises',
+      page_description: nil,
+      results_one: 'entreprise',
+      results_other: 'entreprises',
       slug: 'entreprises-angers',
-      kind: 'company'
+      kind: 'company',
+      q: nil
     )
   end
 
