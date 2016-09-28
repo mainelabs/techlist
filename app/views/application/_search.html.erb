@@ -1,0 +1,20 @@
+<header class="places-search">
+  <div>
+    <h1><%= page_title %></h1>
+    <%= form_tag url_for(@search), method: :get, class: 'search-form' do %>
+      <div class="places-search-bar">
+        <%= hidden_field_tag :page, 1 %>
+        <%= search_field_tag :search,
+                             params[:q],
+                             name: :q,
+                             placeholder: 'Tapez pour chercher. Par exemple : design',
+                             autofocus: params[:q].blank?,
+                             class: 'search-field' %>
+
+        <%= button_tag title: 'Lancer la recherche', id: 'search-button', type: :submit do %>
+          <%= fa_icon(:search) %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</header>

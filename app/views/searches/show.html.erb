@@ -1,0 +1,11 @@
+<% content_for(:meta_robots, 'noindex') if params[:page] %>
+
+<%= render 'search', page_title: @search.page_title %>
+
+<section id="search-results" class="places-list">
+  <%= render 'places_list',
+      places: @places,
+      paginate_params: @paginate_params,
+      results_one: @search.results_one,
+      results_other: @search.results_other %>
+</section>
