@@ -8,10 +8,10 @@ class Search < ApplicationRecord
 
   friendly_id :slug, use: :slugged
 
-  def results
+  def results(q: nil)
     results = Place
-    results.where(kind: kind) if kind
-    results.q(q) if q
+    results = results.where(kind: kind) if kind?
+    results = results.q([self.q, q].compact.join(' '))
     results
   end
 end

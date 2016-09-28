@@ -1,7 +1,7 @@
 class SearchesController < ApplicationController
   def show
     @search = find_search(params[:id])
-    @places = apply_scopes(@search.results).ordered_by_update.page(params[:page])
+    @places = @search.results(q: params[:q]).ordered_by_update.page(params[:page])
     @paginate_params = paginate_params
   end
 
