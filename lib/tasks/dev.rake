@@ -8,6 +8,7 @@ namespace :dev do
     require 'factory_girl_rails'
 
     create_places
+    create_searches
   end
 
   private
@@ -39,6 +40,7 @@ namespace :dev do
            longitude: -0.551269,
            url: 'http://playmoweb.com',
            twitter_name: 'playmoweb',
+           description: 'Applications mobiles'
            logo_url: 'https://pbs.twimg.com/profile_images/572349272830402560/MojlFbrG.png')
     create(:place,
            :active,
@@ -83,6 +85,27 @@ de main de temps en temps, ou simplement en parlant de nous.
            description: 'Courte description.',
            twitter_name: nil,
            logo_url: nil)
+  end
+
+  def create_searches
+    header 'places'
+
+    create(:search,
+      page_title: 'Créer une application mobile à Angers',
+      results_one: 'Une entreprise',
+      results_other: '{%count} entreprises',
+      slug: 'applications-mobiles-angers',
+      kind: 'company',
+      q: 'application AND mobile'
+    )
+
+    create(:search,
+      page_title: 'Trouver une entreprise tech à Angers',
+      results_one: 'Une entreprise',
+      results_other: '{%count} entreprises',
+      slug: 'entreprises-angers',
+      kind: 'company'
+    )
   end
 
   def header(msg)
