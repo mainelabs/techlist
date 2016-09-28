@@ -1,4 +1,4 @@
-class PlaceUpdate < ActiveRecord::Base
+class PlaceUpdate < ApplicationRecord
   include PlaceConcern
 
   belongs_to :place
